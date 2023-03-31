@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import StoryBlock from '../Common/StoryBlock';
 
 const Member = () => {
     return (
@@ -29,7 +30,52 @@ const Member = () => {
                 <Header>
                     <h1>뎁스 1기가 말해주는 경험담</h1>
                 </Header>
-                <div>박스</div>
+                <BoxWrapper>
+                    <StoryBlock
+                        img={'./image/story1.png'}
+                        header1={'옛술의 전당은 '}
+                        header2={'내 인생 최고의 프로젝다.'}
+                        content={
+                            '개발팀 인원 모두 개발에 있어서 1년 전과의 자신과 실력 차이가 얼마나 많이 나는지 체감할 수 있을 거에요. 프로젝트 경험이 처음이고, 언어를 사용해보는 것이 처음이신 분들도 많았는데 모두 생각보다 빠른 속도로 잘 따라와 줘서 정말 고마웠고, 저도 영감을 많이 받았습니다. 개발팀 너무 수고했어요!!!'
+                        }
+                        name={'강상원'}
+                        department={'FrontEnd Developer'}
+                        isLeft={true}
+                    />
+                    <StoryBlock
+                        img={'./image/story1.png'}
+                        header1={'옛술의 전당은 '}
+                        header2={'내 인생 최고의 프로젝다.'}
+                        content={
+                            '개발팀 인원 모두 개발에 있어서 1년 전과의 자신과 실력 차이가 얼마나 많이 나는지 체감할 수 있을 거에요. 프로젝트 경험이 처음이고, 언어를 사용해보는 것이 처음이신 분들도 많았는데 모두 생각보다 빠른 속도로 잘 따라와 줘서 정말 고마웠고, 저도 영감을 많이 받았습니다. 개발팀 너무 수고했어요!!!'
+                        }
+                        name={'강상원'}
+                        department={'FrontEnd Developer'}
+                        isLeft={false}
+                    />
+                    <StoryBlock
+                        img={'./image/story1.png'}
+                        header1={'옛술의 전당은 '}
+                        header2={'내 인생 최고의 프로젝다.'}
+                        content={
+                            '개발팀 인원 모두 개발에 있어서 1년 전과의 자신과 실력 차이가 얼마나 많이 나는지 체감할 수 있을 거에요. 프로젝트 경험이 처음이고, 언어를 사용해보는 것이 처음이신 분들도 많았는데 모두 생각보다 빠른 속도로 잘 따라와 줘서 정말 고마웠고, 저도 영감을 많이 받았습니다. 개발팀 너무 수고했어요!!!'
+                        }
+                        name={'강상원'}
+                        department={'FrontEnd Developer'}
+                        isLeft={true}
+                    />
+                    <StoryBlock
+                        img={'./image/story1.png'}
+                        header1={'옛술의 전당은 '}
+                        header2={'내 인생 최고의 프로젝다.'}
+                        content={
+                            '개발팀 인원 모두 개발에 있어서 1년 전과의 자신과 실력 차이가 얼마나 많이 나는지 체감할 수 있을 거에요. 프로젝트 경험이 처음이고, 언어를 사용해보는 것이 처음이신 분들도 많았는데 모두 생각보다 빠른 속도로 잘 따라와 줘서 정말 고마웠고, 저도 영감을 많이 받았습니다. 개발팀 너무 수고했어요!!!'
+                        }
+                        name={'강상원'}
+                        department={'FrontEnd Developer'}
+                        isLeft={false}
+                    />
+                </BoxWrapper>
             </StoryWrapper>
         </Inner>
     );
@@ -38,8 +84,8 @@ const Member = () => {
 export default Member;
 
 const Inner = styled.div`
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     padding-top: 313px;
 `;
 const IntroWrapper = styled.div`
@@ -114,3 +160,5 @@ const Header = styled.div`
     }
     margin-bottom: 80px;
 `;
+
+const BoxWrapper = styled.div``;

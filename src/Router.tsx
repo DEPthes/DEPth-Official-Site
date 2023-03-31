@@ -5,6 +5,7 @@ import Header from './Component/Common/Header';
 import Member from './Component/Page/Member';
 import Project from './Component/Page/Project';
 import Contact from './Component/Page/Contact';
+import StoryBlock from './Component/Common/StoryBlock';
 
 const Router = () => {
     return (
@@ -16,6 +17,20 @@ const Router = () => {
                     <Route path="/Project" element={<Project />} />
                     <Route path="/Member" element={<Member />} />
                     <Route path="/Contact" element={<Contact />} />
+                    <Route
+                        path="/StoryBlock"
+                        element={
+                            <StoryBlock
+                                img={''}
+                                header1={''}
+                                content={''}
+                                name={''}
+                                department={''}
+                                header2={''}
+                                isLeft={false}
+                            />
+                        }
+                    />
                 </Routes>
             </BrowserRouter>
         </>
