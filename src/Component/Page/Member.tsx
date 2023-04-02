@@ -118,7 +118,7 @@ const IntroWriting = styled.div`
     }
 
     h4 {
-        margin-top: 9px;
+        margin-top: 50px;
         font-weight: 350;
         font-size: 20px;
     }
