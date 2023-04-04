@@ -8,6 +8,7 @@ const About = () => {
         <Inner>
             <IntroWrapper>
                 <IntroImg src="./image/MainImg.png" alt="mainImg" />
+
                 <IntroMentImg src="./image/MainMentImg.png" alt="mainImg" />
             </IntroWrapper>
             <ScrollWrapper>
@@ -49,7 +50,7 @@ const About = () => {
                         <CurriculumBox
                             header={'Hackathon '}
                             content={
-                                '일간 기획, 디자인, 개발 파트가 팀을 이뤄 무박 2일간 MVP 프로덕트를 개발하는 단기 프로젝트입니다. 팀워크를 다지고'
+                                '일간 기획, 디자인, 개발 파트가 팀을 이뤄 무박 2일간 MVP 프로덕트를 개발하는 단기 프로젝트입니다.'
                             }
                         />
                     </div>
@@ -65,7 +66,7 @@ const About = () => {
                         <CurriculumBox
                             header={'Project'}
                             content={
-                                ' 방학 기간 중 팀 빌딩을 통해 기획부터 운영까지 모든 프로세스를 경험합니다. 방학 후엔, 학교에서의 데모데이를 통해 서로의 결과물을 공유하고 DEPth 외부 사람들에게 서비스를 소개하는 시간을 가집니다.'
+                                '기획부터 운영까지 모든 프로세스를 경험할 수 있는 장기 프로젝트입니다. 완료 후 학교에서의 데모데이를 통해 결과물을 공유하고 DEPth 외부 사람들에게 서비스를 소개하는 시간을 가집니다.'
                             }
                         />
                         <CurriculumBox

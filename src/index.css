@@ -86,12 +86,16 @@ video {
     vertical-align: baseline;
 }
 
+
+
 :root {
     --background-color: radial-gradient(
         107.4% 339.42% at -7.4% -7.13%,
         #e2dfda 0%,
         #ffffff 100%
     );
+
+    font-family: "Noto Sans KR";
 }
 
 body {
@@ -109,6 +113,27 @@ body {
     font-weight: 400;
     color: #ffffff;
     font-size: 100%;
+}
+
+body::-webkit-scrollbar {
+    width: 12px;
+}
+body::-webkit-scrollbar-thumb {
+    background: #ddd;
+    height: 2.5em;
+    border-radius: 16px;
+} /* 실질적 스크롤 바 */
+
+body::-webkit-scrollbar-thumb:hover {
+    background:#1b214f;
+} /* 실질적 스크롤 바 위에 마우스를 올려다 둘 때 */
+
+body::-webkit-scrollbar-thumb:active {
+   background: #354CDA;
+} /* 실질적 스크롤 바를 클릭할 때 */
+
+body::-webkit-scrollbar-button {
+    display: none;
 }
 
 @media (max-width: 1920px) and (min-width: 768px) {

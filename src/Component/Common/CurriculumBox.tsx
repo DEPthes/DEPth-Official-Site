@@ -22,17 +22,16 @@ const Box = styled.div`
     height: 196px;
 
     background: #2c3036;
-    box-shadow: 0px 0px 23px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 0px 23px rgba(40, 39, 39, 0.25);
     backdrop-filter: blur(6.5px);
     border-radius: 24px;
 
     display: flex;
     flex-direction: column;
-    justify-content: center;
 
     margin-right: 25px;
 
-    padding: 34px 40px 27px 32px;
+    padding: 34px 40px 47px 32px;
     box-sizing: border-box;
 
     margin-bottom: 27px;
@@ -49,6 +48,7 @@ const Box = styled.div`
         font-weight: 900;
         font-size: 30px;
         line-height: 43px;
+        height: 43px;
 
         margin-bottom: 12px;
     }
@@ -58,6 +58,7 @@ const Box = styled.div`
         font-style: normal;
         font-weight: 400;
         font-size: 14px;
-        line-height: 20px;
+        line-height: 23px;
+        height: 80px;
     }
 `;

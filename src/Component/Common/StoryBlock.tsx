@@ -3,8 +3,7 @@ import styled from 'styled-components';
 
 interface storyType {
     img: string;
-    header1: string;
-    header2: string;
+    header: string;
     content: string;
     name: string;
     department: string;
@@ -19,8 +18,7 @@ const StoryBlock = (p: storyType) => {
                     <BlockMent>
                         <img src="./image/bigQuote.png" alt="bigQuote" />
                         <BlockMentHeader>
-                            <h1>{p.header1}</h1>
-                            <h1>{p.header2}</h1>
+                            <h1>{p.header}</h1>
                         </BlockMentHeader>
                         <BlockMentContent>
                             <h2>{p.content}</h2>
@@ -38,8 +36,7 @@ const StoryBlock = (p: storyType) => {
                     <BlockMent>
                         <img src="./image/bigQuote.png" alt="bigQuote" />
                         <BlockMentHeader>
-                            <h1>{p.header1}</h1>
-                            <h1>{p.header2}</h1>
+                            <h1>{p.header}</h1>
                         </BlockMentHeader>
                         <BlockMentContent>
                             <h2>{p.content}</h2>
@@ -63,6 +60,7 @@ const BlockWrapper = styled.div`
 
     display: flex;
     justify-content: space-around;
+    align-items: center;
 
     margin-bottom: 275px;
 `;
@@ -73,14 +71,12 @@ const BlockMent = styled.div`
     }
 `;
 const BlockMentHeader = styled.div`
-    width: 516px;
-    height: 104px;
     h1 {
         font-weight: 600;
         font-size: 33px;
     }
 
-    margin-bottom: 31px;
+    margin-bottom: 23px;
 `;
 
 const BlockMentContent = styled.div`

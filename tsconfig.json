@@ -21,6 +21,13 @@
     "jsx": "react-jsx"
   },
   "include": [
-    "src"
-  ]
+    "src",
+    "custom.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "custom.d.ts",
+    "pages",
+    "public"
+  ],
+   "use" : ["@svgr/webpack"]
 }
