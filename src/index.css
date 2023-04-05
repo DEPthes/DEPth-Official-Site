@@ -110,6 +110,7 @@ body {
     font-family: 'GmarketSansMedium';
     font-weight: 400;
     color: #ffffff;
+    overflow-x: hidden;
 }
 
 body::-webkit-scrollbar {
@@ -157,6 +158,6 @@ html {
 
 @media (max-width: 950px) {
     html {
-        font-size: 6px;
+        font-size: 5px;
     }
 }

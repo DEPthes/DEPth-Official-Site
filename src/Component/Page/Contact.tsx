@@ -36,6 +36,7 @@ const ButtonGroup = styled.div`
     z-index: 99;
     display: flex;
     justify-content: center;
+    margin-top: 3.4rem;
     a {
         margin-left: 6rem;
         margin-right: 6rem;
@@ -92,12 +93,12 @@ const IntroWrapper = styled.div`
 const IntroImg = styled.div`
     z-index: 99999;
     width: 83.5rem;
-    min-height: 100%;
+    min-height: 100vh;
     height: 77.5rem;
     @media (max-width: 600px) {
         width: 301px;
         height: 365px;
-        margin-top: 180px;
+        margin-top: 2rem;
     }
     background-image: url(./image/ContactImg.png);
     background-size: contain;

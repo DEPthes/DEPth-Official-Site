@@ -112,12 +112,18 @@ export default Member;
 const Inner = styled.div`
     width: 100%;
     height: 100%;
-    padding-top: 313px;
+    padding-top: 31.3rem;
+    @media (max-width: 700px) {
+        padding-top: 33.3rem;
+    }
 `;
 const IntroWrapper = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+    @media (max-width: 700px) {
+        flex-direction: column;
+    }
 `;
 const IntroWriting = styled.div`
     width: 59.5rem;
@@ -153,6 +159,9 @@ const IntroImg = styled.img`
     width: 71.2rem;
     height: 49.1rem;
     object-fit: cover;
+    @media (max-width: 700px) {
+        margin-top: 5rem;
+    }
 `;
 
 const ScrollIcon = styled.img`
@@ -169,12 +178,15 @@ const ScrollWrapper = styled.div`
 
 const StoryWrapper = styled.div`
     width: 121.2rem;
-
     margin: 0 auto;
     margin-top: 24.9rem;
     padding-bottom: 40rem;
     display: flex;
     flex-direction: column;
+    @media (max-width: 700px) {
+        width: 60rem;
+        align-items: flex-start;
+    }
 `;
 
 const Header = styled.div`

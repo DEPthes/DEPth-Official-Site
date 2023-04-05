@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
+import { useMediaQuery } from 'react-responsive';
 
 interface storyType {
     img: string;
@@ -11,9 +12,14 @@ interface storyType {
 }
 
 const StoryBlock = (p: storyType) => {
+    const isSmallScreen = useMediaQuery({ query: '(max-width: 700px)' });
+    let isLeft = p.isLeft;
+    if (isSmallScreen) {
+        isLeft = true;
+    }
     return (
         <BlockWrapper>
-            {p.isLeft ? (
+            {isLeft ? (
                 <>
                     <BlockMent>
                         <img src="./image/bigQuote.png" alt="bigQuote" />
@@ -57,17 +63,26 @@ export default StoryBlock;
 const BlockWrapper = styled.div`
     width: 100%;
     height: 44.5rem;
-
     display: flex;
     justify-content: space-around;
     align-items: center;
-
     margin-bottom: 27.5rem;
+    @media (max-width: 700px) {
+        flex-direction: column;
+        margin-bottom: 14.5rem;
+        height: auto;
+        width: auto;
+        align-items: flex-start;
+        justify-content: center;
+    }
 `;
 const BlockMent = styled.div`
     img {
         object-fit: cover;
         margin-bottom: 2.3rem;
+    }
+    @media (max-width: 700px) {
+        margin-bottom: 5.5rem;
     }
 `;
 const BlockMentHeader = styled.div`
@@ -124,4 +139,6 @@ const BlockMentMember = styled.div`
 const BlockImg = styled.img`
     width: 60.6rem;
     height: 44.288rem;
+    @media (max-width: 700px) {
+    }
 `;
