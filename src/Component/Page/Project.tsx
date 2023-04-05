@@ -142,7 +142,7 @@ export default Project;
 const Inner = styled.div`
     width: 100%;
     height: 100%;
-    padding-top: 233px;
+    padding-top: 23.3rem;
 `;
 const IntroWrapper = styled.div`
     display: flex;
@@ -150,47 +150,47 @@ const IntroWrapper = styled.div`
     justify-content: center;
 `;
 const IntroWriting = styled.div`
-    width: 474px;
-    height: 305px;
+    width: 47.4rem;
+    height: 30.5rem;
     font-family: 'Noto Sans KR';
     h1 {
-        font-size: 20px;
-        font-weight: 500;
+        font-size: 2rem;
+        font-weight: 50rem;
     }
 
     h2 {
         font-weight: 900;
-        font-size: 60px;
+        font-size: 6rem;
         display: flex;
     }
 
     h3 {
         font-weight: 350;
-        font-size: 60px;
-        margin-right: 18px;
+        font-size: 6rem;
+        margin-right: 1.8rem;
     }
 
     h4 {
-        margin-top: 50px;
+        margin-top: 5rem;
         font-weight: 350;
-        font-size: 20px;
+        font-size: 2rem;
     }
 `;
 const IntroImg = styled.img`
-    width: 572px;
-    height: 544px;
+    width: 57.2rem;
+    height: 54.4rem;
     object-fit: cover;
-    margin-left: 223px;
+    margin-left: 22.3rem;
 `;
 
 const ScrollIcon = styled.img`
-    width: 44px;
-    height: 22px;
+    width: 4.4rem;
+    height: 2.2rem;
     margin: 0 auto;
 `;
 
 const ScrollWrapper = styled.div`
-    margin-top: 163px;
+    margin-top: 16.3rem;
     display: flex;
     justify-content: center;
 `;
@@ -200,34 +200,34 @@ const SecondWrapper = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 280px;
+    margin-top: 28rem;
 `;
 const Header = styled.div`
     display: flex;
-    width: 1200px;
+    width: 120rem;
     align-items: center;
     justify-content: flex-start;
-    margin-bottom: 54px;
+    margin-bottom: 5.4rem;
 
     img {
-        margin-right: 32px;
+        margin-right: 3.2rem;
     }
 
     h1 {
         font-family: 'Noto Sans KR';
         font-style: normal;
         font-weight: 900;
-        font-size: 44px;
-        line-height: 64px;
-        margin-bottom: 8px;
+        font-size: 4.4rem;
+        line-height: 6.4rem;
+        margin-bottom: 0.8rem;
     }
 
     h2 {
         font-family: 'Noto Sans KR';
         font-style: normal;
         font-weight: 400;
-        font-size: 24px;
-        line-height: 35px;
+        font-size: 2.4rem;
+        line-height: 3.5rem;
         /* identical to box height */
 
         color: #ffffff;
@@ -239,22 +239,22 @@ const ImgWrapper = styled.div`
 `;
 const ButtonWrapper = styled.div`
     img {
-        width: 59.3px;
-        height: 58.72px;
+        width: 5.93rem;
+        height: 5.872rem;
     }
     a:first-child {
         img {
             position: absolute;
-            bottom: 52px;
-            right: 204px;
+            bottom: 5.2rem;
+            right: 20.4rem;
         }
     }
 
     a:nth-child(2) {
         img {
             position: absolute;
-            bottom: 52px;
-            right: 124px;
+            bottom: 5.2rem;
+            right: 12.4rem;
         }
     }
 
@@ -262,50 +262,50 @@ const ButtonWrapper = styled.div`
     }
     img {
         position: absolute;
-        bottom: 52px;
-        right: 44px;
+        bottom: 5.2rem;
+        right: 4.4rem;
     }
 `;
 
 const Desc = styled.div`
-    margin-top: 100px;
-    width: 1200px;
-    height: 190px;
+    margin-top: 10rem;
+    width: 120rem;
+    height: 19rem;
     background: rgba(44, 48, 54, 0.5);
-    box-shadow: 0px 0px 23px rgba(0, 0, 0, 0.25);
-    backdrop-filter: blur(8.5px);
-    border-radius: 24px;
+    box-shadow: 0rem 0rem 2.3rem rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(0.85rem);
+    border-radius: 2.4rem;
 
     display: flex;
     align-items: flex-start;
 `;
 const DescHeader = styled.div`
-    width: 170px;
-    height: 37.16px;
-    margin-top: 41px;
-    margin-left: 44px;
-    margin-right: 103px;
+    width: 17rem;
+    height: 3.716rem;
+    margin-top: 4.1rem;
+    margin-left: 4.4rem;
+    margin-right: 10.3rem;
     h1 {
         font-family: 'Noto Sans KR';
         font-style: normal;
         font-weight: 700;
-        font-size: 26px;
-        line-height: 38px;
+        font-size: 2.6rem;
+        line-height: 3.8rem;
         /* identical to box height */
 
         color: #f3f3f3;
     }
 `;
 const DescContent = styled.div`
-    width: 830px;
-    height: 109.78px;
-    margin-top: 41px;
+    width: 83rem;
+    height: 10.978rem;
+    margin-top: 4.1rem;
     h2 {
         font-family: 'Noto Sans KR';
         font-style: normal;
         font-weight: 400;
-        font-size: 20px;
-        line-height: 29px;
+        font-size: 2rem;
+        line-height: 2.9rem;
 
         color: #cfcfd0;
     }
@@ -313,43 +313,43 @@ const DescContent = styled.div`
 
 const TeamMember = styled.div`
     box-sizing: border-box;
-    width: 1200px;
-    height: 552px;
-    margin-top: 56px;
+    width: 120rem;
+    height: 55.2rem;
+    margin-top: 5.6rem;
     border: 1px solid #2c3036;
-    filter: drop-shadow(0px 0px 23px rgba(0, 0, 0, 0.25));
-    backdrop-filter: blur(8.5px);
-    margin-bottom: 600px;
-    border-radius: 24px;
+    filter: drop-shadow(0rem 0rem 2.3rem rgba(0, 0, 0, 0.25));
+    backdrop-filter: blur(0.85rem);
+    margin-bottom: 60rem;
+    border-radius: 2.4rem;
 
-    padding-left: 44px;
-    padding-top: 42px;
+    padding-left: 4.4rem;
+    padding-top: 4.2rem;
 
     h1 {
         font-family: 'Noto Sans KR';
         font-style: normal;
         font-weight: 500;
-        font-size: 26px;
+        font-size: 2.6rem;
 
         color: #f3f3f3;
     }
 `;
 const TeamMemberWrapper = styled.div`
-    margin-top: 42px;
+    margin-top: 4.2rem;
 
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
 
     div {
-        width: 246px;
-        height: 106px;
+        width: 24.6rem;
+        height: 10.6rem;
         background: rgba(44, 48, 54, 0.5);
-        box-shadow: 0px 0px 23px rgba(0, 0, 0, 0.25);
-        backdrop-filter: blur(8.5px);
-        border-radius: 10px;
-        margin-right: 22px;
-        margin-bottom: 22px;
+        box-shadow: 0rem 0rem 2.3rem rgba(0, 0, 0, 0.25);
+        backdrop-filter: blur(0.85rem);
+        border-radius: 1rem;
+        margin-right: 2.2rem;
+        margin-bottom: 2.2rem;
 
         display: flex;
         flex-direction: column;
@@ -360,16 +360,16 @@ const TeamMemberWrapper = styled.div`
             font-family: 'Noto Sans KR';
             font-style: normal;
             font-weight: 700;
-            font-size: 19.0131px;
+            font-size: 1.90131rem;
             color: #e6e6e6;
-            margin-bottom: 10px;
+            margin-bottom: 1rem;
         }
 
         h3 {
             font-family: 'Noto Sans KR';
             font-style: normal;
             font-weight: 400;
-            font-size: 19.0131px;
+            font-size: 1.90131rem;
             color: #e6e6e6;
         }
     }

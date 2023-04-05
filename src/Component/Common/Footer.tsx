@@ -28,11 +28,11 @@ export default Footer;
 
 const Wrapper = styled.div`
     bottom: 0;
-    margin-left: 100px;
-    height: 150px;
-    width: 1200px;
-    border-top: 0.1px solid #979da696;
-    padding-top: 20px;
+    margin-left: 10rem;
+    height: 15rem;
+    position: relative;
+    width: 100vw;
+    border-top: 0.01rem solid #979da696;
     margin: 0 auto;
 
     h1,
@@ -40,7 +40,7 @@ const Wrapper = styled.div`
         font-family: 'Noto Sans KR';
         font-style: normal;
         font-weight: 350;
-        font-size: 14.5px;
+        font-size: 1.45rem;
 
         display: flex;
         align-items: center;
@@ -48,6 +48,6 @@ const Wrapper = styled.div`
 
         color: #f4f8ff95;
 
-        margin-bottom: 10px;
+        margin-bottom: 1rem;
     }
 `;
