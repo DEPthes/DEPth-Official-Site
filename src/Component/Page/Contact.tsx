@@ -45,7 +45,7 @@ const ButtonGroup = styled.div`
         width: 6.273rem;
         height: 6.273rem;
     }
-    @media (max-width: 600px) {
+    @media (max-width: 700px) {
         margin-bottom: 100px;
     }
 `;
@@ -75,7 +75,7 @@ const Ment = styled.div`
         text-align: center;
         color: #ffffff;
     }
-    @media (max-width: 600px) {
+    @media (max-width: 700px) {
         margin-bottom: 30px;
     }
 `;
@@ -95,7 +95,7 @@ const IntroImg = styled.div`
     width: 83.5rem;
     min-height: 100vh;
     height: 77.5rem;
-    @media (max-width: 600px) {
+    @media (max-width: 700px) {
         width: 301px;
         height: 365px;
         margin-top: 2rem;
