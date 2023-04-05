@@ -112,78 +112,90 @@ export default Member;
 const Inner = styled.div`
     width: 100%;
     height: 100%;
-    padding-top: 313px;
+    padding-top: 31.3rem;
+    @media (max-width: 700px) {
+        padding-top: 33.3rem;
+    }
 `;
 const IntroWrapper = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+    @media (max-width: 700px) {
+        flex-direction: column;
+    }
 `;
 const IntroWriting = styled.div`
-    width: 595px;
-    height: 386px;
+    width: 59.5rem;
+    height: 38.6rem;
     font-family: 'Noto Sans KR';
     h1 {
-        font-size: 20px;
+        font-size: 2rem;
 
         font-weight: 500;
     }
 
     h2 {
         font-weight: 900;
-        font-size: 60px;
+        font-size: 6rem;
 
         display: flex;
     }
 
     h3 {
         font-weight: 350;
-        font-size: 60px;
+        font-size: 6rem;
 
-        margin-right: 18px;
+        margin-right: 1.8rem;
     }
 
     h4 {
-        margin-top: 50px;
+        margin-top: 5rem;
         font-weight: 350;
-        font-size: 20px;
+        font-size: 2rem;
     }
 `;
 const IntroImg = styled.img`
-    width: 712px;
-    height: 491px;
+    width: 71.2rem;
+    height: 49.1rem;
     object-fit: cover;
+    @media (max-width: 700px) {
+        margin-top: 5rem;
+    }
 `;
 
 const ScrollIcon = styled.img`
-    width: 44px;
-    height: 22px;
+    width: 4.4rem;
+    height: 2.2rem;
     margin: 0 auto;
 `;
 
 const ScrollWrapper = styled.div`
-    margin-top: 163px;
+    margin-top: 16.3rem;
     display: flex;
     justify-content: center;
 `;
 
 const StoryWrapper = styled.div`
-    width: 1212px;
-
+    width: 121.2rem;
     margin: 0 auto;
-    margin-top: 249px;
-    padding-bottom: 400px;
+    margin-top: 24.9rem;
+    padding-bottom: 40rem;
     display: flex;
     flex-direction: column;
+    @media (max-width: 700px) {
+        width: 60rem;
+        align-items: flex-start;
+    }
 `;
 
 const Header = styled.div`
     h1 {
         font-weight: 900;
-        font-size: 40px;
-        line-height: 58px;
+        font-size: 4rem;
+        line-height: 5.8rem;
     }
-    margin-bottom: 150px;
+    margin-bottom: 15rem;
 `;
 
 const BoxWrapper = styled.div``;

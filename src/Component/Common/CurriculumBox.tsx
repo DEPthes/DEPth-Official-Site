@@ -18,47 +18,47 @@ const CurriculumBox = (c: curriculum) => {
 export default CurriculumBox;
 
 const Box = styled.div`
-    width: 367px;
-    height: 196px;
+    width: 36.7rem;
+    height: 19.6rem;
 
     background: #2c3036;
-    box-shadow: 0px 0px 23px rgba(40, 39, 39, 0.25);
-    backdrop-filter: blur(6.5px);
-    border-radius: 24px;
+    box-shadow: 0rem 0rem 2.3rem rgba(40, 39, 39, 0.25);
+    backdrop-filter: blur(0.65rem);
+    border-radius: 2.4rem;
 
     display: flex;
     flex-direction: column;
 
-    margin-right: 25px;
+    margin-right: 2.5rem;
 
-    padding: 34px 40px 47px 32px;
+    padding: 3.4rem 4rem 4.7rem 3.2rem;
     box-sizing: border-box;
 
-    margin-bottom: 27px;
+    margin-bottom: 2.7rem;
 
     :hover {
         background: #354cda;
-        box-shadow: 0px 0px 23px rgba(0, 0, 0, 0.25);
-        backdrop-filter: blur(7px);
+        box-shadow: 0rem 0rem 2.3rem rgba(0, 0, 0, 0.25);
+        backdrop-filter: blur(0.7rem);
     }
 
     h1 {
         font-family: 'Noto Sans KR';
         font-style: normal;
         font-weight: 900;
-        font-size: 30px;
-        line-height: 43px;
-        height: 43px;
+        font-size: 3rem;
+        line-height: 4.3rem;
+        height: 4.3rem;
 
-        margin-bottom: 12px;
+        margin-bottom: 1.2rem;
     }
 
     h2 {
         font-family: 'Noto Sans KR';
         font-style: normal;
         font-weight: 400;
-        font-size: 14px;
-        line-height: 23px;
-        height: 80px;
+        font-size: 1.4rem;
+        line-height: 2.3rem;
+        height: 8rem;
     }
 `;

@@ -55,8 +55,8 @@ export default Header;
 
 const HeaderWrapper = styled.div`
     width: 100%;
-    margin-top: 35px;
-    font-size: 24px;
+    margin-top: 3.5rem;
+    font-size: 2.4rem;
     z-index: 999;
     position: fixed;
 
@@ -66,7 +66,7 @@ const HeaderWrapper = styled.div`
         list-style: none;
         > li {
             cursor: pointer;
-            margin-left: 26px;
+            margin-left: 2.6rem;
             > a {
                 text-decoration: none;
                 color: #ffffff;

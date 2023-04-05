@@ -151,9 +151,9 @@ export default About;
 const Inner = styled.div`
     width: 100%;
     height: 100%;
-    padding-top: 313px;
+    padding-top: 31.3rem;
     background: #0b0b0b;
-    backdrop-filter: blur(42px);
+    backdrop-filter: blur(4.2rem);
 
     display: flex;
     flex-direction: column;
@@ -171,24 +171,24 @@ const IntroWrapper = styled.div`
 
 const IntroImg = styled.img`
     z-index: -99;
-    width: 536px;
-    height: 536px;
+    width: 53.6rem;
+    height: 53.6rem;
 `;
 
 const IntroMentImg = styled.img`
     position: absolute;
-    width: 494px;
-    height: 154px;
+    width: 49.4rem;
+    height: 15.4rem;
 `;
 
 const ScrollIcon = styled.img`
-    width: 44px;
-    height: 22px;
+    width: 4.4rem;
+    height: 2.2rem;
     margin: 0 auto;
 `;
 
 const ScrollWrapper = styled.div`
-    margin-top: 163px;
+    margin-top: 16.3rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -201,11 +201,11 @@ const SecondWrapper = styled.div`
     justify-content: center;
     flex-direction: column;
 
-    margin-top: 313px;
+    margin-top: 31.3rem;
 `;
 
 const SecondMent = styled.div`
-    margin-bottom: 35px;
+    margin-bottom: 3.5rem;
 
     width: 100%;
     div {
@@ -216,15 +216,15 @@ const SecondMent = styled.div`
     h1 {
         font-style: normal;
         font-weight: 900;
-        font-size: 40px;
-        line-height: 58px;
+        font-size: 4rem;
+        line-height: 5.8rem;
     }
 
     h2 {
         font-style: normal;
         font-weight: 350;
-        font-size: 40px;
-        line-height: 58px;
+        font-size: 4rem;
+        line-height: 5.8rem;
     }
 `;
 
@@ -238,7 +238,7 @@ const BoxWrapper = styled.div`
 `;
 
 const ThirdWrapper = styled.div`
-    margin-top: 442px;
+    margin-top: 44.2rem;
 `;
 const ThirdHeader = styled.div`
     width: 100%;
@@ -252,13 +252,13 @@ const ThirdHeader = styled.div`
     h1,
     h2 {
         font-style: normal;
-        font-size: 40px;
+        font-size: 4rem;
         line-height: 148.8%;
         color: #ffffff;
     }
 
     h1 {
-        margin-right: 15px;
+        margin-right: 1.5rem;
         font-weight: 350;
     }
 
@@ -267,11 +267,11 @@ const ThirdHeader = styled.div`
     }
 
     h3 {
-        margin-top: 10px;
-        margin-bottom: 93px;
+        margin-top: 1rem;
+        margin-bottom: 9.3rem;
         font-style: normal;
         font-weight: 400;
-        font-size: 20px;
+        font-size: 2rem;
         line-height: 139.8%;
 
         color: #e2e2e2;
@@ -280,25 +280,25 @@ const ThirdHeader = styled.div`
 
 const PartWrapper = styled.div`
     li {
-        margin-top: 360px;
+        margin-top: 36rem;
         list-style: none;
     }
 `;
 
 const LastWrapper = styled.div`
-    margin-top: 562px;
+    margin-top: 56.2rem;
 
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     flex-direction: column;
-    margin-bottom: 403px;
+    margin-bottom: 40.3rem;
 
     h1 {
         font-style: normal;
         font-weight: 900;
-        font-size: 42px;
+        font-size: 4.2rem;
         line-height: 148.8%;
         /* or 62px */
 
@@ -310,27 +310,27 @@ const LastWrapper = styled.div`
     }
 
     .blur {
-        width: 202px;
-        height: 56.59px;
+        width: 20.2rem;
+        height: 5.659rem;
         filter: drop-shadow(0px 0px 8px rgba(53, 76, 218, 0.6));
     }
 
     button {
-        width: 202px;
-        height: 56.59px;
+        width: 20.2rem;
+        height: 5.659rem;
         border: none;
 
         cursor: pointer;
 
         background: #354cda;
-        border-radius: 6.09483px;
+        border-radius: 0.609483rem;
         /* make the background image appear only once */
 
         h2 {
             font-family: 'Noto Sans KR';
             font-style: normal;
             font-weight: 350;
-            font-size: 20.8966px;
+            font-size: 2.08966rem;
             line-height: 148.8%;
             /* identical to box height, or 31px */
 
