@@ -1,15 +1,17 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
+import { useMediaQuery } from 'react-responsive';
 
 const Header = () => {
     const [isShow, setIsShow] = useState(true);
     const showHandler = () => {
         setIsShow(!isShow);
     };
+    const isBigScreen = useMediaQuery({ query: '(min-width: 700px)' });
     return (
         <HeaderWrapper>
-            {isShow ? (
+            {isShow || isBigScreen ? (
                 <ShownHeader>
                     <HeaderTop>
                         <p>로고</p>
@@ -166,6 +168,7 @@ const ShownHeader = styled.div`
         position: fixed;
         right: 0;
         width: 70%;
+
         height: 100%;
         margin-top: 0;
         transform: translateX(180);
