@@ -6,12 +6,14 @@ import Member from './Component/Page/Member';
 import Project from './Component/Page/Project';
 import Contact from './Component/Page/Contact';
 import Footer from './Component/Common/Footer';
+import ScrollToTop from './Component/Common/ScrolltoTop';
 
 const Router = () => {
     return (
         <>
             <BrowserRouter>
                 <Header />
+                <ScrollToTop />
                 <Routes>
                     <Route path="/" element={<About />} />
                     <Route path="/Project" element={<Project />} />
