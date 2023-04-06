@@ -13,7 +13,7 @@ interface PartType {
 
 const PartBox = (p: PartType) => {
     return (
-        <BoxWrapper>
+        <BoxWrapper isDev={p.isDev}>
             <Header>
                 <div>
                     <img src={p.headerImg} alt="headerImg" />
@@ -29,7 +29,7 @@ const PartBox = (p: PartType) => {
                         <TextWrapper>
                             <h2>{p.content}</h2>
                         </TextWrapper>
-                    </ContentWrapper>{' '}
+                    </ContentWrapper>
                     <ContentWrapper>
                         <ImgWrapper>
                             <img src={p.DuserImg} alt="pmImg" />
@@ -65,11 +65,10 @@ const DevBox = styled.div`
     height: 44rem;
 `;
 
-const BoxWrapper = styled.div`
+const BoxWrapper = styled.div<{ isDev: boolean }>`
     width: 123.8rem;
     height: 26.3rem;
-
-    margin-bottom: 11.3rem;
+    margin-bottom: ${(props) => (props.isDev ? '40rem' : '11.3rem')};
 `;
 const Header = styled.div`
     display: flex;
