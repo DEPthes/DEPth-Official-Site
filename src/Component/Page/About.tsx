@@ -62,6 +62,7 @@ const About = () => {
         {
             id: 'pm',
             header: '서비스의 시작과 끝, 기획!',
+            header2: '',
             headerImg: './image/partPMIcon.png',
             userImg: './image/partPM.png',
             content:
@@ -73,6 +74,7 @@ const About = () => {
         {
             id: 'dev',
             header: '서비스 구현? 개발에게 맡겨!',
+            header2: '보이지 않는 백엔드의 손!',
             headerImg: './image/partDev.png',
             userImg: './image/partFE.png',
             isDev: true,
@@ -84,9 +86,10 @@ const About = () => {
         },
         {
             id: 'design',
-            header: '사용자의 눈이 되어줄게, 디자인에게 맡겨!',
+            header: '사용자의 눈이 되어줄게!',
+            header2: '',
             headerImg: './image/partDeIcon.png',
-            userImg: './image/partPM.png',
+            userImg: './image/partDE.png',
             DuserImg: '',
             Dcontent: '',
             isDev: false,
@@ -94,6 +97,10 @@ const About = () => {
                 '디자인팀은 사용자의 니즈를 파악하고 사용자의 경험을 위한 UX/UI를 설계하고 디자인합니다. 사용자에 대한 통찰력을 기르고 사용자들이 원하는 것이 무언인지 끌어내며 개발팀, 기획팀과의 소통을 통해 해결책을 찾아냅니다. ',
         },
     ];
+    const isMobile = useMediaQuery({
+        query: '(max-width:767px)',
+    });
+
     return (
         <Inner>
             <IntroWrapper>
@@ -101,6 +108,7 @@ const About = () => {
 
                 <IntroMentImg src="./image/MainMentImg.png" alt="mainImg" />
             </IntroWrapper>
+
             <ScrollWrapper>
                 <ScrollIcon src="./image/scrollIcon.png" alt="ScrollIcon" />
             </ScrollWrapper>
@@ -261,6 +269,7 @@ const About = () => {
                                           isDev={box.isDev}
                                           DuserImg={box.DuserImg}
                                           Dcontent={box.Dcontent}
+                                          header2={box.header2}
                                       />
                                   ),
                           )
@@ -273,6 +282,7 @@ const About = () => {
                                   content={box.content}
                                   isDev={box.isDev}
                                   DuserImg={box.DuserImg}
+                                  header2={box.header2}
                                   Dcontent={box.Dcontent}
                               />
                           ))}
@@ -288,12 +298,22 @@ const About = () => {
                         <h2>2기 지원하기</h2>
                     </button>
                 </div>
+                {isMobile ? <ColorBox></ColorBox> : ''}
             </LastWrapper>
         </Inner>
     );
 };
 
 export default About;
+
+const ColorBox = styled.div`
+    background: #0031e4;
+    filter: blur(161.663px);
+
+    width: 390px;
+    height: 208px;
+    margin-top: 150px;
+`;
 
 const Inner = styled.div`
     width: 100%;
@@ -306,11 +326,9 @@ const Inner = styled.div`
     align-items: center;
 
     img {
-        object-fit: cover;
+        object-fit: contain;
     }
     @media (max-width: 700px) {
-        width: 100vw;
-        padding-top: 0;
         overflow-x: hidden;
     }
 `;
@@ -318,9 +336,6 @@ const IntroWrapper = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    @media (max-width: 700px) {
-        display: none;
-    }
 `;
 
 const IntroImg = styled.img`
@@ -339,19 +354,13 @@ const ScrollIcon = styled.img`
     width: 4.4rem;
     height: 2.2rem;
     margin: 0 auto;
-    @media (max-width: 700px) {
-        display: none;
-    }
 `;
 
 const ScrollWrapper = styled.div`
-    margin-top: 16.3rem;
+    margin-top: 30.8rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    @media (max-width: 700px) {
-        display: none;
-    }
 `;
 
 const SecondWrapper = styled.div`
@@ -371,15 +380,16 @@ const SecondMent = styled.div`
     margin-bottom: 3.5rem;
     width: 100%;
     white-space: pre-line;
+
     em {
         font-style: normal;
-        font-weight: 900;
+        font-weight: 700;
         font-size: 4rem;
         line-height: 5.8rem;
     }
-
+    font-family: 'Noto Sans KR';
     font-style: normal;
-    font-weight: 350;
+    font-weight: 250;
     font-size: 4rem;
     line-height: 5.8rem;
     @media (max-width: 700px) {
@@ -404,8 +414,8 @@ const ThirdWrapper = styled.div`
     @media (max-width: 700px) {
         width: 100%;
         padding: 0 5.8rem;
-        background-color: red;
-        margin-top: 26.2rem;
+
+        margin-top: 40.2rem;
     }
 `;
 const ThirdHeader = styled.div`
@@ -413,19 +423,19 @@ const ThirdHeader = styled.div`
         > h1 {
             width: 100%;
             font-style: normal;
-            font-size: 4rem;
-            line-height: 148.8%;
+            font-size: 3.5rem;
+            line-height: 120.8%;
             color: #ffffff;
             > em {
-                font-weight: 900;
+                font-weight: 700;
             }
         }
 
         > p {
-            margin-top: 1rem;
-            margin-bottom: 9.3rem;
+            margin-top: 2.7rem;
+            margin-bottom: 5.3rem;
             font-style: normal;
-            font-weight: 400;
+            font-weight: 200;
             font-size: 2rem;
             line-height: 139.8%;
 
@@ -456,11 +466,14 @@ const LastWrapper = styled.div`
     justify-content: center;
     text-align: center;
     flex-direction: column;
-    margin-bottom: 40.3rem;
+    margin-bottom: 35.3rem;
+    @media (max-width: 700px) {
+        margin-bottom: 0;
+    }
 
     h1 {
         font-style: normal;
-        font-weight: 900;
+        font-weight: 700;
         font-size: 4.2rem;
         line-height: 148.8%;
         /* or 62px */
@@ -469,7 +482,7 @@ const LastWrapper = styled.div`
     }
 
     div {
-        margin-bottom: 55px;
+        margin-bottom: 3.4375em;
     }
 
     .blur {
@@ -488,7 +501,6 @@ const LastWrapper = styled.div`
         background: #354cda;
         border-radius: 0.609483rem;
         /* make the background image appear only once */
-
         h2 {
             font-family: 'Noto Sans KR';
             font-style: normal;
@@ -543,7 +555,7 @@ const MobileCategoryButton = styled.div<MobileCategoryButton>`
     border: ${(props) =>
         props.activeCurriculumButton === props.id
             ? ''
-            : '0.1px solid rgba(255, 255, 255, 0.7)'};
+            : '0.1px solid rgba(53, 54, 95, 0.56)'};
     border-radius: 50px;
     width: ${(props) => props.widthValue};
     background-color: ${(props) =>
@@ -557,6 +569,7 @@ const MobileCategoryButton = styled.div<MobileCategoryButton>`
     align-items: center;
     justify-content: center;
     font-size: 2.5rem;
+    font-family: 'Noto Sans KR';
 `;
 
 const MobilePartButtonContainer = styled.div`
@@ -565,7 +578,7 @@ const MobilePartButtonContainer = styled.div`
     width: 47.4rem;
     height: 8.6rem;
     display: none;
-    margin-top: 6rem;
+    margin-top: 5.7rem;
     justify-content: center;
     align-items: center;
     & > p:nth-of-type(2) {

@@ -18,8 +18,8 @@ const CurriculumBox = (c: curriculum) => {
 export default CurriculumBox;
 
 const Box = styled.div`
-    width: 36.7rem;
-    height: 19.6rem;
+    width: 40.7rem;
+    height: 23.6rem;
 
     background: #2c3036;
     box-shadow: 0rem 0rem 2.3rem rgba(40, 39, 39, 0.25);
@@ -31,7 +31,7 @@ const Box = styled.div`
 
     margin-right: 2.5rem;
 
-    padding: 3.4rem 4rem 4.7rem 3.2rem;
+    padding: 4.4rem 4rem 6.7rem 3.2rem;
     box-sizing: border-box;
 
     margin-bottom: 2.7rem;
@@ -64,7 +64,7 @@ const Box = styled.div`
         font-style: normal;
         font-weight: 400;
         font-size: 1.4rem;
-        line-height: 2.3rem;
+        line-height: 2.8rem;
         height: 8rem;
     }
 `;

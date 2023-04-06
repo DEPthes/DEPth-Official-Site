@@ -1,4 +1,5 @@
 import React from 'react';
+import { useMediaQuery } from 'react-responsive';
 import styled from 'styled-components';
 
 interface PartType {
@@ -9,45 +10,102 @@ interface PartType {
     isDev: boolean;
     DuserImg: string;
     Dcontent: string;
+    header2: string;
 }
 
 const PartBox = (p: PartType) => {
+    const isMobile = useMediaQuery({
+        query: '(max-width:767px)',
+    });
     return (
         <BoxWrapper isDev={p.isDev}>
-            <Header>
-                <div>
-                    <img src={p.headerImg} alt="headerImg" />
-                    <h1>{p.header}</h1>
-                </div>
-            </Header>
-            {p.isDev ? (
-                <DevBox>
-                    <ContentWrapper>
+            {isMobile ? (
+                <>
+                    <MHeader>
                         <ImgWrapper>
                             <img src={p.userImg} alt="pmImg" />
                         </ImgWrapper>
-                        <TextWrapper>
-                            <h2>{p.content}</h2>
-                        </TextWrapper>
-                    </ContentWrapper>
-                    <ContentWrapper>
-                        <ImgWrapper>
-                            <img src={p.DuserImg} alt="pmImg" />
-                        </ImgWrapper>
-                        <TextWrapper>
-                            <h2>{p.Dcontent}</h2>
-                        </TextWrapper>
-                    </ContentWrapper>
-                </DevBox>
+                        <Header>
+                            <div>
+                                <img src={p.headerImg} alt="headerImg" />
+                                <h1>{p.header}</h1>
+                            </div>
+                        </Header>
+                    </MHeader>
+                    {p.isDev ? (
+                        <>
+                            <ContentWrapper>
+                                <TextWrapper>
+                                    <h2>{p.content}</h2>
+                                </TextWrapper>
+                            </ContentWrapper>
+
+                            <MHeader>
+                                <ImgWrapper>
+                                    <img src={p.DuserImg} alt="pmImg" />
+                                </ImgWrapper>
+                                <Header>
+                                    <div>
+                                        <img
+                                            src={p.headerImg}
+                                            alt="headerImg"
+                                        />
+                                        <h1>{p.header2}</h1>
+                                    </div>
+                                </Header>
+                            </MHeader>
+                            <ContentWrapper>
+                                <TextWrapper>
+                                    <h2>{p.Dcontent}</h2>
+                                </TextWrapper>
+                            </ContentWrapper>
+                        </>
+                    ) : (
+                        <ContentWrapper>
+                            <TextWrapper>
+                                <h2>{p.content}</h2>
+                            </TextWrapper>
+                        </ContentWrapper>
+                    )}
+                </>
             ) : (
-                <ContentWrapper>
-                    <ImgWrapper>
-                        <img src={p.userImg} alt="pmImg" />
-                    </ImgWrapper>
-                    <TextWrapper>
-                        <h2>{p.content}</h2>
-                    </TextWrapper>
-                </ContentWrapper>
+                <>
+                    <Header>
+                        <div>
+                            <img src={p.headerImg} alt="headerImg" />
+                            <h1>{p.header}</h1>
+                        </div>
+                    </Header>
+                    {p.isDev ? (
+                        <DevBox>
+                            <ContentWrapper>
+                                <ImgWrapper>
+                                    <img src={p.userImg} alt="pmImg" />
+                                </ImgWrapper>
+                                <TextWrapper>
+                                    <h2>{p.content}</h2>
+                                </TextWrapper>
+                            </ContentWrapper>
+                            <ContentWrapper>
+                                <ImgWrapper>
+                                    <img src={p.DuserImg} alt="pmImg" />
+                                </ImgWrapper>
+                                <TextWrapper>
+                                    <h2>{p.Dcontent}</h2>
+                                </TextWrapper>
+                            </ContentWrapper>
+                        </DevBox>
+                    ) : (
+                        <ContentWrapper>
+                            <ImgWrapper>
+                                <img src={p.userImg} alt="pmImg" />
+                            </ImgWrapper>
+                            <TextWrapper>
+                                <h2>{p.content}</h2>
+                            </TextWrapper>
+                        </ContentWrapper>
+                    )}
+                </>
             )}
         </BoxWrapper>
     );
@@ -55,24 +113,41 @@ const PartBox = (p: PartType) => {
 
 export default PartBox;
 
+const MHeader = styled.div`
+    display: flex;
+    margin-top: 7.062rem;
+    margin-right: auto;
+    img {
+        width: 2.1rem;
+        height: 2.1rem;
+    }
+`;
+
 const DevBox = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 
     width: 123.8rem;
+    height: 45rem;
 
-    height: 44rem;
+    @media (max-width: 700px) {
+        width: fit-content;
+        height: auto;
+    }
 `;
 
 const BoxWrapper = styled.div<{ isDev: boolean }>`
-    width: 123.8rem;
-    height: 26.3rem;
-    margin-bottom: ${(props) => (props.isDev ? '40rem' : '11.3rem')};
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 11.3rem;
 `;
 const Header = styled.div`
     display: flex;
     margin-bottom: 3.4rem;
+    margin-right: auto;
+
     div {
         display: flex;
         align-items: center;
@@ -80,11 +155,16 @@ const Header = styled.div`
     }
     img {
         margin-right: 1.5rem;
+        @media (max-width: 700px) {
+            width: 21px;
+            height: 21px;
+        }
     }
 
     h1 {
+        font-family: 'Noto Sans KR';
         font-style: normal;
-        font-weight: 900;
+        font-weight: 700;
         font-size: 3rem;
         line-height: 4.3rem;
     }
@@ -94,6 +174,10 @@ const ContentWrapper = styled.div`
     align-items: center;
     justify-content: space-around;
     box-sizing: border-box;
+
+    @media (max-width: 700px) {
+        margin-top: 5rem;
+    }
 `;
 const ImgWrapper = styled.div`
     img {
@@ -108,14 +192,19 @@ const TextWrapper = styled.div`
     align-items: center;
     padding: 1.6rem 2.6rem 1.6rem 2.5rem;
     gap: 1rem;
+
     width: 102.5rem;
     height: 16.8rem;
     background: #2c3036;
     border-radius: 3.5rem;
-
+    @media (max-width: 700px) {
+        width: 345px;
+        height: 154px;
+    }
     h2 {
+        font-family: 'Noto Sans KR';
         font-style: normal;
-        font-weight: 500;
+        font-weight: 350;
         font-size: 2rem;
         line-height: 3.6rem;
 
