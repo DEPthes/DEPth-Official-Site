@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import { useMediaQuery } from 'react-responsive';
 
 const Header = () => {
-    const [isShow, setIsShow] = useState(true);
+    const [isShow, setIsShow] = useState(false);
     const showHandler = () => {
         setIsShow(!isShow);
     };
@@ -167,7 +167,7 @@ const ShownHeader = styled.div`
     @media (max-width: 700px) {
         position: fixed;
         right: 0;
-        width: 70%;
+        width: 50%;
 
         height: 100%;
         margin-top: 0;
