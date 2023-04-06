@@ -112,7 +112,7 @@ export default Member;
 const Inner = styled.div`
     width: 100%;
     height: 100%;
-    padding-top: 31.3rem;
+    padding-top: 28.3rem;
     @media (max-width: 700px) {
         padding-top: 33.3rem;
     }

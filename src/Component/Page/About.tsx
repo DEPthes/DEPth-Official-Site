@@ -16,7 +16,6 @@ const About = () => {
     const [activePartButton, setActivePartButton] = useState('pm');
     const partHandleClick = (buttonId: string) => {
         setActivePartButton(buttonId);
-        console.log('sibal');
     };
     const curriculumBoxes1 = [
         {
@@ -35,7 +34,7 @@ const About = () => {
             id: 'HackaThon',
             header: 'Hackathon',
             content:
-                '일간 기획, 디자인, 개발 파트가 팀을 이뤄 무박 2일간 MVP 프로덕트를 개발하는 단기 프로젝트입니다.',
+                '기획, 디자인, 개발 파트가 팀을 이뤄 무박 2일간 MVP 프로덕트를 개발하는 단기 프로젝트입니다.',
         },
     ];
     const curriculumBoxes2 = [
@@ -97,9 +96,6 @@ const About = () => {
                 '디자인팀은 사용자의 니즈를 파악하고 사용자의 경험을 위한 UX/UI를 설계하고 디자인합니다. 사용자에 대한 통찰력을 기르고 사용자들이 원하는 것이 무언인지 끌어내며 개발팀, 기획팀과의 소통을 통해 해결책을 찾아냅니다. ',
         },
     ];
-    const isMobile = useMediaQuery({
-        query: '(max-width:767px)',
-    });
 
     return (
         <Inner>
@@ -295,10 +291,16 @@ const About = () => {
                 </div>
                 <div className="blur">
                     <button>
-                        <h2>2기 지원하기</h2>
+                        <a
+                            href="https://forms.gle/UATQKjfemKr5L8Ab9"
+                            target="_blank"
+                            rel="noreferrer"
+                        >
+                            <h2>2기 지원하기</h2>
+                        </a>
                     </button>
                 </div>
-                {isMobile ? <ColorBox></ColorBox> : ''}
+                <ColorBox></ColorBox>
             </LastWrapper>
         </Inner>
     );
@@ -318,7 +320,7 @@ const ColorBox = styled.div`
 const Inner = styled.div`
     width: 100%;
     height: 100%;
-    padding-top: 31.3rem;
+    padding-top: 24.3rem;
     background: #0b0b0b;
     backdrop-filter: blur(4.2rem);
     display: flex;
@@ -330,6 +332,7 @@ const Inner = styled.div`
     }
     @media (max-width: 700px) {
         overflow-x: hidden;
+        padding-top: 31.3rem;
     }
 `;
 const IntroWrapper = styled.div`
@@ -357,10 +360,13 @@ const ScrollIcon = styled.img`
 `;
 
 const ScrollWrapper = styled.div`
-    margin-top: 30.8rem;
+    margin-top: 15.8rem;
     display: flex;
     align-items: center;
     justify-content: center;
+    @media (max-width: 700px) {
+        margin-top: 30.8rem;
+    }
 `;
 
 const SecondWrapper = styled.div`
@@ -420,12 +426,14 @@ const ThirdWrapper = styled.div`
 `;
 const ThirdHeader = styled.div`
     & > div:nth-of-type(1) {
+        width: 100%;
         > h1 {
             width: 100%;
             font-style: normal;
             font-size: 3.5rem;
             line-height: 120.8%;
             color: #ffffff;
+
             > em {
                 font-weight: 700;
             }

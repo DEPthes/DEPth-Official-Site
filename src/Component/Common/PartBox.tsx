@@ -141,6 +141,7 @@ const BoxWrapper = styled.div<{ isDev: boolean }>`
     display: flex;
     flex-direction: column;
     align-items: center;
+
     margin-bottom: 11.3rem;
 `;
 const Header = styled.div`
@@ -198,16 +199,19 @@ const TextWrapper = styled.div`
     background: #2c3036;
     border-radius: 3.5rem;
     @media (max-width: 700px) {
-        width: 345px;
-        height: 154px;
+        width: 100%;
+        height: 30.8rem;
     }
     h2 {
         font-family: 'Noto Sans KR';
         font-style: normal;
-        font-weight: 350;
+        font-weight: 400;
         font-size: 2rem;
-        line-height: 3.6rem;
-
+        line-height: 3.8rem;
+        @media (max-width: 700px) {
+            font-size: 2.5rem;
+            line-height: 3.8rem;
+        }
         color: #d9d9d9;
     }
 `;
