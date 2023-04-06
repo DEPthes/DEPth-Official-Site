@@ -1,4 +1,5 @@
 import React from 'react';
+import CopyToClipboard from 'react-copy-to-clipboard';
 import styled from 'styled-components';
 
 const Contact = () => {
@@ -14,15 +15,28 @@ const Contact = () => {
                     </Ment>
 
                     <ButtonGroup>
-                        <img src="./image/CMail.png" alt="CMail" />
+                        <CopyToClipboard
+                            className="Toradm"
+                            text="2022depth@gmail.com"
+                            onCopy={() => alert('클립보드에 복사되었습니다.')}
+                        >
+                            <img src="./image/CMail.png" alt="CMail" />
+                        </CopyToClipboard>
+
                         <a
-                            href="https://www.instagram.com/yetsool_hall/ "
+                            href="https://instagram.com/depth_mju.co.kr?igshid=YmMyMTA2M2Y="
                             target="_blank"
                             rel="noreferrer"
                         >
                             <img src="./image/CInsta.png" alt="CInsta" />
                         </a>
-                        <img src="./image/CKakao.png" alt="CKakao" />
+                        <a
+                            href="https://open.kakao.com/o/sqq6Cddf "
+                            target="_blank"
+                            rel="noreferrer"
+                        >
+                            <img src="./image/CKakao.png" alt="CKakao" />
+                        </a>
                     </ButtonGroup>
                 </IntroImg>
             </IntroWrapper>
@@ -37,13 +51,11 @@ const ButtonGroup = styled.div`
     display: flex;
     justify-content: center;
     margin-top: 3.4rem;
-    a {
-        margin-left: 6rem;
-        margin-right: 6rem;
-    }
+
     img {
-        width: 6.273rem;
-        height: 6.273rem;
+        width: 8.273rem;
+        height: 8.273rem;
+        margin-left: 3.6rem;
     }
     @media (max-width: 700px) {
         margin-bottom: 100px;
@@ -77,6 +89,7 @@ const Ment = styled.div`
     }
     @media (max-width: 700px) {
         margin-bottom: 30px;
+        margin-top: 20rem;
     }
 `;
 
@@ -92,12 +105,12 @@ const IntroWrapper = styled.div`
 
 const IntroImg = styled.div`
     z-index: 99999;
-    width: 83.5rem;
+    width: 93.5rem;
     min-height: 100vh;
     height: 77.5rem;
     @media (max-width: 700px) {
-        width: 301px;
-        height: 365px;
+        width: 83.5rem;
+
         margin-top: 2rem;
     }
     background-image: url(./image/ContactImg.png);
