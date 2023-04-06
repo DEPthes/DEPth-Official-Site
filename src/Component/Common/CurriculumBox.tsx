@@ -35,6 +35,12 @@ const Box = styled.div`
     box-sizing: border-box;
 
     margin-bottom: 2.7rem;
+    @media (max-width: 700px) {
+        margin-top: 4.2rem;
+        background-color: #354cda;
+        width: 100%;
+        height: 20.6rem;
+    }
 
     :hover {
         background: #354cda;

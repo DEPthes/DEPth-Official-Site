@@ -202,7 +202,7 @@ const HeaderTop = styled.div`
 
 const NonShownHeader = styled.div`
     display: flex;
-    padding-top: 7rem;
+    padding-top: 8.333rem;
     justify-content: flex-end;
     height: auto;
     position: fixed;
