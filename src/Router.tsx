@@ -5,8 +5,6 @@ import Header from './Component/Common/Header';
 import Member from './Component/Page/Member';
 import Project from './Component/Page/Project';
 import Contact from './Component/Page/Contact';
-import StoryBlock from './Component/Common/StoryBlock';
-import PartBox from './Component/Common/PartBox';
 import Footer from './Component/Common/Footer';
 
 const Router = () => {
