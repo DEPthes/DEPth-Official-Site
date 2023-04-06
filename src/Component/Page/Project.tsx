@@ -167,20 +167,20 @@ const IntroWriting = styled.div`
     }
 
     h2 {
-        font-weight: 900;
+        font-weight: 700;
         font-size: 6rem;
         display: flex;
     }
 
     h3 {
-        font-weight: 350;
+        font-weight: 250;
         font-size: 6rem;
         margin-right: 1.8rem;
     }
 
     h4 {
         margin-top: 5rem;
-        font-weight: 350;
+        font-weight: 200;
         font-size: 2rem;
     }
 `;
@@ -235,7 +235,7 @@ const Header = styled.div`
     h1 {
         font-family: 'Noto Sans KR';
         font-style: normal;
-        font-weight: 900;
+        font-weight: 700;
         font-size: 4.4rem;
         line-height: 6.4rem;
         margin-bottom: 0.8rem;
@@ -244,7 +244,7 @@ const Header = styled.div`
     h2 {
         font-family: 'Noto Sans KR';
         font-style: normal;
-        font-weight: 400;
+        font-weight: 250;
         font-size: 2.4rem;
         line-height: 3.5rem;
         /* identical to box height */
@@ -314,7 +314,7 @@ const DescHeader = styled.div`
     h1 {
         font-family: 'Noto Sans KR';
         font-style: normal;
-        font-weight: 700;
+        font-weight: 500;
         font-size: 2.6rem;
         line-height: 3.8rem;
         /* identical to box height */
@@ -332,9 +332,9 @@ const DescContent = styled.div`
     h2 {
         font-family: 'Noto Sans KR';
         font-style: normal;
-        font-weight: 400;
+        font-weight: 300;
         font-size: 2rem;
-        line-height: 2.9rem;
+        line-height: 3rem;
 
         color: #cfcfd0;
     }
@@ -401,7 +401,7 @@ const TeamMemberWrapper = styled.div`
         h2 {
             font-family: 'Noto Sans KR';
             font-style: normal;
-            font-weight: 700;
+            font-weight: 500;
             font-size: 1.90131rem;
             color: #e6e6e6;
             margin-bottom: 1rem;
@@ -410,7 +410,7 @@ const TeamMemberWrapper = styled.div`
         h3 {
             font-family: 'Noto Sans KR';
             font-style: normal;
-            font-weight: 400;
+            font-weight: 300;
             font-size: 1.90131rem;
             color: #e6e6e6;
         }

@@ -92,7 +92,7 @@ const Member = () => {
                         isLeft={false}
                     />
                     <StoryBlock
-                        img={'./image/story/story6.png'}
+                        img={'./image/story/story7.png'}
                         header={'놀라움의 연속'}
                         content={
                             '뎁스1기에 가입했을때만 하더라도 웹 프로그래밍의 알파벳인 HTML조차 익숙하지 않았다. 하지만 뛰어난 실력의 팀 리더 상원이를 비룻해 다양한 경험을 가진 개발자분들과 함께한 스터디를 통해 빠르게 성장할 수 있었다. 물론 그 과정에서 피나는 노력이 있었지만, HTML 작성도 힘겨워 했던 내가 어느새 리액트로 옛술의 전당 마이페이지를 만들고 있다는 사실에 놀라지 않을 수 없었다'
@@ -136,14 +136,14 @@ const IntroWriting = styled.div`
     }
 
     h2 {
-        font-weight: 900;
+        font-weight: 700;
         font-size: 6rem;
 
         display: flex;
     }
 
     h3 {
-        font-weight: 350;
+        font-weight: 250;
         font-size: 6rem;
 
         margin-right: 1.8rem;
@@ -151,7 +151,7 @@ const IntroWriting = styled.div`
 
     h4 {
         margin-top: 5rem;
-        font-weight: 350;
+        font-weight: 200;
         font-size: 2rem;
     }
 `;
@@ -191,7 +191,7 @@ const StoryWrapper = styled.div`
 
 const Header = styled.div`
     h1 {
-        font-weight: 900;
+        font-weight: 700;
         font-size: 4rem;
         line-height: 5.8rem;
     }
