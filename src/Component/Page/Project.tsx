@@ -143,14 +143,22 @@ const Inner = styled.div`
     width: 100%;
     height: 100%;
     padding-top: 23.3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 `;
 const IntroWrapper = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+    @media (max-width: 700px) {
+        width: 80%;
+        flex-direction: column;
+        align-items: center;
+    }
 `;
 const IntroWriting = styled.div`
-    width: 47.4rem;
+    width: 100%;
     height: 30.5rem;
     font-family: 'Noto Sans KR';
     h1 {
@@ -181,6 +189,10 @@ const IntroImg = styled.img`
     height: 54.4rem;
     object-fit: cover;
     margin-left: 22.3rem;
+    @media (max-width: 700px) {
+        margin-left: 0;
+        margin-top: 10rem;
+    }
 `;
 
 const ScrollIcon = styled.img`
@@ -201,16 +213,23 @@ const SecondWrapper = styled.div`
     align-items: center;
     justify-content: center;
     margin-top: 28rem;
+    width: 120rem;
+    @media (max-width: 700px) {
+        width: 70rem;
+    }
 `;
 const Header = styled.div`
     display: flex;
-    width: 120rem;
+    width: 100%;
     align-items: center;
     justify-content: flex-start;
     margin-bottom: 5.4rem;
 
     img {
         margin-right: 3.2rem;
+        @media (max-width: 700px) {
+            display: none;
+        }
     }
 
     h1 {
@@ -236,6 +255,9 @@ const Header = styled.div`
 const Content = styled.div``;
 const ImgWrapper = styled.div`
     position: relative;
+    > img {
+        width: 100%;
+    }
 `;
 const ButtonWrapper = styled.div`
     img {
@@ -269,15 +291,19 @@ const ButtonWrapper = styled.div`
 
 const Desc = styled.div`
     margin-top: 10rem;
-    width: 120rem;
+    width: 100%;
     height: 19rem;
     background: rgba(44, 48, 54, 0.5);
     box-shadow: 0rem 0rem 2.3rem rgba(0, 0, 0, 0.25);
     backdrop-filter: blur(0.85rem);
     border-radius: 2.4rem;
-
     display: flex;
     align-items: flex-start;
+    @media (max-width: 700px) {
+        flex-direction: column;
+        height: 28.752rem;
+        padding: 0 2.667rem;
+    }
 `;
 const DescHeader = styled.div`
     width: 17rem;
@@ -295,6 +321,9 @@ const DescHeader = styled.div`
 
         color: #f3f3f3;
     }
+    @media (max-width: 700px) {
+        margin-left: 0;
+    }
 `;
 const DescContent = styled.div`
     width: 83rem;
@@ -309,11 +338,20 @@ const DescContent = styled.div`
 
         color: #cfcfd0;
     }
+    @media (max-width: 700px) {
+        width: auto;
+        height: auto;
+        font-size: 2rem;
+    }
 `;
 
 const TeamMember = styled.div`
     box-sizing: border-box;
-    width: 120rem;
+    width: 100%;
+    @media (max-width: 700px) {
+        height: auto;
+        padding-right: 4.4rem;
+    }
     height: 55.2rem;
     margin-top: 5.6rem;
     border: 1px solid #2c3036;
@@ -321,25 +359,24 @@ const TeamMember = styled.div`
     backdrop-filter: blur(0.85rem);
     margin-bottom: 60rem;
     border-radius: 2.4rem;
-
     padding-left: 4.4rem;
     padding-top: 4.2rem;
-
     h1 {
         font-family: 'Noto Sans KR';
         font-style: normal;
         font-weight: 500;
         font-size: 2.6rem;
-
         color: #f3f3f3;
     }
 `;
 const TeamMemberWrapper = styled.div`
     margin-top: 4.2rem;
-
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
+    @media (max-width: 700px) {
+        justify-content: space-between;
+        width: 100%;
+    }
 
     div {
         width: 24.6rem;
@@ -350,11 +387,16 @@ const TeamMemberWrapper = styled.div`
         border-radius: 1rem;
         margin-right: 2.2rem;
         margin-bottom: 2.2rem;
-
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        @media (max-width: 700px) {
+            &:nth-child(even) {
+                margin-right: 0;
+            }
+            width: 28rem;
+        }
 
         h2 {
             font-family: 'Noto Sans KR';
