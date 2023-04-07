@@ -114,7 +114,7 @@ const Inner = styled.div`
     height: 100%;
     padding-top: 28.3rem;
     @media (max-width: 700px) {
-        padding-top: 33.3rem;
+        padding-top: 23.3rem;
     }
 `;
 const IntroWrapper = styled.div`
