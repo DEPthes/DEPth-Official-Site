@@ -20,7 +20,6 @@ export default CurriculumBox;
 const Box = styled.div`
     width: 45.7rem;
     height: 27.6rem;
-
     background: #2c3036;
     box-shadow: 0rem 0rem 2.3rem rgba(40, 39, 39, 0.25);
     backdrop-filter: blur(0.65rem);

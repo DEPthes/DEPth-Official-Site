@@ -28,13 +28,13 @@ const About = () => {
             id: 'Ideathon',
             header: 'Ideathon',
             content:
-                '기획, 디자인, 개발이 팀을 이뤄 8시간 동안 새로운 아이디어를 탄생시키는 단기 프로젝트입니다. 협업의 기초를 배우고 이어지는 프로젝트에 활용할 아이디어를 도출하는 단계입니다.',
+                'DEPth 전체가 기획팀의 리드를 통해 새로운 아이디어를 탄생시키는 단기 프로젝트입니다. 협업의 기초를 배우고 이어지는 프로젝트에 활용할 아이디어를 도출하는 단계입니다.',
         },
         {
             id: 'HackaThon',
             header: 'Hackathon',
             content:
-                '기획, 디자인, 개발 파트가 팀을 이뤄 무박 2일간 MVP 프로덕트를 개발하는 단기 프로젝트입니다.',
+                '기획, 디자인, 개발 파트가 팀을 이뤄 단기간에 MVP 프로덕트를 개발하는 프로젝트입니다.',
         },
     ];
     const curriculumBoxes2 = [
@@ -42,7 +42,7 @@ const About = () => {
             id: 'Networking',
             header: 'Networking',
             content:
-                '장기적인 네트워킹 행사를 통해 다양한 사람들을 만나고, 팀원들과의 친목을 다질 수 있는 자리입니다.',
+                '장기적인 네트워킹 행사를 통해 다양한 사람들을 만나고, 팀원들과의 친목을 다질 수 있는 프로그램입니다.',
         },
         {
             id: 'Project',
@@ -54,7 +54,7 @@ const About = () => {
             id: 'MJU Solution',
             header: 'MJU Solution',
             content:
-                '명지대 학생들의 편의를 증진 시키기 위한 서비스를  고안하고 개발하는 활동입니다. 특정 학생 활동 기관의 요구 사항을 통해서 분석부터 설계, 개발 그리고 실제 운영까지 경험할 수 있습니다.',
+                '명지대 학생들의 편의를 증진 시키기 위한 서비스를 고안하고 개발하는 활동입니다. 특정 학생 활동 기관의 요구 사항을 통해서 분석부터 설계, 개발 그리고 실제 운영까지 경험할 수 있습니다.',
         },
     ];
     const partData = [
@@ -65,7 +65,7 @@ const About = () => {
             headerImg: './image/partPMIcon.png',
             userImg: './image/partPM.png',
             content:
-                '‘기획’은 서비스의 존재이유를 만들어갑니다. 내외부 환경 분석과 시장분석을 통해 “사용자들에게 필요한 서비스”를 찾아가며 문제를 분석하고 해결방안을 모색하여 기획 의도를 정의합니다. 이후 기능정의서 및 화면 설계서 등 서비스의 구성을 정립하여 개발자와 디자이너에게 전달하여 끊임없는 소통을 통해 서비스를 완성해나갑니다.',
+                '‘기획’은 서비스의 존재이유를 만들어갑니다. 내외부 환경 분석과 시장분석을 통해 “사용자들에게 필요한 서비스”를 찾아가며 문제를 분석하고 해결방안을 모색하여 기획 의도를 정의합니다. 이후 기능정의서 및 화면 설계서 등 서비스의 구성을 정립하여 개발자와 디자이너에게 전달하며 끊임없는 소통을 통해 서비스를 완성해나갑니다.',
             isDev: false,
             DuserImg: '',
             Dcontent: '',
@@ -498,16 +498,20 @@ const LastWrapper = styled.div`
         height: 5.659rem;
         filter: drop-shadow(0px 0px 8px rgba(53, 76, 218, 0.6));
     }
+    a {
+        text-decoration: none;
+    }
 
     button {
         width: 20.2rem;
         height: 5.659rem;
         border: none;
-
+        text-decoration-line: none;
         cursor: pointer;
 
         background: #354cda;
         border-radius: 0.609483rem;
+        border: none;
         /* make the background image appear only once */
         h2 {
             font-family: 'Noto Sans KR';
@@ -515,6 +519,7 @@ const LastWrapper = styled.div`
             font-weight: 350;
             font-size: 2.08966rem;
             line-height: 148.8%;
+
             /* identical to box height, or 31px */
 
             color: rgba(255, 255, 255, 0.95);
