@@ -101,7 +101,7 @@ const BlockMentContent = styled.div`
 
     h2 {
         font-weight: 300;
-        font-size: 1.84168rem;
+        font-size: 2.24168rem;
         color: #c6c6c6;
         line-height: 3rem;
         /* or 162% */

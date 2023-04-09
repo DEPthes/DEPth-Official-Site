@@ -102,7 +102,7 @@ const About = () => {
             <IntroWrapper>
                 <IntroImg src="./image/MainImg.png" alt="mainImg" />
 
-                <IntroMentImg src="./image/MainMentImg.png" alt="mainImg" />
+                <IntroMentImg src="./image/AboutLogo.png" alt="mainImg" />
             </IntroWrapper>
 
             <ScrollWrapper>
@@ -582,6 +582,8 @@ const MobileCategoryButton = styled.div<MobileCategoryButton>`
     align-items: center;
     justify-content: center;
     font-size: 2.5rem;
+    font-style: normal;
+    font-weight: 700;
     font-family: 'Noto Sans KR';
 `;
 
@@ -613,4 +615,6 @@ const MobilePartButtonText = styled.p<MobilePartButtonText>`
             : 'rgba(255, 255, 255, 0.15)'};
 
     font-size: 3rem;
+    font-style: normal;
+    font-weight: 700;
 `;
