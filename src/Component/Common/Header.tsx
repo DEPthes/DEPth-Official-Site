@@ -221,11 +221,18 @@ const HeaderWrapper = styled.div`
 
 const ShownHeader = styled.div`
     width: 100%;
-    margin-top: 3.5rem;
+    padding-top: 3.5rem;
     font-size: 2.4rem;
     z-index: 999;
     position: fixed;
-
+    font-family: 'GmarketSansMedium';
+    height: 15.3rem;
+    background: linear-gradient(
+        180deg,
+        #000000 13.02%,
+        rgba(0, 0, 0, 0) 99.99%,
+        rgba(255, 255, 255, 0) 100%
+    );
     animation: ${headerAnimation} 0.8s ease-in-out;
 
     ul {

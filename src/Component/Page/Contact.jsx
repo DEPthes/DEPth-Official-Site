@@ -18,7 +18,7 @@ const Contact = () => {
                         <CopyToClipboard
                             className="Toradm"
                             text="2022depth@gmail.com"
-                            onCopy={() => alert('클립보드에 복사되었습니다.')}
+                            onCopy={() => alert('메일 주소가 복사되었습니다.')}
                         >
                             <img src="./image/CMail.png" alt="CMail" />
                         </CopyToClipboard>

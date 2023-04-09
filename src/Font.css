@@ -32,3 +32,10 @@
   font-weight: lighter;
   src: url("./NotoSansKR-Thin.woff") format("woff");
 }
+
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url("./assets/GmarketSansOTF/GmarketSansMedium.otf") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
