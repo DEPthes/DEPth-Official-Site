@@ -200,7 +200,7 @@ const TextWrapper = styled.div`
     border-radius: 3.5rem;
     @media (max-width: 700px) {
         width: 100%;
-        height: 30.8rem;
+        height: 35.8rem;
     }
     h2 {
         font-family: 'Noto Sans KR';

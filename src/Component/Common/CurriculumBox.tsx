@@ -20,7 +20,6 @@ export default CurriculumBox;
 const Box = styled.div`
     width: 45.7rem;
     height: 27.6rem;
-
     background: #2c3036;
     box-shadow: 0rem 0rem 2.3rem rgba(40, 39, 39, 0.25);
     backdrop-filter: blur(0.65rem);
@@ -42,10 +41,10 @@ const Box = styled.div`
         margin-top: 6.2rem;
         padding-top: 0.4rem;
         background-color: #354cda;
-        width: 90%;
-        height: 30.6rem;
+        width: 100%;
+        height: 35.6rem;
     }
-
+    transition: all 0.5s ease-in-out;
     :hover {
         background: #354cda;
         box-shadow: 0rem 0rem 2.3rem rgba(0, 0, 0, 0.25);

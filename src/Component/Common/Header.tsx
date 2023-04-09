@@ -5,14 +5,26 @@ import { useMediaQuery } from 'react-responsive';
 
 const Header = () => {
     const [isShow, setIsShow] = useState(false);
+    const [close, setClose] = useState(false);
+    const closeNav = () => {
+        // Button begins to shake
+        setClose(true);
+
+        // Buttons stops to shake after 2 seconds
+        setTimeout(() => setClose(false), 2000);
+    };
+
     const showHandler = () => {
         setIsShow(!isShow);
     };
+
+    console.log(close);
     const isBigScreen = useMediaQuery({ query: '(min-width: 700px)' });
+
     return (
         <HeaderWrapper>
             {isShow || isBigScreen ? (
-                <ShownHeader>
+                <ShownHeader className={close ? 'closeNav' : ''}>
                     <HeaderTop>
                         <p>
                             <svg
@@ -79,7 +91,10 @@ const Header = () => {
                             viewBox="0 0 32 32"
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg"
-                            onClick={showHandler}
+                            onClick={() => {
+                                closeNav();
+                                showHandler();
+                            }}
                         >
                             <path
                                 d="M9.5498 22.339L21.8499 10.0389"
@@ -184,15 +199,25 @@ const headerAnimation = keyframes`
     	0% {
 		transform: translateX(100%);
 	}
-
-
-	
 	100% {
 		transform: translateX(0%);
 	}
 `;
+const closeNav = keyframes`
+    	0% {
+		transform: translateX(100%);
+	}
+	100% {
+		transform: translateX(0%);
+	}
+`;
+const HeaderWrapper = styled.div`
+    .closeNav {
+        animation: ${closeNav} 0.8s ease-in-out;
 
-const HeaderWrapper = styled.div``;
+        /* animation: ${closeNav} 0.8s ease-in-out; */
+    }
+`;
 
 const ShownHeader = styled.div`
     width: 100%;
@@ -200,6 +225,7 @@ const ShownHeader = styled.div`
     font-size: 2.4rem;
     z-index: 999;
     position: fixed;
+
     animation: ${headerAnimation} 0.8s ease-in-out;
 
     ul {
