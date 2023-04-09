@@ -5,26 +5,17 @@ import { useMediaQuery } from 'react-responsive';
 
 const Header = () => {
     const [isShow, setIsShow] = useState(false);
-    const [close, setClose] = useState(false);
-    const closeNav = () => {
-        // Button begins to shake
-        setClose(true);
-
-        // Buttons stops to shake after 2 seconds
-        setTimeout(() => setClose(false), 2000);
-    };
 
     const showHandler = () => {
         setIsShow(!isShow);
     };
 
-    console.log(close);
     const isBigScreen = useMediaQuery({ query: '(min-width: 700px)' });
 
     return (
         <HeaderWrapper>
             {isShow || isBigScreen ? (
-                <ShownHeader className={close ? 'closeNav' : ''}>
+                <ShownHeader>
                     <HeaderTop>
                         <p>
                             <svg
@@ -92,7 +83,6 @@ const Header = () => {
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg"
                             onClick={() => {
-                                closeNav();
                                 showHandler();
                             }}
                         >
@@ -203,21 +193,8 @@ const headerAnimation = keyframes`
 		transform: translateX(0%);
 	}
 `;
-const closeNav = keyframes`
-    	0% {
-		transform: translateX(100%);
-	}
-	100% {
-		transform: translateX(0%);
-	}
-`;
-const HeaderWrapper = styled.div`
-    .closeNav {
-        animation: ${closeNav} 0.8s ease-in-out;
 
-        /* animation: ${closeNav} 0.8s ease-in-out; */
-    }
-`;
+const HeaderWrapper = styled.div``;
 
 const ShownHeader = styled.div`
     width: 100%;
