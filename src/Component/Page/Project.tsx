@@ -12,7 +12,9 @@ const Project = () => {
                 description={
                     'DEPth의 첫 프로젝트 옛술의 전당, 적극적인 소통과 노력으로 만들어낼 수 있었습니다. '
                 }
-                keywords={'DEPth, 명지대학교 IT 동아리, 프로젝트 동아리'}
+                keywords={
+                    'DEPth, 명지대학교 IT 동아리, 명지대학교 프로젝트 동아리, 뎁스, 명지, 명지대, 명지대 뎁스'
+                }
                 imgsrc={'../../../public/DEPthLogo.png'}
                 url={'http://depth-mju.co.kr/Project'}
             />{' '}

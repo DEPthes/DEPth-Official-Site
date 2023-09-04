@@ -11,7 +11,9 @@ const Contact = () => {
                 description={
                     'Do Evlove Potential in-DEPth, DEPth는 명지대학교 IT 연합 프로젝트형 동아리입니다. 관심 분야에 대한 공부부터 기획, 개발, 디자인 분야의 다양한 사람들과 프로젝트 및 네트워킹 경험을 쌓을 수 있습니다. '
                 }
-                keywords={'DEPth, 명지대학교 IT 동아리, 프로젝트 동아리'}
+                keywords={
+                    'DEPth, 명지대학교 IT 동아리, 명지대학교 프로젝트 동아리, 뎁스, 명지, 명지대, 명지대 뎁스'
+                }
                 imgsrc={'../../../public/DEPthLogo.png'}
                 url={'http://depth-mju.co.kr/Contact'}
             />
