@@ -29,6 +29,7 @@ const MetaTag: React.FC<MetaTagProps> = ({
             <meta property="og:description" content={description} />
             <meta property="og:image" content={imgsrc} />
             <meta property="og:url" content={url} />
+            <link rel="canonical" href={url} />
         </Helmet>
     );
 };
