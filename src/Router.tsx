@@ -7,9 +7,7 @@ import Project from './Component/Page/Project';
 import Contact from './Component/Page/Contact';
 import Footer from './Component/Common/Footer';
 import ScrollToTop from './Component/Common/ScrolltoTop';
-import { Helmet } from 'react-helmet-async';
 import SEOMetaTag from './SEOMetaTag';
-import DEPthLogo from '../public/DEPthLogo.png';
 
 const Router = () => {
     return (
