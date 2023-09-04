@@ -1,137 +1,159 @@
 /* eslint-disable react/no-unescaped-entities */
 import React from 'react';
 import styled from 'styled-components';
+import SEOMetaTag from '../../SEOMetaTag';
 
 const Project = () => {
     return (
-        <Inner>
-            <IntroWrapper>
-                <IntroWriting>
-                    <h1>DEPth Project</h1>
-                    <h2>뎁스의 첫</h2>
-                    <h3>프로젝트 </h3>
-                    <h4>
-                        뎁스의 첫 프로젝트 ‘옛술의 전당', <br />
-                        적극적인 소통과 노력으로 만들어낼 수 있었습니다.
-                    </h4>
-                </IntroWriting>
-                <IntroImg src="./image/ProjectImg.png" alt="MemberImg" />
-            </IntroWrapper>
-            <ScrollWrapper>
-                <ScrollIcon src="./image/scrollIcon.png" alt="ScrollIcon" />
-            </ScrollWrapper>
+        <>
+            {' '}
+            <SEOMetaTag
+                title={'DEPth Project'}
+                description={
+                    'DEPth의 첫 프로젝트 옛술의 전당, 적극적인 소통과 노력으로 만들어낼 수 있었습니다. '
+                }
+                keywords={'DEPth, 명지대학교 IT 동아리, 프로젝트 동아리'}
+                imgsrc={'../../../public/DEPthLogo.png'}
+                url={'http://depth-mju.co.kr/Project'}
+            />{' '}
+            <Inner>
+                <IntroWrapper>
+                    <IntroWriting>
+                        <h1>DEPth Project</h1>
+                        <h2>뎁스의 첫</h2>
+                        <h3>프로젝트 </h3>
+                        <h4>
+                            뎁스의 첫 프로젝트 ‘옛술의 전당', <br />
+                            적극적인 소통과 노력으로 만들어낼 수 있었습니다.
+                        </h4>
+                    </IntroWriting>
+                    <IntroImg src="./image/ProjectImg.png" alt="MemberImg" />
+                </IntroWrapper>
+                <ScrollWrapper>
+                    <ScrollIcon src="./image/scrollIcon.png" alt="ScrollIcon" />
+                </ScrollWrapper>
 
-            <SecondWrapper>
-                <Header>
-                    <div>
-                        <img src="./image/yetsulLogo.png" alt="yetsulLogo" />
-                    </div>
-                    <div>
-                        <h1>옛술의 전당</h1>
-                        <h2>“청춘을 위한 한 잔, 옛술의 전당에서 건배!”</h2>
-                    </div>
-                </Header>
-                <Content>
-                    <ImgWrapper>
-                        <img src="./image/yetsul.png" alt="yetsul" />
-                        <ButtonWrapper>
-                            <a
-                                href="https://www.yetsul.com/"
-                                target="_blank"
-                                rel="noreferrer"
-                            >
-                                <img src="./image/link.png" alt="link" />
-                            </a>
-                            <a
-                                href="https://github.com/DEPthes"
-                                target="_blank"
-                                rel="noreferrer"
-                            >
-                                <img src="./image/github.png" alt="github" />
-                            </a>
-                            <a
-                                href="https://instagram.com/yetsool_hall?igshid=YmMyMTA2M2Y="
-                                target="_blank"
-                                rel="noreferrer"
-                            >
-                                <img src="./image/insta.png" alt="insta" />
-                            </a>
-                        </ButtonWrapper>
-                    </ImgWrapper>
-                </Content>
-                <Desc>
-                    <DescHeader>
-                        <h1>프로젝트 설명</h1>
-                    </DescHeader>
-                    <DescContent>
-                        <h2>
-                            옛술의 전당은 ‘우리의 자랑스러운 전통주를 알리기
-                            위해’ 시작되었습니다. 자신에게 어울리는 전통주를
-                            찾고 전통주의 매력을 한층 더 느끼며, 전통주를 즐길
-                            수 있게 하는 것을 목표로 제작하였고, 우리의 옛술이
-                            더 이상 ‘전통주’ 자체가 아닌 모두가 함께 즐길 수
-                            있는 술로 거듭나도록 다양한 서비스를 제공하고
-                            있습니다.
-                        </h2>
-                    </DescContent>
-                </Desc>
-                <TeamMember>
-                    <div>
-                        <h1>프로젝트 팀원</h1>
-                    </div>
-                    <TeamMemberWrapper>
+                <SecondWrapper>
+                    <Header>
                         <div>
-                            <h2>TEAM LEADER</h2>
-                            <h3>이보현</h3>
+                            <img
+                                src="./image/yetsulLogo.png"
+                                alt="yetsulLogo"
+                            />
                         </div>
                         <div>
-                            <h2>PM LEADER</h2>
-                            <h3>이여원</h3>
+                            <h1>옛술의 전당</h1>
+                            <h2>“청춘을 위한 한 잔, 옛술의 전당에서 건배!”</h2>
+                            <h4 className="service-end">
+                                현재 서비스가 종료되었습니다.
+                            </h4>
                         </div>
+                    </Header>
+                    <Content>
+                        <ImgWrapper>
+                            <img src="./image/yetsul.png" alt="yetsul" />
+                            <ButtonWrapper>
+                                <a
+                                    href="https://www.yetsul.com/"
+                                    target="_blank"
+                                    rel="noreferrer"
+                                >
+                                    <img src="./image/link.png" alt="link" />
+                                </a>
+                                <a
+                                    href="https://github.com/DEPthes"
+                                    target="_blank"
+                                    rel="noreferrer"
+                                >
+                                    <img
+                                        src="./image/github.png"
+                                        alt="github"
+                                    />
+                                </a>
+                                <a
+                                    href="https://instagram.com/yetsool_hall?igshid=YmMyMTA2M2Y="
+                                    target="_blank"
+                                    rel="noreferrer"
+                                >
+                                    <img src="./image/insta.png" alt="insta" />
+                                </a>
+                            </ButtonWrapper>
+                        </ImgWrapper>
+                    </Content>
+                    <Desc>
+                        <DescHeader>
+                            <h1>프로젝트 설명</h1>
+                        </DescHeader>
+                        <DescContent>
+                            <h2>
+                                옛술의 전당은 ‘우리의 자랑스러운 전통주를 알리기
+                                위해’ 시작되었습니다. 자신에게 어울리는 전통주를
+                                찾고 전통주의 매력을 한층 더 느끼며, 전통주를
+                                즐길 수 있게 하는 것을 목표로 제작하였고, 우리의
+                                옛술이 더 이상 ‘전통주’ 자체가 아닌 모두가 함께
+                                즐길 수 있는 술로 거듭나도록 다양한 서비스를
+                                제공하고 있습니다.
+                            </h2>
+                        </DescContent>
+                    </Desc>
+                    <TeamMember>
                         <div>
-                            <h2>WEB LEADER</h2>
-                            <h3>강상원</h3>
+                            <h1>프로젝트 팀원</h1>
                         </div>
-                        <div>
-                            <h2>SERVER LEADER</h2>
-                            <h3>김해찬</h3>
-                        </div>
-                        <div>
-                            <h2>DESIGN</h2>
-                            <h3>최성경</h3>
-                        </div>
-                        <div>
-                            <h2>PM</h2>
-                            <h3>문규원</h3>
-                        </div>
-                        <div>
-                            <h2>PM</h2>
-                            <h3>박상민</h3>
-                        </div>
-                        <div>
-                            <h2>PM</h2>
-                            <h3>김보은</h3>
-                        </div>
-                        <div>
-                            <h2>WEB</h2>
-                            <h3>김희윤</h3>
-                        </div>
-                        <div>
-                            <h2>WEB</h2>
-                            <h3>이가은</h3>
-                        </div>
-                        <div>
-                            <h2>WEB</h2>
-                            <h3>이보현</h3>
-                        </div>
-                        <div>
-                            <h2>SERVER</h2>
-                            <h3>김현빈</h3>
-                        </div>
-                    </TeamMemberWrapper>
-                </TeamMember>
-            </SecondWrapper>
-        </Inner>
+                        <TeamMemberWrapper>
+                            <div>
+                                <h2>TEAM LEADER</h2>
+                                <h3>이보현</h3>
+                            </div>
+                            <div>
+                                <h2>PM LEADER</h2>
+                                <h3>이여원</h3>
+                            </div>
+                            <div>
+                                <h2>WEB LEADER</h2>
+                                <h3>강상원</h3>
+                            </div>
+                            <div>
+                                <h2>SERVER LEADER</h2>
+                                <h3>김해찬</h3>
+                            </div>
+                            <div>
+                                <h2>DESIGN</h2>
+                                <h3>최성경</h3>
+                            </div>
+                            <div>
+                                <h2>PM</h2>
+                                <h3>문규원</h3>
+                            </div>
+                            <div>
+                                <h2>PM</h2>
+                                <h3>박상민</h3>
+                            </div>
+                            <div>
+                                <h2>PM</h2>
+                                <h3>김보은</h3>
+                            </div>
+                            <div>
+                                <h2>WEB</h2>
+                                <h3>김희윤</h3>
+                            </div>
+                            <div>
+                                <h2>WEB</h2>
+                                <h3>이가은</h3>
+                            </div>
+                            <div>
+                                <h2>WEB</h2>
+                                <h3>이보현</h3>
+                            </div>
+                            <div>
+                                <h2>SERVER</h2>
+                                <h3>김현빈</h3>
+                            </div>
+                        </TeamMemberWrapper>
+                    </TeamMember>
+                </SecondWrapper>
+            </Inner>
+        </>
     );
 };
 
@@ -248,6 +270,11 @@ const Header = styled.div`
         /* identical to box height */
 
         color: #ffffff;
+    }
+
+    h4 {
+        margin-top: 1rem;
+        font-size: 1.5rem;
     }
 `;
 const Content = styled.div``;

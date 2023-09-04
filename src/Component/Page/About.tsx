@@ -289,17 +289,7 @@ const About = () => {
                     <h1>앞으로도</h1>
                     <h1>뎁스의 행보를 응원해주세요.</h1>
                 </div>
-                <div className="blur">
-                    <button>
-                        <a
-                            href="https://forms.gle/UATQKjfemKr5L8Ab9"
-                            target="_blank"
-                            rel="noreferrer"
-                        >
-                            <h2>2기 지원하기</h2>
-                        </a>
-                    </button>
-                </div>
+                <div className="blur"></div>
                 <ColorBox></ColorBox>
             </LastWrapper>
         </Inner>
@@ -567,8 +557,8 @@ const MobileCategoryButton = styled.div<MobileCategoryButton>`
     background: rgba(0, 0, 0, 0.56);
     border: ${(props) =>
         props.activeCurriculumButton === props.id
-            ? ''
-            : '0.1px solid rgba(53, 54, 95, 0.56)'};
+            ? '0.1px solid rgba(53, 54, 95, 0.56)'
+            : ''};
     border-radius: 50px;
     width: ${(props) => props.widthValue};
     background-color: ${(props) =>
@@ -585,6 +575,8 @@ const MobileCategoryButton = styled.div<MobileCategoryButton>`
     font-style: normal;
     font-weight: 700;
     font-family: 'Noto Sans KR';
+    cursor: pointer;
+    transition: all 0.5s ease-out;
 `;
 
 const MobilePartButtonContainer = styled.div`
@@ -602,6 +594,7 @@ const MobilePartButtonContainer = styled.div`
     @media (max-width: 700px) {
         display: flex;
     }
+    cursor: pointer;
 `;
 interface MobilePartButtonText {
     id: string;
@@ -617,4 +610,5 @@ const MobilePartButtonText = styled.p<MobilePartButtonText>`
     font-size: 3rem;
     font-style: normal;
     font-weight: 700;
+    transition: all 0.5s ease-in;
 `;

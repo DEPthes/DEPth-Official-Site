@@ -36,6 +36,8 @@ const Box = styled.div`
     padding: 1.4rem 4rem 6.7rem 3.2rem;
     box-sizing: border-box;
 
+    cursor: pointer;
+
     @media (max-width: 700px) {
         margin: 0 auto;
         margin-top: 6.2rem;

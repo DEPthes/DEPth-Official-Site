@@ -1,20 +1,41 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import styled, { keyframes } from 'styled-components';
 import { useMediaQuery } from 'react-responsive';
 
 const Header = () => {
-    const [isShow, setIsShow] = useState(false);
+    const [isBigScreen, setIsBigScreen] = useState(false);
+    const isMobileScreen = useMediaQuery({ query: '(max-width: 700px)' });
+    const [isMenuOpen, setIsMenuOpen] = useState(!isMobileScreen);
 
-    const showHandler = () => {
-        setIsShow(!isShow);
+    useEffect(() => {
+        const handleResize = () => {
+            setIsBigScreen(window.innerWidth >= 700);
+        };
+
+        handleResize();
+        window.addEventListener('resize', handleResize);
+
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
+
+    const toggleMenu = () => {
+        if (isMobileScreen) {
+            setIsMenuOpen(!isMenuOpen);
+        }
     };
 
-    const isBigScreen = useMediaQuery({ query: '(min-width: 700px)' });
+    useEffect(() => {
+        if (!isBigScreen) {
+            setIsMenuOpen(false);
+        }
+    }, [isBigScreen]);
 
     return (
         <HeaderWrapper>
-            {isShow || isBigScreen ? (
+            {isBigScreen || isMenuOpen ? (
                 <ShownHeader>
                     <HeaderTop>
                         <p>
@@ -83,7 +104,7 @@ const Header = () => {
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg"
                             onClick={() => {
-                                showHandler();
+                                toggleMenu();
                             }}
                         >
                             <path
@@ -108,7 +129,7 @@ const Header = () => {
                                 className={(status) =>
                                     status.isActive ? 'isActive' : 'link'
                                 }
-                                onClick={showHandler}
+                                onClick={toggleMenu}
                             >
                                 ABOUT
                             </NavLink>
@@ -119,7 +140,7 @@ const Header = () => {
                                 className={(status) =>
                                     status.isActive ? 'isActive' : 'link'
                                 }
-                                onClick={showHandler}
+                                onClick={toggleMenu}
                             >
                                 PROJECT
                             </NavLink>
@@ -130,7 +151,7 @@ const Header = () => {
                                 className={(status) =>
                                     status.isActive ? 'isActive' : 'link'
                                 }
-                                onClick={showHandler}
+                                onClick={toggleMenu}
                             >
                                 MEMBER
                             </NavLink>
@@ -141,7 +162,7 @@ const Header = () => {
                                 className={(status) =>
                                     status.isActive ? 'isActive' : 'link'
                                 }
-                                onClick={showHandler}
+                                onClick={toggleMenu}
                             >
                                 CONTACT
                             </NavLink>
@@ -156,7 +177,7 @@ const Header = () => {
                         viewBox="0 0 50 50"
                         fill="none"
                         xmlns="http://www.w3.org/2000/svg"
-                        onClick={showHandler}
+                        onClick={toggleMenu}
                     >
                         <path
                             d="M12.6172 18.9852H35.2472"
@@ -290,4 +311,5 @@ const NonShownHeader = styled.div`
     svg {
         margin-right: 2rem;
     }
+    cursor: pointer;
 `;

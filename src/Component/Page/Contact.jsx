@@ -1,46 +1,60 @@
 import React from 'react';
 import CopyToClipboard from 'react-copy-to-clipboard';
 import styled from 'styled-components';
+import SEOMetaTag from '../../SEOMetaTag';
 
 const Contact = () => {
     return (
-        <Inner>
-            <IntroWrapper>
-                <IntroImg>
-                    <Ment>
-                        <h1>궁금한 것이 있거나</h1>
-                        <h1>문의사항이 있으신가요?</h1>
-                        <h2>DEPth 및 프로젝트 관련</h2>
-                        <h2>문의 모두 언제든지 환영합니다.</h2>
-                    </Ment>
+        <>
+            <SEOMetaTag
+                title={'DEPth Contact'}
+                description={
+                    'Do Evlove Potential in-DEPth, DEPth는 명지대학교 IT 연합 프로젝트형 동아리입니다. 관심 분야에 대한 공부부터 기획, 개발, 디자인 분야의 다양한 사람들과 프로젝트 및 네트워킹 경험을 쌓을 수 있습니다. '
+                }
+                keywords={'DEPth, 명지대학교 IT 동아리, 프로젝트 동아리'}
+                imgsrc={'../../../public/DEPthLogo.png'}
+                url={'http://depth-mju.co.kr/Contact'}
+            />
+            <Inner>
+                <IntroWrapper>
+                    <IntroImg>
+                        <Ment>
+                            <h1>궁금한 것이 있거나</h1>
+                            <h1>문의사항이 있으신가요?</h1>
+                            <h2>DEPth 및 프로젝트 관련</h2>
+                            <h2>문의 모두 언제든지 환영합니다.</h2>
+                        </Ment>
 
-                    <ButtonGroup>
-                        <CopyToClipboard
-                            className="Toradm"
-                            text="2022depth@gmail.com"
-                            onCopy={() => alert('메일 주소가 복사되었습니다.')}
-                        >
-                            <img src="./image/CMail.png" alt="CMail" />
-                        </CopyToClipboard>
+                        <ButtonGroup>
+                            <CopyToClipboard
+                                className="Toradm"
+                                text="2022depth@gmail.com"
+                                onCopy={() =>
+                                    alert('메일 주소가 복사되었습니다.')
+                                }
+                            >
+                                <img src="./image/CMail.png" alt="CMail" />
+                            </CopyToClipboard>
 
-                        <a
-                            href="https://instagram.com/depth_mju.co.kr?igshid=YmMyMTA2M2Y="
-                            target="_blank"
-                            rel="noreferrer"
-                        >
-                            <img src="./image/CInsta.png" alt="CInsta" />
-                        </a>
-                        <a
-                            href="https://open.kakao.com/o/sqq6Cddf "
-                            target="_blank"
-                            rel="noreferrer"
-                        >
-                            <img src="./image/CKakao.png" alt="CKakao" />
-                        </a>
-                    </ButtonGroup>
-                </IntroImg>
-            </IntroWrapper>
-        </Inner>
+                            <a
+                                href="https://instagram.com/depth_mju.co.kr?igshid=YmMyMTA2M2Y="
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                <img src="./image/CInsta.png" alt="CInsta" />
+                            </a>
+                            <a
+                                href="https://open.kakao.com/o/sqq6Cddf "
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                <img src="./image/CKakao.png" alt="CKakao" />
+                            </a>
+                        </ButtonGroup>
+                    </IntroImg>
+                </IntroWrapper>
+            </Inner>
+        </>
     );
 };
 
