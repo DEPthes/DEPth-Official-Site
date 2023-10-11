@@ -101,8 +101,6 @@ const About = () => {
         <Inner>
             <IntroWrapper>
                 <IntroImg src="./image/MainImg.png" alt="mainImg" />
-
-                <IntroMentImg src="./image/AboutLogo.png" alt="mainImg" />
             </IntroWrapper>
 
             <ScrollWrapper>
