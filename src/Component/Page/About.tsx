@@ -335,12 +335,6 @@ const IntroImg = styled.img`
     height: 53.6rem;
 `;
 
-const IntroMentImg = styled.img`
-    position: absolute;
-    width: 59.4rem;
-    height: 25.4rem;
-`;
-
 const ScrollIcon = styled.img`
     width: 4.4rem;
     height: 2.2rem;
