@@ -8,6 +8,7 @@ import Contact from './Component/Page/Contact';
 import Footer from './Component/Common/Footer';
 import ScrollToTop from './Component/Common/ScrolltoTop';
 import SEOMetaTag from './SEOMetaTag';
+import ProjectDetail from './Component/Page/ProjectDetail';
 
 const Router = () => {
     return (
@@ -29,6 +30,7 @@ const Router = () => {
                 <Routes>
                     <Route path="/" element={<About />} />
                     <Route path="/Project" element={<Project />} />
+                    <Route path="/Project/:id" element={<ProjectDetail />} />
                     <Route path="/Member" element={<Member />} />
                     <Route path="/Contact" element={<Contact />} />
                 </Routes>
