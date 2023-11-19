@@ -39,7 +39,8 @@ export const projectContents: ProjectBlockProps[] = [
             '자신의 감정을 글로 적는 과정에서 해소가 이루어지기도 하고, 익명의 누군가와 편지를 주고 받으며 예상치 못한 사람에게 예상치 못한 답변을 받기도 하죠. 이:음에서 정성이 담긴 편지의 온기를 다시 느껴보세요.',
         serviceLink: 'https://ieum.vercel.app/',
         githubLink: [
-            'https://github.com/DEPthes/2nd-MVP-IEUM-Client, https://github.com/DEPthes/2nd-MVP-IEUM-Server',
+            'https://github.com/DEPthes/2nd-MVP-IEUM-Client',
+            'https://github.com/DEPthes/2nd-MVP-IEUM-Server',
         ],
         member: {
             'PM LEADER': '이여원',
@@ -63,7 +64,8 @@ export const projectContents: ProjectBlockProps[] = [
             '“비건=채식주의? NO! 비건은 그렇게 어렵지 않아” 커져가는 비건 시장 속에서 헤매는 “비기너”들과 함께 “비거너”가 되는 여정을 함께합니다. ',
         serviceLink: '',
         githubLink: [
-            'https://github.com/DEPthes/2nd-MVP-BeginVegan-Client, https://github.com/DEPthes/2nd-MVP-BeginVegan-Server',
+            'https://github.com/DEPthes/2nd-MVP-BeginVegan-Client',
+            'https://github.com/DEPthes/2nd-MVP-BeginVegan-Server',
         ],
         member: {
             'PM LEADER': '문규원',
@@ -87,7 +89,8 @@ export const projectContents: ProjectBlockProps[] = [
             '사용자들은 부정적인 감정을 ‘물’에 털어내고 상황에 맞는 답변을 통해 위로 또는 공감을 받을 수 있습니다. 일기를 작성하여 결정이 완성되면 결정에 담긴 답변을 열람함으로써, 지난 날을 되돌아볼 수 있습니다.',
         serviceLink: '',
         githubLink: [
-            'https://github.com/DEPthes/2nd-MVP-Water-Client, https://github.com/DEPthes/2nd-MVP-Water-Server',
+            'https://github.com/DEPthes/2nd-MVP-Water-Client',
+            'https://github.com/DEPthes/2nd-MVP-Water-Server',
         ],
         member: {
             'PM LEADER': '이인서',
