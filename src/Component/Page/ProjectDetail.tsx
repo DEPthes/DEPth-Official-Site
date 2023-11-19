@@ -117,12 +117,14 @@ const ProjectDetail = () => {
 export default ProjectDetail;
 
 const Inner = styled.div`
-    width: 100%;
-    height: 100%;
+    padding-left: 6rem;
+    padding-right: 6rem;
+    box-sizing: border-box;
     padding-top: 4.3rem;
     display: flex;
-    flex-direction: column;
+
     align-items: center;
+    justify-content: center;
     @media (max-width: 700px) {
         padding-top: 0;
     }
@@ -200,6 +202,7 @@ const ButtonWrapper = styled.div`
         width: 5.93rem;
         height: 5.872rem;
     }
+
     position: absolute;
     bottom: 3.2rem;
 
@@ -218,7 +221,7 @@ const ButtonWrapper = styled.div`
 `;
 
 const Desc = styled.div`
-    margin-top: 10rem;
+    margin-top: 5rem;
     width: 100%;
     height: 19rem;
     background: rgba(44, 48, 54, 0.5);
@@ -236,7 +239,7 @@ const Desc = styled.div`
 const DescHeader = styled.div`
     width: 17rem;
     height: 3.716rem;
-    margin-top: 4.1rem;
+    margin-top: 2.1rem;
     margin-left: 4.4rem;
     margin-right: 10.3rem;
     h1 {
@@ -280,6 +283,7 @@ const TeamMember = styled.div`
         height: auto;
         padding-right: 4.4rem;
     }
+
     height: 55.2rem;
     margin-top: 5.6rem;
     border: 1px solid #2c3036;
@@ -323,7 +327,7 @@ const TeamMemberWrapper = styled.div`
             &:nth-child(even) {
                 margin-right: 0;
             }
-            width: 28rem;
+            width: 25rem;
         }
 
         h2 {

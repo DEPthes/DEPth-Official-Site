@@ -25,7 +25,7 @@ const About = () => {
                 '협업 프로젝트에 도입하기 전, 파트 별 지식을 쌓을 수 있는 스터디 활동이 진행됩니다. 파트장과 파트원이 선별한 10주 분량의 커리큘럼으로 진행됩니다.',
         },
         {
-            id: 'Ideathon',
+            id: '아이디어톤',
             header: '아이디어톤',
             content:
                 '협업 프로젝트의 시작을 알리는 행사입니다. 프로젝트를 진행할 팀원들과 함께 주제에 맞는 아이디어를 도출하고, 전체 회원들과 공유하는 시간입니다.',
@@ -39,8 +39,8 @@ const About = () => {
     ];
     const curriculumBoxes2 = [
         {
-            id: 'DEPth Main Project',
-            header: 'DEPth Main Project',
+            id: 'Main Project',
+            header: 'Main Project',
             content:
                 'DEPth의 메인 활동, 16주 간의 장기 협업 프로젝트입니다. 기획, 디자인, 개발 파트가 팀을 이뤄 서비스 기획부터 런칭, 이후 실제 고객 유입과 이를 통한 서비스 개선까지 경험해볼 수 있습니다.',
         },
@@ -131,29 +131,39 @@ const About = () => {
                         </MobileCategoryButton>
                         <MobileCategoryButton
                             widthValue="19.8rem"
-                            onClick={() => curriculumHandleClick('Ideathon')}
-                            id="Ideathon"
+                            onClick={() => curriculumHandleClick('아이디어톤')}
+                            id="아이디어톤"
                             activeCurriculumButton={activeCurriculumButton}
                         >
                             IdeaThon
                         </MobileCategoryButton>
                         <MobileCategoryButton
                             widthValue="22rem"
-                            onClick={() => curriculumHandleClick('HackaThon')}
-                            id="HackaThon"
+                            onClick={() => curriculumHandleClick('MVP Project')}
+                            id="MVP Project"
                             activeCurriculumButton={activeCurriculumButton}
                         >
-                            HackaThon
+                            MVP Project
                         </MobileCategoryButton>
                     </MobileCategoryUpperRow>
                     <MobileCategoryLowerRow>
                         <MobileCategoryButton
                             widthValue="17.4rem"
-                            onClick={() => curriculumHandleClick('Project')}
-                            id="Project"
+                            onClick={() =>
+                                curriculumHandleClick('Main Project')
+                            }
+                            id="Main Project"
                             activeCurriculumButton={activeCurriculumButton}
                         >
-                            Project
+                            Main Project
+                        </MobileCategoryButton>
+                        <MobileCategoryButton
+                            widthValue="22.6rem"
+                            onClick={() => curriculumHandleClick('Demo Day')}
+                            id="Demo Day"
+                            activeCurriculumButton={activeCurriculumButton}
+                        >
+                            Demo Day
                         </MobileCategoryButton>
                         <MobileCategoryButton
                             widthValue="22.6rem"
@@ -162,16 +172,6 @@ const About = () => {
                             activeCurriculumButton={activeCurriculumButton}
                         >
                             Networking
-                        </MobileCategoryButton>
-                        <MobileCategoryButton
-                            widthValue="22.6rem"
-                            onClick={() =>
-                                curriculumHandleClick('MJU Solution')
-                            }
-                            id="MJU Solution"
-                            activeCurriculumButton={activeCurriculumButton}
-                        >
-                            MJU Solution
                         </MobileCategoryButton>
                     </MobileCategoryLowerRow>
                 </MobileCategoryContainer>
@@ -516,6 +516,7 @@ const MobileCategoryContainer = styled.div`
         flex-direction: column;
         align-items: center;
         width: 57.333rem;
+
         margin-top: 7.5rem;
     }
 `;
@@ -563,7 +564,7 @@ const MobileCategoryButton = styled.div<MobileCategoryButton>`
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-style: normal;
     font-weight: 700;
     font-family: 'Noto Sans KR';
