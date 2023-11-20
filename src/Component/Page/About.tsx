@@ -135,7 +135,7 @@ const About = () => {
                             id="아이디어톤"
                             activeCurriculumButton={activeCurriculumButton}
                         >
-                            IdeaThon
+                            아이디어톤
                         </MobileCategoryButton>
                         <MobileCategoryButton
                             widthValue="22rem"
