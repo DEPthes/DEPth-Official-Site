@@ -96,7 +96,7 @@ export const projectContents: ProjectBlockProps[] = [
             'PM LEADER': '이인서',
             'CLIENT LEADER': '김희윤',
             'SERVER LEADER': '김해찬',
-            PM: '김하늘',
+            PM: '전하늘',
             CLIENT: '이보현',
             SERVER: '노은빈',
             DESIGN: '이다은',

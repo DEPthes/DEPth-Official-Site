@@ -1,35 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-
-interface ProjectMember {
-    [key: string]: string | string[];
-}
-
-interface ProjectBlockProps {
-    id: string;
-    name: string;
-    thumbnail: string;
-    logo: string;
-    cohort: string;
-    platform: string;
-    slogan: string;
-    description: string;
-    githubLink: string[];
-    serviceLink: string;
-    member: ProjectMember;
-}
+import { ProjectBlockProps } from '../../assets/Contents/ProjectInterface';
 
 const ProjectBlock = (props: ProjectBlockProps) => {
-    const {
-        id,
-        thumbnail,
-        name,
-
-        slogan,
-        cohort,
-        platform,
-    } = props;
+    const { id, thumbnail, name, slogan, cohort, platform } = props;
 
     return (
         <StyledLink to={`/project/${id}`}>
