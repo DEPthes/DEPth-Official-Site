@@ -239,7 +239,7 @@ const Desc = styled.div`
 const DescHeader = styled.div`
     width: 17rem;
     height: 3.716rem;
-    margin-top: 2.1rem;
+    margin-top: 4.1rem;
     margin-left: 4.4rem;
     margin-right: 10.3rem;
     h1 {
@@ -284,7 +284,7 @@ const TeamMember = styled.div`
         padding-right: 4.4rem;
     }
 
-    height: 55.2rem;
+    height: fix;
     margin-top: 5.6rem;
     border: 1px solid #2c3036;
     filter: drop-shadow(0rem 0rem 2.3rem rgba(0, 0, 0, 0.25));
@@ -293,6 +293,7 @@ const TeamMember = styled.div`
     border-radius: 2.4rem;
     padding-left: 4.4rem;
     padding-top: 4.2rem;
+    padding-bottom: 4.2rem;
     h1 {
         font-family: 'Noto Sans KR';
         font-style: normal;

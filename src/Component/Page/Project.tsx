@@ -5,8 +5,19 @@ import { projectContents } from '../../assets/Contents/ProjectContents';
 import { ProjectBlockProps } from '../../assets/Contents/ProjectInterface';
 import SEOMetaTag from '../../SEOMetaTag';
 import ProjectBlock from '../Common/ProjectBlock';
+import { useState } from 'react';
 
 const Project = () => {
+    const [section, setSection] = useState<'1기' | '2기 mvp' | '2기 main'>(
+        '1기',
+    );
+
+    const handleBoxClick = (
+        selectedSection: '1기' | '2기 mvp' | '2기 main',
+    ) => {
+        setSection(selectedSection);
+    };
+
     return (
         <>
             <SEOMetaTag
@@ -27,8 +38,8 @@ const Project = () => {
                         <h2>뎁스의 </h2>
                         <h3>프로젝트 </h3>
                         <h4>
-                            뎁스 1기의 프로젝트부터 <br />
-                            새롭게 합류한 2기의 단기 프로젝트를 소개합니다.
+                            DEPth 1기의 프로젝트부터 <br />
+                            2기의 MVP Project와 Main Project를 소개합니다.
                         </h4>
                     </IntroWriting>
                     <IntroImg src="./image/ProjectImg.png" alt="MemberImg" />
@@ -36,23 +47,66 @@ const Project = () => {
                 <ScrollWrapper>
                     <ScrollIcon src="./image/scrollIcon.png" alt="ScrollIcon" />
                 </ScrollWrapper>
+                <BoxWrapper>
+                    <Box
+                        style={
+                            section === '1기'
+                                ? {
+                                      background: 'rgba(217, 217, 217, 0.5)',
+                                      color: 'rgba(255, 255, 255, 1)',
+                                  }
+                                : {}
+                        }
+                        onClick={() => handleBoxClick('1기')}
+                    >
+                        1기
+                    </Box>
+                    <Box
+                        style={
+                            section === '2기 mvp'
+                                ? {
+                                      background: 'rgba(217, 217, 217, 0.5)',
+                                      color: 'rgba(255, 255, 255, 1)',
+                                  }
+                                : {}
+                        }
+                        onClick={() => handleBoxClick('2기 mvp')}
+                    >
+                        2기 MVP
+                    </Box>
+                    <Box
+                        style={
+                            section === '2기 main'
+                                ? {
+                                      background: 'rgba(217, 217, 217, 0.5)',
+                                      color: 'rgba(255, 255, 255, 1)',
+                                  }
+                                : {}
+                        }
+                        onClick={() => handleBoxClick('2기 main')}
+                    >
+                        2기 Main
+                    </Box>
+                </BoxWrapper>
                 <SecondWrapper>
-                    {projectContents.map((project: ProjectBlockProps) => (
-                        <ProjectBlock
-                            key={project.id}
-                            id={project.id}
-                            name={project.name}
-                            thumbnail={project.thumbnail}
-                            logo={project.logo}
-                            cohort={project.cohort}
-                            platform={project.platform}
-                            slogan={project.slogan}
-                            description={project.description}
-                            githubLink={project.githubLink}
-                            serviceLink={project.serviceLink}
-                            member={project.member}
-                        />
-                    ))}
+                    {projectContents
+                        .filter((project) => project.cohort === section)
+                        .map((project: ProjectBlockProps) => (
+                            <ProjectBlock
+                                key={project.id}
+                                id={project.id}
+                                name={project.name}
+                                thumbnail={project.thumbnail}
+                                logo={project.logo}
+                                cohort={project.cohort}
+                                platform={project.platform}
+                                slogan={project.slogan}
+                                description={project.description}
+                                githubLink={project.githubLink}
+                                serviceLink={project.serviceLink}
+                                member={project.member}
+                            />
+                        ))}
                 </SecondWrapper>
             </Inner>
         </>
@@ -130,12 +184,20 @@ const ScrollWrapper = styled.div`
     justify-content: center;
 `;
 
+const BoxWrapper = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10.3rem;
+    flex-direction: row;
+`;
+
 const SecondWrapper = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    margin-top: 21.3rem;
+    margin-top: 5.3rem;
 
     flex-direction: row;
     flex-wrap: wrap;
@@ -147,4 +209,37 @@ const SecondWrapper = styled.div`
     }
 
     margin-bottom: 35.9rem;
+`;
+
+const Box = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 6.7875rem;
+    height: 3.375rem;
+    border-radius: 0.3125rem;
+    border: 1px solid rgba(255, 255, 255, 0.041);
+    background: rgba(217, 217, 217, 0.149);
+    color: rgba(255, 255, 255, 0.712);
+    font-size: 1.4375rem;
+    font-weight: 500;
+    line-height: 1.875rem;
+    margin-left: 2rem;
+    margin-right: auto;
+    margin-top: 15rem;
+
+    transition: background-color 0.3s ease;
+
+    &:hover {
+        background: rgba(217, 217, 217, 0.5);
+        color: rgba(255, 255, 255, 1);
+        cursor: pointer;
+    }
+
+    @media (max-width: 700px) {
+        width: 6.7875rem;
+        height: 4.375rem;
+        font-size: 1.90375rem;
+    }
 `;

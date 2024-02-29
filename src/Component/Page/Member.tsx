@@ -25,14 +25,16 @@ const Member = () => {
                         <h2>함께 성장하고 </h2>
                         <h2>나아가는 </h2>
                         <h2>
-                            <h3>뎁스의 </h3> 팀워크
+                            <h3>DEPth</h3>의 팀워크
                         </h2>
                         <h4>
-                            뎁스 1기는 지속적인 소통을 통해 극강의 팀워크를
-                            만들어냈습니다. <br />
-                            12명의 사람들이 매주 모여 정기회의를 통해 소통하며{' '}
+                            DEPth 1기는 지속적인 소통을 통해 극강의 팀워크를
+                            만들어냈고, <br />
+                            DEPth 2기는 체계를 만들어 원활한 팀워크를 만들기
+                            위해 <br />
+                            꾸준한 노력을 했습니다.
                             <br />
-                            함께 성장했습니다.
+                            이러한 과정으로 DEPth는 함께 성장했습니다.
                         </h4>
                     </IntroWriting>
                     <IntroImg src="./image/MemberImg.png" alt="MemberImg" />
@@ -42,7 +44,7 @@ const Member = () => {
                 </ScrollWrapper>
                 <StoryWrapper>
                     <Header>
-                        <h1>뎁스 1기가 말해주는 경험담</h1>
+                        <h1>DEPth 1기가 말해주는 경험담</h1>
                     </Header>
                     <BoxWrapper>
                         <StoryBlock
