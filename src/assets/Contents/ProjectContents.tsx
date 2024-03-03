@@ -37,7 +37,7 @@ export const projectContents: ProjectBlockProps[] = [
         slogan: '편지의 따뜻한 위로를 전하는 랜덤 익명 편지 서비스',
         description:
             '자신의 감정을 글로 적는 과정에서 해소가 이루어지기도 하고, 익명의 누군가와 편지를 주고 받으며 예상치 못한 사람에게 예상치 못한 답변을 받기도 하죠. 이:음에서 정성이 담긴 편지의 온기를 다시 느껴보세요.',
-        serviceLink: 'https://ieum.vercel.app/',
+        serviceLink: 'https://ieum.depth-mju.co.kr/',
         githubLink: [
             'https://github.com/DEPthes/2nd-MVP-IEUM-Client',
             'https://github.com/DEPthes/2nd-MVP-IEUM-Server',
