@@ -1,11 +1,10 @@
 /* eslint-disable react/no-unescaped-entities */
-import React from 'react';
 import styled from 'styled-components';
 import { projectContents } from '../../assets/Contents/ProjectContents';
 import { ProjectBlockProps } from '../../assets/Contents/ProjectInterface';
 import SEOMetaTag from '../../SEOMetaTag';
 import ProjectBlock from '../Common/ProjectBlock';
-import { useState } from 'react';
+import React, { useState } from 'react';
 
 const Project = () => {
     const [section, setSection] = useState<'1기' | '2기 mvp' | '2기 main'>(

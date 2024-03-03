@@ -1,1 +1,1 @@
-# 3nd-DEPth-Official-Site
+# 3rd-DEPth-Official-Site
