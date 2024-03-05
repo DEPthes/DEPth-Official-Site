@@ -215,8 +215,8 @@ const Box = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 7.7875rem;
-    height: 4.375rem;
+    width: 6.7875rem;
+    height: 3.375rem;
     border-radius: 0.3125rem;
     border: 1px solid rgba(255, 255, 255, 0.041);
     background: rgba(217, 217, 217, 0.149);
@@ -237,8 +237,8 @@ const Box = styled.div`
     }
 
     @media (max-width: 700px) {
-        width: 6.7875rem;
-        height: 4.375rem;
+        width: 8.7875rem;
+        height: 6.375rem;
         font-size: 1.90375rem;
     }
 `;
