@@ -32,7 +32,7 @@ const Contact = () => {
                                 className="Toradm"
                                 text="2022depth@gmail.com"
                                 onCopy={() =>
-                                    alert('메일 주소가 복사되었습니다.')
+                                    alert('DEPth 이메일 주소가 복사되었습니다.')
                                 }
                             >
                                 <img src="./image/CMail.png" alt="CMail" />
