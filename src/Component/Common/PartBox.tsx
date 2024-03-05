@@ -13,6 +13,7 @@ interface PartType {
     AuserImg: string;
     Acontent: string;
     header2: string;
+    header3: string;
 }
 
 const PartBox = (p: PartType) => {
@@ -70,7 +71,7 @@ const PartBox = (p: PartType) => {
                                             src={p.headerImg}
                                             alt="headerImg"
                                         />
-                                        <h1>{p.header2}</h1>
+                                        <h1>{p.header3}</h1>
                                     </div>
                                 </Header>
                             </MHeader>

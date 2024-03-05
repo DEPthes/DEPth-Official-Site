@@ -62,6 +62,7 @@ const About = () => {
             id: 'pm',
             header: '서비스의 시작과 끝, 기획!',
             header2: '',
+            header3: '',
             headerImg: './image/partPMIcon.png',
             userImg: './image/partPM.png',
             content:
@@ -76,6 +77,7 @@ const About = () => {
             id: 'dev',
             header: '서비스 구현? 개발에게 맡겨!',
             header2: '보이지 않는 백엔드의 손!',
+            header3: '사용자와 소통하는 안드로이드 앱!',
             headerImg: './image/partDev.png',
             userImg: './image/partFE.png',
             isDev: true,
@@ -92,6 +94,7 @@ const About = () => {
             id: 'design',
             header: '사용자의 눈이 되어줄게!',
             header2: '',
+            header3: '',
             headerImg: './image/partDeIcon.png',
             userImg: './image/partDE.png',
             DuserImg: '',
@@ -273,6 +276,7 @@ const About = () => {
                                           AuserImg={box.AuserImg}
                                           Acontent={box.Acontent}
                                           header2={box.header2}
+                                          header3={box.header3}
                                       />
                                   ),
                           )
@@ -286,6 +290,7 @@ const About = () => {
                                   isDev={box.isDev}
                                   DuserImg={box.DuserImg}
                                   header2={box.header2}
+                                  header3={box.header3}
                                   Dcontent={box.Dcontent}
                                   AuserImg={box.AuserImg}
                                   Acontent={box.Acontent}
