@@ -238,7 +238,7 @@ const Box = styled.div`
 
     @media (max-width: 700px) {
         width: 8.7875rem;
-        height: 6.375rem;
+        height: 4.375rem;
         font-size: 1.90375rem;
     }
 `;
