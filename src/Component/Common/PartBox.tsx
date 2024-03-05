@@ -10,6 +10,8 @@ interface PartType {
     isDev: boolean;
     DuserImg: string;
     Dcontent: string;
+    AuserImg: string;
+    Acontent: string;
     header2: string;
 }
 
@@ -39,7 +41,6 @@ const PartBox = (p: PartType) => {
                                     <h2>{p.content}</h2>
                                 </TextWrapper>
                             </ContentWrapper>
-
                             <MHeader>
                                 <ImgWrapper>
                                     <img src={p.DuserImg} alt="pmImg" />
@@ -57,6 +58,25 @@ const PartBox = (p: PartType) => {
                             <ContentWrapper>
                                 <TextWrapper>
                                     <h2>{p.Dcontent}</h2>
+                                </TextWrapper>
+                            </ContentWrapper>
+                            <MHeader>
+                                <ImgWrapper>
+                                    <img src={p.AuserImg} alt="pmImg" />
+                                </ImgWrapper>
+                                <Header>
+                                    <div>
+                                        <img
+                                            src={p.headerImg}
+                                            alt="headerImg"
+                                        />
+                                        <h1>{p.header2}</h1>
+                                    </div>
+                                </Header>
+                            </MHeader>
+                            <ContentWrapper>
+                                <TextWrapper>
+                                    <h2>{p.Acontent}</h2>
                                 </TextWrapper>
                             </ContentWrapper>
                         </>
@@ -94,6 +114,14 @@ const PartBox = (p: PartType) => {
                                     <h2>{p.Dcontent}</h2>
                                 </TextWrapper>
                             </ContentWrapper>
+                            <ContentWrapper>
+                                <ImgWrapper>
+                                    <img src={p.AuserImg} alt="pmImg" />
+                                </ImgWrapper>
+                                <TextWrapper>
+                                    <h2>{p.Acontent}</h2>
+                                </TextWrapper>
+                            </ContentWrapper>
                         </DevBox>
                     ) : (
                         <ContentWrapper>
@@ -129,7 +157,7 @@ const DevBox = styled.div`
     justify-content: space-between;
 
     width: 123.8rem;
-    height: 45rem;
+    height: 60rem;
 
     @media (max-width: 700px) {
         width: fit-content;

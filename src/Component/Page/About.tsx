@@ -69,6 +69,8 @@ const About = () => {
             isDev: false,
             DuserImg: '',
             Dcontent: '',
+            AuserImg: '',
+            Acontent: '',
         },
         {
             id: 'dev',
@@ -82,6 +84,9 @@ const About = () => {
             DuserImg: './image/partBE.png',
             content:
                 '프론트엔드팀은 사용자와 서비스를 연결해 주는 과정의 모든 것을 구현하는 역할을 합니다. 백엔드팀, 디자인팀과 협업하며 더 효율적인 데이터 처리 방법과 높은 퀄리티의 화면을 구현하기 위해 노력합니다. 프론트엔드팀의 가치는 서비스의 가치와 직결되므로 웹서비스의 전체적인 수준을 높이기 위해 매일같이 고민하고 있습니다.',
+            AuserImg: './image/partAD.png',
+            Acontent:
+                '안드로이드팀은 사용자 중심의 모바일 애플리케이션을 제공하는 것을 목표로 활동합니다. 안드로이드 운영체제 기반의 애플리케이션 개발과 관리가 주요 업무이고, 사용자와 가장 가까운 곳에서 운영되기 때문에 사용자에게 최적화된 서비스를 제공하기 위해 지속적으로 노력하며 다양한 가치를 창출하고자 합니다.',
         },
         {
             id: 'design',
@@ -94,6 +99,8 @@ const About = () => {
             isDev: false,
             content:
                 '디자인팀은 사용자의 니즈를 파악하고 사용자의 경험을 위한 UX/UI를 설계하고 디자인합니다. 사용자에 대한 통찰력을 기르고 사용자들이 원하는 것이 무언인지 끌어내며 개발팀, 기획팀과의 소통을 통해 해결책을 찾아냅니다. ',
+            AuserImg: '',
+            Acontent: '',
         },
     ];
 
@@ -263,6 +270,8 @@ const About = () => {
                                           isDev={box.isDev}
                                           DuserImg={box.DuserImg}
                                           Dcontent={box.Dcontent}
+                                          AuserImg={box.AuserImg}
+                                          Acontent={box.Acontent}
                                           header2={box.header2}
                                       />
                                   ),
@@ -278,6 +287,8 @@ const About = () => {
                                   DuserImg={box.DuserImg}
                                   header2={box.header2}
                                   Dcontent={box.Dcontent}
+                                  AuserImg={box.AuserImg}
+                                  Acontent={box.Acontent}
                               />
                           ))}
                 </PartWrapper>
