@@ -99,7 +99,7 @@ const Box = styled.div`
     line-height: 1.875rem;
     margin-left: 1rem;
     @media (max-width: 700px) {
-        width: 6.7875rem;
+        width: 8.7875rem;
         height: 4.375rem;
         font-size: 1.90375rem;
     }
