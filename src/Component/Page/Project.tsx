@@ -34,7 +34,7 @@ const Project = () => {
                 <IntroWrapper>
                     <IntroWriting>
                         <h1>DEPth Project</h1>
-                        <h2>뎁스의 </h2>
+                        <h2>DEPth의 </h2>
                         <h3>프로젝트 </h3>
                         <h4>
                             DEPth 1기의 프로젝트부터 <br />
@@ -215,8 +215,8 @@ const Box = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 6.7875rem;
-    height: 3.375rem;
+    width: 7.7875rem;
+    height: 4.375rem;
     border-radius: 0.3125rem;
     border: 1px solid rgba(255, 255, 255, 0.041);
     background: rgba(217, 217, 217, 0.149);

@@ -117,6 +117,26 @@ const Member = () => {
                             department={'FrontEnd Developer'}
                             isLeft={true}
                         />
+                        <StoryBlock
+                            img={'./image/story/story8.png'}
+                            header={'경험의 중요성을 알게 된 1년'}
+                            content={
+                                'DEPth 2기 기획파트원으로 참여해 스터디, MVP project와 main project까지 진행하며 많은 것을 배웠습니다. 스터디에서 배운 것으로 프로젝트드를 기획할 수 있었고 좋은 팀원들을 만나 즐겁게 2기 활동을 마무리 할 수 있었습니다. 프로젝트를 기획하고 배포, 그리고 유지보수까지 하는 경험을 DEPth에서 하며 개인 역량을 늘리는 것은 물론이고 디자인과 개발에 대해서도 조금씩 알아가며 성장할 수 있었고 사람으로서 배운 것도 많았던 것 같습니다. DEPth 2기에 지원한 일이 2023년에 한 일 중 가장 잘한 일이라고 생각할정도로 저에게는 매우 소중하고 중요한 1년이었습니다! DEPth 짱'
+                            }
+                            name={'조민경'}
+                            department={'Product Manager'}
+                            isLeft={false}
+                        />
+                        <StoryBlock
+                            img={'./image/story/story9.png'}
+                            header={'더 넓게 확장된 시야'}
+                            content={
+                                '뎁스 2기 디자인 파트로 참여하며 뼈가 되고 살이 되는 많은 것들을 배운 것 같습니다. 배운 것들을 바로 mvp프로젝트와 메인 프로젝트에서 다뤄보면서 실력을 그치지 않고 키워갈 수 있었습니다. 프로젝트를 통해서 디자인 뿐 아니라 개발팀, 기획팀과 함께 하면서 협업의 중요성에 대해서도 더욱 깨닫게 되었습니다. 뎁스를 통해 서비스를 바라보는 시야가 넓어질 수 있었던 것 같습니다. nice~chu~'
+                            }
+                            name={'김민주'}
+                            department={'Designer'}
+                            isLeft={true}
+                        />
                     </BoxWrapper>
                 </StoryWrapper>
             </Inner>
