@@ -17,6 +17,10 @@ const About = () => {
     const partHandleClick = (buttonId: string) => {
         setActivePartButton(buttonId);
     };
+    const handleButtonClick = () => {
+        window.location.href = 'https://forms.gle/7jtFZJk1PdwEQup39';
+    };
+
     const curriculumBoxes1 = [
         {
             id: 'Study',
@@ -301,10 +305,13 @@ const About = () => {
             <LastWrapper>
                 <div>
                     <h1>앞으로도</h1>
-                    <h1>뎁스의 행보를 응원해주세요.</h1>
+                    <h1>DEPth의 행보를 응원해주세요.</h1>
                 </div>
                 <div className="blur"></div>
-                <ColorBox></ColorBox>
+                <ColorBox />
+                <FormButton onClick={handleButtonClick}>
+                    3기 지원하기
+                </FormButton>
             </LastWrapper>
         </Inner>
     );
@@ -315,10 +322,22 @@ export default About;
 const ColorBox = styled.div`
     background: #0031e4;
     filter: blur(161.663px);
-
     width: 390px;
     height: 208px;
     margin-top: 150px;
+    z-index: -1;
+`;
+
+const FormButton = styled.button`
+    width: 4rem;
+    height: 10.5rem;
+    background: red;
+    border-radius: 50px;
+    margin-top: -150px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    cursor: pointer !important;
 `;
 
 const Inner = styled.div`
