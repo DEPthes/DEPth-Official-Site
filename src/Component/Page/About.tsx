@@ -77,7 +77,7 @@ const About = () => {
             id: 'dev',
             header: '서비스 구현? 개발에게 맡겨!',
             header2: '보이지 않는 백엔드의 손!',
-            header3: '사용자와 소통하는 안드로이드 앱!',
+            header3: '소통하는 안드로이드 앱!',
             headerImg: './image/partDev.png',
             userImg: './image/partFE.png',
             isDev: true,
