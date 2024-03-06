@@ -10,7 +10,7 @@ const Member = () => {
             <SEOMetaTag
                 title={'DEPth Member'}
                 description={
-                    'DEPth 1기가 말해주는 경험담, 12명의 사람들이 매주 모여 소통하며 함께 성장했습니다.'
+                    'DEPth 가 말해주는 경험담, 12명의 사람들이 매주 모여 소통하며 함께 성장했습니다.'
                 }
                 keywords={
                     'DEPth, 명지대학교 IT 동아리, 명지대학교 프로젝트 동아리, 뎁스, 명지, 명지대, 명지대 뎁스'
