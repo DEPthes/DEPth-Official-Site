@@ -44,7 +44,7 @@ const Member = () => {
                 </ScrollWrapper>
                 <StoryWrapper>
                     <Header>
-                        <h1>DEPth 1기가 말해주는 경험담</h1>
+                        <h1>DEPth 가 말해주는 경험담</h1>
                     </Header>
                     <BoxWrapper>
                         <StoryBlock
