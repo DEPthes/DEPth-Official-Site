@@ -18,7 +18,8 @@ const About = () => {
         setActivePartButton(buttonId);
     };
     const handleButtonClick = () => {
-        window.location.href = 'https://forms.gle/7jtFZJk1PdwEQup39';
+        window.location.href =
+            'https://docs.google.com/forms/d/e/1FAIpQLSfSS6FAsNBunb7AIGRyppNm9oXrGuv6FBEFpFFMrEPc0dZgUQ/viewform?usp=header';
     };
 
     const curriculumBoxes1 = [
@@ -310,7 +311,7 @@ const About = () => {
                 <div className="blur"></div>
                 <ColorBox />
                 <FormButton onClick={handleButtonClick}>
-                    3기 지원하기
+                    4기 운영진 지원하기
                 </FormButton>
             </LastWrapper>
         </Inner>
@@ -329,7 +330,7 @@ const ColorBox = styled.div`
 `;
 
 const FormButton = styled.button`
-    width: 4rem;
+    width: 200px !important;
     height: 10.5rem;
     background: red;
     border-radius: 50px;
@@ -338,6 +339,11 @@ const FormButton = styled.button`
     font-weight: bold;
     font-size: 18px;
     cursor: pointer !important;
+
+    @media (max-width: 950px) {
+        width: 150px !important;
+        font-size: 12px;
+    }
 `;
 
 const Inner = styled.div`
