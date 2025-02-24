@@ -46,7 +46,7 @@ const Contact = () => {
                                 <img src="./image/CInsta.png" alt="CInsta" />
                             </a>
                             <a
-                                href="https://open.kakao.com/o/smlX0Lag"
+                                href="https://open.kakao.com/o/sDxpKehh"
                                 target="_blank"
                                 rel="noreferrer"
                             >

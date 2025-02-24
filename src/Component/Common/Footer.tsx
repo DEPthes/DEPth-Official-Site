@@ -74,7 +74,7 @@ const Footer = () => {
                         </svg>
                     </a>
                     <a
-                        href="https://open.kakao.com/o/sqq6Cddf "
+                        href="https://open.kakao.com/o/sDxpKehh"
                         target="_blank"
                         rel="noreferrer"
                     >
