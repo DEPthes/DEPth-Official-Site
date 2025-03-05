@@ -19,7 +19,7 @@ const About = () => {
     };
     const handleButtonClick = () => {
         window.location.href =
-            'https://docs.google.com/forms/d/e/1FAIpQLSfSS6FAsNBunb7AIGRyppNm9oXrGuv6FBEFpFFMrEPc0dZgUQ/viewform?usp=header';
+            'https://docs.google.com/forms/d/e/1FAIpQLSc5lq5Sg9EIJEcNoPnp40QK9HzFpXnKHGa_tP6xVk438yvQ7g/viewform?usp=header';
     };
 
     const curriculumBoxes1 = [
@@ -311,7 +311,7 @@ const About = () => {
                 <div className="blur"></div>
                 <ColorBox />
                 <FormButton onClick={handleButtonClick}>
-                    4기 운영진 지원하기
+                    4기 지원하기
                 </FormButton>
             </LastWrapper>
         </Inner>
