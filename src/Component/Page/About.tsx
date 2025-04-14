@@ -392,14 +392,20 @@ const SecondMent = styled.div`
         font-weight: 700;
         font-size: 4.5rem;
         line-height: 5.8rem;
+        @media(max-width: 767px){
+            font-size: 3.5rem;
+            line-height: 4rem;
+        }
     }
     font-family: 'Noto Sans KR';
     font-style: normal;
-    font-weight: 250;
+    font-weight: 300;
     font-size: 4.5rem;
     line-height: 5.8rem;
     @media (max-width: 767px) {
         margin-bottom: 0;
+        font-size: 3.5rem;
+        line-height: 4rem;
     }
 `;
 
@@ -430,7 +436,7 @@ const ThirdWrapper = styled.div`
 `;
 const ThirdHeader = styled.div`
     & > div:nth-of-type(1) {
-        width: 80%;
+        width: 100%;
         margin: 0 auto;
         > h1 {
             width: 80%;
@@ -438,6 +444,10 @@ const ThirdHeader = styled.div`
             font-size: 3.5rem;
             line-height: 120.8%;
             color: #ffffff;
+            @media(max-width: 767px){
+                font-size: 3.2rem;
+                width: 100%;
+            }
 
             > em {
                 font-weight: 700;
@@ -451,6 +461,10 @@ const ThirdHeader = styled.div`
             font-weight: 200;
             font-size: 2rem;
             line-height: 139.8%;
+            @media(max-width: 767px){
+                font-size: 1.8rem;
+                margin-bottom: 3rem;
+            }
 
             color: #e2e2e2;
         }
@@ -470,6 +484,9 @@ const PartWrapper = styled.div`
     li {
         margin-top: 36rem;
         list-style: none;
+    }
+    @media(max-width: 767px){
+        width: 100%;
     }
 `;
 
