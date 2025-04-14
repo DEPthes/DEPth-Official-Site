@@ -5,12 +5,12 @@ import { useMediaQuery } from 'react-responsive';
 
 const Header = () => {
     const [isBigScreen, setIsBigScreen] = useState(false);
-    const isMobileScreen = useMediaQuery({ query: '(max-width: 700px)' });
+    const isMobileScreen = useMediaQuery({ query: '(max-width: 767px)' });
     const [isMenuOpen, setIsMenuOpen] = useState(!isMobileScreen);
 
     useEffect(() => {
         const handleResize = () => {
-            setIsBigScreen(window.innerWidth >= 700);
+            setIsBigScreen(window.innerWidth >= 768);
         };
 
         handleResize();
@@ -215,7 +215,8 @@ const headerAnimation = keyframes`
 	}
 `;
 
-const HeaderWrapper = styled.div``;
+const HeaderWrapper = styled.div`
+`;
 
 const ShownHeader = styled.div`
     width: 100%;
@@ -224,7 +225,7 @@ const ShownHeader = styled.div`
     z-index: 999;
     position: fixed;
     font-family: 'GmarketSansMedium';
-    height: 15.3rem;
+    height: 9rem;
     background: linear-gradient(
         180deg,
         #000000 13.02%,
@@ -232,7 +233,7 @@ const ShownHeader = styled.div`
         rgba(255, 255, 255, 0) 100%
     );
     animation: ${headerAnimation} 0.8s ease-in-out;
-
+    
     ul {
         display: flex;
         justify-content: center;
@@ -240,7 +241,7 @@ const ShownHeader = styled.div`
         > li {
             cursor: pointer;
             margin-left: 2.6rem;
-            @media (max-width: 700px) {
+            @media (max-width: 767px) {
                 margin-left: 4.3rem;
             }
             > a {
@@ -248,7 +249,7 @@ const ShownHeader = styled.div`
                 color: #ffffff;
             }
         }
-        @media (max-width: 700px) {
+        @media (max-width: 767px) {
             flex-direction: column;
         }
     }
@@ -262,11 +263,11 @@ const ShownHeader = styled.div`
     }
     svg {
         display: none;
-        @media (max-width: 700px) {
+        @media (max-width: 767px) {
             display: block;
         }
     }
-    @media (max-width: 700px) {
+    @media (max-width: 767px) {
         position: fixed;
         right: 0;
         width: 50%;
@@ -286,7 +287,7 @@ const ShownHeader = styled.div`
 
 const HeaderTop = styled.div`
     display: none;
-    @media (max-width: 700px) {
+    @media (max-width: 767px) {
         display: flex;
 
         align-items: center;

@@ -12,7 +12,7 @@ interface storyType {
 }
 
 const StoryBlock = (p: storyType) => {
-    const isSmallScreen = useMediaQuery({ query: '(max-width: 700px)' });
+    const isSmallScreen = useMediaQuery({ query: '(max-width: 767px)' });
     let isLeft = p.isLeft;
     if (isSmallScreen) {
         isLeft = true;
@@ -22,7 +22,7 @@ const StoryBlock = (p: storyType) => {
             {isLeft ? (
                 <>
                     <BlockMent>
-                        <img src="./image/bigQuote.png" alt="bigQuote" />
+                        <img src="./image/bigQuote.png" alt="bigQuote" style={{width: '5rem'}}/>
                         <BlockMentHeader>
                             <h1>{p.header}</h1>
                         </BlockMentHeader>
@@ -34,11 +34,13 @@ const StoryBlock = (p: storyType) => {
                             <h4>{p.department}</h4>
                         </BlockMentMember>
                     </BlockMent>
+                    <div style={{width:!isSmallScreen?'4rem':''}}></div>
                     <BlockImg src={p.img} alt="blockImg" />
                 </>
             ) : (
                 <>
                     <BlockImg src={p.img} alt="blockImg" />
+                    <div style={{width:!isSmallScreen?'4rem':''}}></div>
                     <BlockMent>
                         <img src="./image/bigQuote.png" alt="bigQuote" />
                         <BlockMentHeader>
@@ -67,7 +69,7 @@ const BlockWrapper = styled.div`
     justify-content: space-around;
     align-items: center;
     margin-bottom: 27.5rem;
-    @media (max-width: 700px) {
+    @media (max-width: 767px) {
         flex-direction: column;
         margin-bottom: 14.5rem;
         height: auto;
@@ -81,7 +83,7 @@ const BlockMent = styled.div`
         object-fit: cover;
         margin-bottom: 2.3rem;
     }
-    @media (max-width: 700px) {
+    @media (max-width: 767px) {
         margin-bottom: 5.5rem;
     }
 `;
@@ -95,7 +97,7 @@ const BlockMentHeader = styled.div`
 `;
 
 const BlockMentContent = styled.div`
-    width: 51.6rem;
+    width: 63rem;
 
     margin-bottom: 4.9rem;
 
@@ -137,8 +139,9 @@ const BlockMentMember = styled.div`
 `;
 
 const BlockImg = styled.img`
-    width: 60.6rem;
-    height: 44.288rem;
-    @media (max-width: 700px) {
+    width: 63rem;
+    height: 46rem;
+    @media (max-width: 767px) {
+        margin: 0;
     }
 `;

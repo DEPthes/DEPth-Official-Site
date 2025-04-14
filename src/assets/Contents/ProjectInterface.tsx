@@ -7,7 +7,9 @@ export interface ProjectBlockProps {
     name: string;
     thumbnail: string;
     logo: string;
+    detailImg: string|null;
     cohort: string;
+    projectType: string;
     platform: string;
     slogan: string;
     description: string;

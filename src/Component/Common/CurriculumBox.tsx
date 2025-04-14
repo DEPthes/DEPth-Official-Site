@@ -1,4 +1,5 @@
 import React from 'react';
+import { useMediaQuery } from 'react-responsive';
 import styled from 'styled-components';
 
 interface curriculum {
@@ -7,10 +8,11 @@ interface curriculum {
 }
 
 const CurriculumBox = (c: curriculum) => {
+    const isSmallScreen = useMediaQuery({ query: '(max-width: 767px)' });
     return (
         <Box>
-            <h1>{c.header}</h1>
-            <h2>{c.content}</h2>
+            {isSmallScreen?<></>:<h1>{c.header}</h1>}
+            <div><h2>{c.content}</h2></div>
         </Box>
     );
 };
@@ -38,13 +40,14 @@ const Box = styled.div`
 
     cursor: pointer;
 
-    @media (max-width: 700px) {
+    @media (max-width: 767px) {
         margin: 0 auto;
         margin-top: 6.2rem;
         padding-top: 0.4rem;
+        padding: 2rem;
         background-color: #354cda;
         width: 100%;
-        height: 35.6rem;
+        height: 25rem;
     }
     transition: all 0.5s ease-in-out;
     :hover {
@@ -72,9 +75,11 @@ const Box = styled.div`
         line-height: 2.8rem;
         height: 8rem;
 
-        @media (max-width: 700px) {
+        @media (max-width: 767px) {
             font-size: 2.5rem;
             line-height: 3.8rem;
+            padding: 0;
+            height: auto;
         }
     }
 `;
