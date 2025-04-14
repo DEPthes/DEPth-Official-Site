@@ -34,13 +34,13 @@ const StoryBlock = (p: storyType) => {
                             <h4>{p.department}</h4>
                         </BlockMentMember>
                     </BlockMent>
-                    <div style={{width:!isSmallScreen?'4rem':''}}></div>
+                    <div style={{width:!isSmallScreen?'40%':''}}></div>
                     <BlockImg src={p.img} alt="blockImg" />
                 </>
             ) : (
                 <>
                     <BlockImg src={p.img} alt="blockImg" />
-                    <div style={{width:!isSmallScreen?'4rem':''}}></div>
+                    <div style={{width:!isSmallScreen?'40%':''}}></div>
                     <BlockMent>
                         <img src="./image/bigQuote.png" alt="bigQuote" />
                         <BlockMentHeader>
@@ -97,7 +97,7 @@ const BlockMentHeader = styled.div`
 `;
 
 const BlockMentContent = styled.div`
-    width: 63rem;
+    width: 95%;
 
     margin-bottom: 4.9rem;
 
@@ -139,9 +139,9 @@ const BlockMentMember = styled.div`
 `;
 
 const BlockImg = styled.img`
-    width: 63rem;
-    height: 46rem;
+    width: 45%;
     @media (max-width: 767px) {
         margin: 0;
+        width: 100%;
     }
 `;

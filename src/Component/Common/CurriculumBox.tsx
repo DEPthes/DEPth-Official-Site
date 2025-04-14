@@ -21,7 +21,6 @@ export default CurriculumBox;
 
 const Box = styled.div`
     width: 45.7rem;
-    height: 27.6rem;
     background: #2c3036;
     box-shadow: 0rem 0rem 2.3rem rgba(40, 39, 39, 0.25);
     backdrop-filter: blur(0.65rem);
@@ -32,10 +31,9 @@ const Box = styled.div`
     align-items: flex-start;
     justify-content: flex-start;
 
-    margin-right: 2.5rem;
-    margin-bottom: 2.7rem;
+    margin: 0 1.5rem 3rem 1.5rem;
 
-    padding: 1.4rem 4rem 6.7rem 3.2rem;
+    padding: 3rem 4rem;
     box-sizing: border-box;
 
     cursor: pointer;
@@ -60,9 +58,8 @@ const Box = styled.div`
         font-family: 'Noto Sans KR';
         font-style: normal;
         font-weight: 900;
-        font-size: 3rem;
+        font-size: 250%;
         line-height: 4.3rem;
-        height: 4.3rem;
 
         margin-bottom: 1.2rem;
     }
@@ -71,9 +68,8 @@ const Box = styled.div`
         font-family: 'Noto Sans KR';
         font-style: normal;
         font-weight: 400;
-        font-size: 2rem;
+        font-size: 180%;
         line-height: 2.8rem;
-        height: 8rem;
 
         @media (max-width: 767px) {
             font-size: 2.5rem;

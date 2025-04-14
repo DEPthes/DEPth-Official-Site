@@ -53,13 +53,13 @@ const Wrapper = styled.div`
     }
 
     @media (max-width: 767px) {
-        width: 60.25rem;
+        width: 100%;
         // height: 48.75rem;
     }
 
     img {
         width: 100%;
-        height: 27.125rem;
+        // height: 27.125rem;
         object-fit: cover;
         margin-bottom: 2rem;
         border-radius: 10px;

@@ -74,54 +74,68 @@ const Inner = styled.div`
     width: 100%;
     height: 100%;
     padding-top: 28.3rem;
-    @media (max-width: 767px {
+    @media (max-width: 767px) {
         padding-top: 23.3rem;
     }
 `;
 const IntroWrapper = styled.div`
     display: flex;
+    width: 73%;
+    margin: 0 auto;
     align-items: center;
     justify-content: center;
     @media (max-width: 767px) {
         flex-direction: column;
+        width: 80%;
     }
 `;
 const IntroWriting = styled.div`
-    width: 59.5rem;
-    height: 50rem;
+    width: 40%;
     font-family: 'Noto Sans KR';
+    @media(max-width:767px){
+        width: 100%;
+    }
     h1 {
-        font-size: 2rem;
-
+        font-size: 180%;
         font-weight: 300;
+        @media(max-width: 767px){
+            font-size: 280%;
+        }
     }
 
     h2 {
         font-weight: 700;
-        font-size: 6rem;
-
+        font-size: 500%;
         display: flex;
+        @media(max-width: 767px){
+            font-size: 600%;
+        }
     }
 
     h3 {
         font-weight: 250;
-        font-size: 6rem;
-
+        font-size: 100%;
         margin-right: 1.8rem;
+        @media(max-width: 767px){
+            font-size: 100%;
+        }
     }
 
     h4 {
         margin-top: 2rem;
         font-weight: 300;
-        font-size: 2rem;
+        font-size: 180%;
+        @media(max-width: 767px){
+            font-size: 280%;
+        }
     }
 `;
 const IntroImg = styled.img`
-    // width: 71.2rem;
-    height: 52rem;
+    width: 50%;
     object-fit: cover;
     @media (max-width: 767px) {
         margin-top: 5rem;
+        width: 100%;
     }
 `;
 
@@ -138,25 +152,30 @@ const ScrollWrapper = styled.div`
 `;
 
 const StoryWrapper = styled.div`
-    width: 134rem;
+    width: 80%;
     margin: 0 auto;
     margin-top: 24.9rem;
     padding-bottom: 40rem;
     display: flex;
     flex-direction: column;
     @media (max-width: 767px) {
-        width: 60rem;
+        width: 100%;
         align-items: flex-start;
     }
 `;
 
 const Header = styled.div`
+    width: 80%;
+    margin: 0 auto;
     h1 {
         font-weight: 700;
-        font-size: 4rem;
+        font-size: 400%;
         line-height: 5.8rem;
     }
     margin-bottom: 15rem;
 `;
 
-const BoxWrapper = styled.div``;
+const BoxWrapper = styled.div`
+    width: 80%;
+    margin: 0 auto;
+`;
