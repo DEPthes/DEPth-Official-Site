@@ -5,8 +5,10 @@ import { ProjectBlockProps } from '../../assets/Contents/ProjectInterface';
 import SEOMetaTag from '../../SEOMetaTag';
 import ProjectBlock from '../Common/ProjectBlock';
 import React, { useState } from 'react';
+import { useMediaQuery } from 'react-responsive';
 
 const Project = () => {
+    const isSmallScreen = useMediaQuery({ query: '(max-width: 767px)' });
     const [section, setSection] = useState<'1기' | '2기' | '3기'>(
         '1기',
     );
@@ -34,8 +36,9 @@ const Project = () => {
                 <IntroWrapper>
                     <IntroWriting>
                         <h1>DEPth Project</h1>
+                        {isSmallScreen?<><h2>뎁스의 <span>프로젝트</span></h2></>:<>
                         <h2>뎁스의 </h2>
-                        <h3>프로젝트 </h3>
+                        <h3>프로젝트 </h3></>}
                         <h4>
                             DEPth의 프로젝트를 소개합니다.
                         </h4>
@@ -156,16 +159,21 @@ const Project = () => {
 export default Project;
 
 const Inner = styled.div`
-    width: 100%;
+    width: 60%;
     height: 100%;
+    margin: 0 auto;
     padding-top: 23.3rem;
     display: flex;
     flex-direction: column;
     align-items: center;
+    @media(max-width: 767px){
+        width: 80%;
+    }
 `;
 
 const IntroWrapper = styled.div`
     display: flex;
+    width: 100%;
     align-items: center;
     justify-content: center;
     @media (max-width: 767px) {
@@ -178,37 +186,57 @@ const IntroWriting = styled.div`
     width: 100%;
     height: 30.5rem;
     font-family: 'Noto Sans KR';
+    @media(max-width: 767px){
+        width: 130%;
+    }
     h1 {
-        font-size: 2rem;
+        font-size: 180%;
         font-weight: 50rem;
+        @media(max-width: 767px){
+            font-size: 280%;
+        }
     }
 
     h2 {
         font-weight: 250;
-        font-size: 6rem;
+        font-size: 500%;
         display: flex;
+        @media(max-width: 767px){
+            font-size: 600%;
+            span{
+                font-size: 100%;
+                font-weight: 700;
+                margin-left: 10px;
+            }
+        }
     }
 
     h3 {
         font-weight: 700;
-        font-size: 6rem;
+        font-size: 500%;
         margin-right: 1.8rem;
+        @media(max-width: 767px){
+            font-size: 600%;
+        }
     }
 
     h4 {
         margin-top: 4rem;
         font-weight: 300;
-        font-size: 2rem;
+        font-size: 180%;
+        @media(max-width: 767px){
+            font-size: 280%;
+        }
     }
 `;
 const IntroImg = styled.img`
-    width: 57.2rem;
-    height: 54.4rem;
+    display: flex;
+    width: 50%;
     object-fit: cover;
-    margin-left: 22.3rem;
     @media (max-width: 767px) {
         margin-left: 0;
-        margin-top: 10rem;
+        margin-top: 5rem;
+        width: 130%;
     }
 `;
 

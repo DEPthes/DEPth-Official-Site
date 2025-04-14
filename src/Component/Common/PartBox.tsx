@@ -157,8 +157,8 @@ const DevBox = styled.div`
     flex-direction: column;
     justify-content: space-between;
 
-    width: 123.8rem;
-    height: 60rem;
+    // width: 123.8rem;
+    // height: 60rem;
 
     @media (max-width: 767px) {
         width: fit-content;
@@ -171,7 +171,7 @@ const BoxWrapper = styled.div<{ isDev: boolean }>`
     flex-direction: column;
     align-items: center;
 
-    margin-bottom: 11.3rem;
+    margin-bottom: 15%;
 `;
 const Header = styled.div`
     display: flex;
@@ -203,12 +203,15 @@ const Header = styled.div`
 `;
 const ContentWrapper = styled.div`
     display: flex;
+    width: 100%;
     align-items: center;
     justify-content: space-around;
+    margin-bottom: 20px;
     box-sizing: border-box;
 
     @media (max-width: 767px) {
         margin-top: 5rem;
+        margin-bottom: 0;
     }
 `;
 const ImgWrapper = styled.div`
@@ -225,10 +228,10 @@ const TextWrapper = styled.div`
     padding: 1.6rem 2.6rem 1.6rem 2.5rem;
     gap: 1rem;
 
-    width: 102.5rem;
-    height: 16.8rem;
+    width: 100%;
     background: #2c3036;
     border-radius: 3.5rem;
+    
     @media (max-width: 767px) {
         width: 100%;
         height: 35.8rem;

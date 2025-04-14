@@ -214,7 +214,7 @@ export const projectContents: ProjectBlockProps[] = [
             'https://github.com/DEPthes/3rd-MVP-NS-Server',
         ],
         member: {
-            'PM': '허재석',
+            'PM': '이재형',
             'DESIGN LEADER': '서예원',
             'CLIENT LEADER': '이가은',
             'SERVER LEADER': '정지수',
@@ -403,7 +403,7 @@ export const projectContents: ProjectBlockProps[] = [
         ],
         member: {
             'PM': '박하영',
-            'DESIGN LEADER': '전효주',
+            'DESIGN LEADER': '한효주',
             'CLIENT LEADER': '김홍민',
             'SERVER LEADER': '이지수',
             CLIENT: ['나범수', '이가은'],

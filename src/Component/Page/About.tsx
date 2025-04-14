@@ -346,12 +346,13 @@ const Inner = styled.div`
 const IntroWrapper = styled.div`
     display: flex;
     z-index: -100;
-    width: 100%;
+    width: 60%;
     align-items: center;
     justify-content: center;
     
     @media (max-width: 767px) {
-        height: 100vh;
+        height: calc(100vh - 300px);
+        margin-bottom: 70px;
         align-items: center;
         justify-content: center;
     }
@@ -359,18 +360,16 @@ const IntroWrapper = styled.div`
 
 const IntroImg = styled.img`
     z-index: -99;
-    // width: 53.6rem;
-    // height: 53.6rem;
-    width: 100rem;
-    // height: 100rem;
+    width: 100%;
     
     @media(max-width: 767px){
-        width: 80em;
+        width: 100%;
     }
 `;
 
 const SecondWrapper = styled.div`
     display: flex;
+    width: 80%;
     align-items: center;
     justify-content: center;
     flex-direction: column;
@@ -385,7 +384,7 @@ const SecondWrapper = styled.div`
 
 const SecondMent = styled.div`
     margin-bottom: 10rem;
-    width: 90%;
+    width: 80%;
     white-space: pre-line;
 
     em {
@@ -406,11 +405,13 @@ const SecondMent = styled.div`
 
 const BoxWrapper = styled.div`
     display: flex;
-    width: 90%;
+    width: 82%;
 
     div {
-        display: flex;
-        justify-content: center;
+        @media(max-width: 767px){
+            display: flex;
+            justify-content: center;
+        }
     }
     @media (max-width: 767px) {
         /* display: none; */
@@ -418,6 +419,7 @@ const BoxWrapper = styled.div`
 `;
 
 const ThirdWrapper = styled.div`
+    width: 80%;
     margin-top: 44.2rem;
     @media (max-width: 767px) {
         width: 100%;
@@ -428,9 +430,10 @@ const ThirdWrapper = styled.div`
 `;
 const ThirdHeader = styled.div`
     & > div:nth-of-type(1) {
-        width: 100%;
+        width: 80%;
+        margin: 0 auto;
         > h1 {
-            width: 100%;
+            width: 80%;
             font-style: normal;
             font-size: 3.5rem;
             line-height: 120.8%;
@@ -462,6 +465,8 @@ const ThirdHeader = styled.div`
 `;
 
 const PartWrapper = styled.div`
+    width: 80%;
+    margin: 0 auto;
     li {
         margin-top: 36rem;
         list-style: none;
@@ -549,7 +554,6 @@ const MobileCategoryUpperRow = styled.div`
     display: flex;
     justify-content: space-between;
     height: 6.167rem;
-    // width: 90%;
     margin-bottom: 3rem;
     // & > div:nth-of-type(1) {
     //     margin: 0 2.6rem;
