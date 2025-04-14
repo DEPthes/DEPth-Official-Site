@@ -7,12 +7,12 @@ import ProjectBlock from '../Common/ProjectBlock';
 import React, { useState } from 'react';
 
 const Project = () => {
-    const [section, setSection] = useState<'1기' | '2기 mvp' | '2기 main'>(
+    const [section, setSection] = useState<'1기' | '2기' | '3기'>(
         '1기',
     );
 
     const handleBoxClick = (
-        selectedSection: '1기' | '2기 mvp' | '2기 main',
+        selectedSection: '1기' | '2기' | '3기',
     ) => {
         setSection(selectedSection);
     };
@@ -34,11 +34,10 @@ const Project = () => {
                 <IntroWrapper>
                     <IntroWriting>
                         <h1>DEPth Project</h1>
-                        <h2>DEPth의 </h2>
+                        <h2>뎁스의 </h2>
                         <h3>프로젝트 </h3>
                         <h4>
-                            DEPth 1기의 프로젝트부터 <br />
-                            2기의 MVP Project와 Main Project를 소개합니다.
+                            DEPth의 프로젝트를 소개합니다.
                         </h4>
                     </IntroWriting>
                     <IntroImg src="./image/ProjectImg.png" alt="MemberImg" />
@@ -62,51 +61,93 @@ const Project = () => {
                     </Box>
                     <Box
                         style={
-                            section === '2기 mvp'
+                            section === '2기'
                                 ? {
                                       background: 'rgba(217, 217, 217, 0.5)',
                                       color: 'rgba(255, 255, 255, 1)',
                                   }
                                 : {}
                         }
-                        onClick={() => handleBoxClick('2기 mvp')}
+                        onClick={() => handleBoxClick('2기')}
                     >
-                        2기 MVP
+                        2기
                     </Box>
                     <Box
                         style={
-                            section === '2기 main'
+                            section === '3기'
                                 ? {
                                       background: 'rgba(217, 217, 217, 0.5)',
                                       color: 'rgba(255, 255, 255, 1)',
                                   }
                                 : {}
                         }
-                        onClick={() => handleBoxClick('2기 main')}
+                        onClick={() => handleBoxClick('3기')}
                     >
-                        2기 Main
+                        3기
                     </Box>
                 </BoxWrapper>
-                <SecondWrapper>
-                    {projectContents
-                        .filter((project) => project.cohort === section)
-                        .map((project: ProjectBlockProps) => (
+                <>
+                    {
+                        projectContents.find((project) => project.cohort === section)?.cohort === '1기'
+                        ? <ProjectType></ProjectType>
+                        : <ProjectType>MVP</ProjectType>
+                    }
+                    <SecondWrapper>
+                        {projectContents
+                        .filter(
+                            (project) =>
+                            project.cohort === section && project.projectType === 'MVP'
+                        )
+                        .map((project) => (
                             <ProjectBlock
-                                key={project.id}
-                                id={project.id}
-                                name={project.name}
-                                thumbnail={project.thumbnail}
-                                logo={project.logo}
-                                cohort={project.cohort}
-                                platform={project.platform}
-                                slogan={project.slogan}
-                                description={project.description}
-                                githubLink={project.githubLink}
-                                serviceLink={project.serviceLink}
-                                member={project.member}
+                            key={project.id}
+                            id={project.id}
+                            name={project.name}
+                            thumbnail={project.thumbnail}
+                            logo={project.logo}
+                            detailImg={project.detailImg}
+                            cohort={project.cohort}
+                            projectType={project.projectType}
+                            platform={project.platform}
+                            slogan={project.slogan}
+                            description={project.description}
+                            githubLink={project.githubLink}
+                            serviceLink={project.serviceLink}
+                            member={project.member}
                             />
                         ))}
-                </SecondWrapper>
+                    </SecondWrapper>
+                    {
+                        projectContents.find((project) => project.cohort === section)?.cohort === '1기'
+                        ? <ProjectType></ProjectType>
+                        : <ProjectType>MAIN</ProjectType>
+                    }
+                    <SecondWrapper style={{marginBottom: '40rem'}}>
+                        {projectContents
+                        .filter(
+                            (project) =>
+                            project.cohort === section && project.projectType === 'MAIN'
+                        )
+                        .map((project) => (
+                            <ProjectBlock
+                            key={project.id}
+                            id={project.id}
+                            name={project.name}
+                            thumbnail={project.thumbnail}
+                            logo={project.logo}
+                            detailImg={project.detailImg}
+                            cohort={project.cohort}
+                            projectType={project.projectType}
+                            platform={project.platform}
+                            slogan={project.slogan}
+                            description={project.description}
+                            githubLink={project.githubLink}
+                            serviceLink={project.serviceLink}
+                            member={project.member}
+                            />
+                        ))}
+                    </SecondWrapper>
+                </>
             </Inner>
         </>
     );
@@ -127,7 +168,7 @@ const IntroWrapper = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    @media (max-width: 700px) {
+    @media (max-width: 767px) {
         width: 80%;
         flex-direction: column;
         align-items: center;
@@ -143,20 +184,20 @@ const IntroWriting = styled.div`
     }
 
     h2 {
-        font-weight: 700;
+        font-weight: 250;
         font-size: 6rem;
         display: flex;
     }
 
     h3 {
-        font-weight: 250;
+        font-weight: 700;
         font-size: 6rem;
         margin-right: 1.8rem;
     }
 
     h4 {
-        margin-top: 5rem;
-        font-weight: 200;
+        margin-top: 4rem;
+        font-weight: 300;
         font-size: 2rem;
     }
 `;
@@ -165,7 +206,7 @@ const IntroImg = styled.img`
     height: 54.4rem;
     object-fit: cover;
     margin-left: 22.3rem;
-    @media (max-width: 700px) {
+    @media (max-width: 767px) {
         margin-left: 0;
         margin-top: 10rem;
     }
@@ -187,8 +228,13 @@ const BoxWrapper = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 10.3rem;
     flex-direction: row;
+`;
+
+const ProjectType = styled.div`
+    font-size: 5rem;
+    font-weight: bold;
+    margin-top: 13rem;
 `;
 
 const SecondWrapper = styled.div`
@@ -196,18 +242,16 @@ const SecondWrapper = styled.div`
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    margin-top: 5.3rem;
+    // margin-top: 5.3rem;
 
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
 
     width: 110rem;
-    @media (max-width: 700px) {
+    @media (max-width: 767px) {
         width: 100%;
     }
-
-    margin-bottom: 35.9rem;
 `;
 
 const Box = styled.div`
@@ -215,17 +259,15 @@ const Box = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 6.7875rem;
-    height: 3.375rem;
+    padding: 1.8rem 2.8rem;
     border-radius: 0.3125rem;
     border: 1px solid rgba(255, 255, 255, 0.041);
     background: rgba(217, 217, 217, 0.149);
     color: rgba(255, 255, 255, 0.712);
-    font-size: 1.4375rem;
-    font-weight: 500;
+    font-size: 3rem;
+    font-weight: 700;
     line-height: 1.875rem;
-    margin-left: 2rem;
-    margin-right: auto;
+    margin: 0 2rem;
     margin-top: 15rem;
 
     transition: background-color 0.3s ease;
@@ -236,9 +278,7 @@ const Box = styled.div`
         cursor: pointer;
     }
 
-    @media (max-width: 700px) {
-        width: 8.7875rem;
-        height: 4.375rem;
-        font-size: 1.90375rem;
+    @media (max-width: 767px) {
+        font-size: 2.5rem;
     }
 `;

@@ -71,9 +71,10 @@ const ButtonGroup = styled.div`
     img {
         width: 8.273rem;
         height: 8.273rem;
-        margin-left: 3.6rem;
+        margin-left: 1.8rem;
+        margin-right: 1.8rem;
     }
-    @media (max-width: 700px) {
+    @media (max-width: 767px) {
         margin-bottom: 100px;
     }
 `;
@@ -103,9 +104,9 @@ const Ment = styled.div`
         text-align: center;
         color: #ffffff;
     }
-    @media (max-width: 700px) {
+    @media (max-width: 767px) {
         margin-bottom: 30px;
-        margin-top: 20rem;
+        // margin-top: 20rem;
     }
 `;
 
@@ -124,10 +125,9 @@ const IntroImg = styled.div`
     width: 93.5rem;
     min-height: 100vh;
     height: 77.5rem;
-    @media (max-width: 700px) {
+    @media (max-width: 767px) {
         width: 83.5rem;
-
-        margin-top: 2rem;
+        // margin-top: 2rem;
     }
     background-image: url(./image/ContactImg.png);
     background-size: contain;

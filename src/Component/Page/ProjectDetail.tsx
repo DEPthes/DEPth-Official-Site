@@ -41,7 +41,7 @@ const ProjectDetail = () => {
                 <Content>
                     <ImgWrapper>
                         <img
-                            src={projectDetail.thumbnail}
+                            src={projectDetail.detailImg?projectDetail.detailImg:projectDetail.thumbnail}
                             alt={projectDetail.name}
                         />
                         <ButtonWrapper>
@@ -80,7 +80,7 @@ const ProjectDetail = () => {
                         <h1>프로젝트 설명</h1>
                     </DescHeader>
                     <DescContent>
-                        <h2>{projectDetail.description}</h2>
+                        <h2 dangerouslySetInnerHTML={{__html: projectDetail.description}}/>
                     </DescContent>
                 </Desc>
                 <TeamMember>
@@ -125,7 +125,7 @@ const Inner = styled.div`
 
     align-items: center;
     justify-content: center;
-    @media (max-width: 700px) {
+    @media (max-width: 767px) {
         padding-top: 0;
     }
 `;
@@ -137,8 +137,8 @@ const SecondWrapper = styled.div`
     justify-content: center;
     margin-top: 28rem;
     width: 120rem;
-    @media (max-width: 700px) {
-        width: 70rem;
+    @media (max-width: 767px) {
+        width: 100%;
     }
 `;
 const Header = styled.div`
@@ -147,7 +147,7 @@ const Header = styled.div`
     align-items: center;
     justify-content: flex-start;
     margin-bottom: 5.4rem;
-    @media (max-width: 700px) {
+    @media (max-width: 767px) {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -158,7 +158,7 @@ const Header = styled.div`
         width: 16.8125rem;
         height: 16.72263rem;
         margin-right: 3.2rem;
-        @media (max-width: 700px) {
+        @media (max-width: 767px) {
             margin-bottom: 3rem;
             width: 11rem;
             height: 11rem;
@@ -223,23 +223,21 @@ const ButtonWrapper = styled.div`
 const Desc = styled.div`
     margin-top: 5rem;
     width: 100%;
-    height: 19rem;
     background: rgba(44, 48, 54, 0.5);
     box-shadow: 0rem 0rem 2.3rem rgba(0, 0, 0, 0.25);
     backdrop-filter: blur(0.85rem);
     border-radius: 2.4rem;
     display: flex;
     align-items: flex-start;
-    @media (max-width: 700px) {
+    padding: 4.1rem 0;
+    @media (max-width: 767px) {
         flex-direction: column;
-        height: 28.752rem;
-        padding: 0 2.667rem;
+        padding: 2.667rem;
     }
 `;
 const DescHeader = styled.div`
     width: 17rem;
     height: 3.716rem;
-    margin-top: 4.1rem;
     margin-left: 4.4rem;
     margin-right: 10.3rem;
     h1 {
@@ -252,14 +250,14 @@ const DescHeader = styled.div`
 
         color: #f3f3f3;
     }
-    @media (max-width: 700px) {
+    @media (max-width: 767px) {
         margin-left: 0;
+        margin-bottom: 10px;
     }
 `;
 const DescContent = styled.div`
     width: 83rem;
-    height: 10.978rem;
-    margin-top: 4.1rem;
+    // height: 10.978rem;
     h2 {
         font-family: 'Noto Sans KR';
         font-style: normal;
@@ -269,7 +267,7 @@ const DescContent = styled.div`
 
         color: #cfcfd0;
     }
-    @media (max-width: 700px) {
+    @media (max-width: 767px) {
         width: auto;
         height: auto;
         font-size: 2rem;
@@ -279,7 +277,7 @@ const DescContent = styled.div`
 const TeamMember = styled.div`
     box-sizing: border-box;
     width: 100%;
-    @media (max-width: 700px) {
+    @media (max-width: 767px) {
         height: auto;
         padding-right: 4.4rem;
     }
@@ -300,13 +298,14 @@ const TeamMember = styled.div`
         font-weight: 500;
         font-size: 2.6rem;
         color: #f3f3f3;
+        margin-left: 1.1rem;
     }
 `;
 const TeamMemberWrapper = styled.div`
     margin-top: 4.2rem;
     display: flex;
     flex-wrap: wrap;
-    @media (max-width: 700px) {
+    @media (max-width: 767px) {
         justify-content: space-between;
         width: 100%;
     }
@@ -318,17 +317,16 @@ const TeamMemberWrapper = styled.div`
         box-shadow: 0rem 0rem 2.3rem rgba(0, 0, 0, 0.25);
         backdrop-filter: blur(0.85rem);
         border-radius: 1rem;
-        margin-right: 2.2rem;
-        margin-bottom: 2.2rem;
+        margin: 0 1.1rem 2.2rem 1.1rem;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        @media (max-width: 700px) {
+        @media (max-width: 767px) {
             &:nth-child(even) {
-                margin-right: 0;
+                // margin-right: 0;
             }
-            width: 25rem;
+            width: 24rem;
         }
 
         h2 {

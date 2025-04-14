@@ -39,7 +39,7 @@ const PartBox = (p: PartType) => {
                         <>
                             <ContentWrapper>
                                 <TextWrapper>
-                                    <h2>{p.content}</h2>
+                                    <h2 dangerouslySetInnerHTML={{__html:p.content}}/>
                                 </TextWrapper>
                             </ContentWrapper>
                             <MHeader>
@@ -58,7 +58,7 @@ const PartBox = (p: PartType) => {
                             </MHeader>
                             <ContentWrapper>
                                 <TextWrapper>
-                                    <h2>{p.Dcontent}</h2>
+                                    <h2 dangerouslySetInnerHTML={{__html:p.Dcontent}}/>
                                 </TextWrapper>
                             </ContentWrapper>
                             <MHeader>
@@ -77,14 +77,14 @@ const PartBox = (p: PartType) => {
                             </MHeader>
                             <ContentWrapper>
                                 <TextWrapper>
-                                    <h2>{p.Acontent}</h2>
+                                    <h2 dangerouslySetInnerHTML={{__html:p.Acontent}}/>
                                 </TextWrapper>
                             </ContentWrapper>
                         </>
                     ) : (
                         <ContentWrapper>
                             <TextWrapper>
-                                <h2>{p.content}</h2>
+                                <h2 dangerouslySetInnerHTML={{__html:p.content}}/>
                             </TextWrapper>
                         </ContentWrapper>
                     )}
@@ -104,7 +104,7 @@ const PartBox = (p: PartType) => {
                                     <img src={p.userImg} alt="pmImg" />
                                 </ImgWrapper>
                                 <TextWrapper>
-                                    <h2>{p.content}</h2>
+                                    <h2 dangerouslySetInnerHTML={{__html:p.content}}/>
                                 </TextWrapper>
                             </ContentWrapper>
                             <ContentWrapper>
@@ -112,7 +112,7 @@ const PartBox = (p: PartType) => {
                                     <img src={p.DuserImg} alt="pmImg" />
                                 </ImgWrapper>
                                 <TextWrapper>
-                                    <h2>{p.Dcontent}</h2>
+                                    <h2 dangerouslySetInnerHTML={{__html:p.Dcontent}}/>
                                 </TextWrapper>
                             </ContentWrapper>
                             <ContentWrapper>
@@ -120,7 +120,7 @@ const PartBox = (p: PartType) => {
                                     <img src={p.AuserImg} alt="pmImg" />
                                 </ImgWrapper>
                                 <TextWrapper>
-                                    <h2>{p.Acontent}</h2>
+                                    <h2 dangerouslySetInnerHTML={{__html:p.Acontent}}/>
                                 </TextWrapper>
                             </ContentWrapper>
                         </DevBox>
@@ -130,7 +130,7 @@ const PartBox = (p: PartType) => {
                                 <img src={p.userImg} alt="pmImg" />
                             </ImgWrapper>
                             <TextWrapper>
-                                <h2>{p.content}</h2>
+                                <h2 dangerouslySetInnerHTML={{__html:p.content}}/>
                             </TextWrapper>
                         </ContentWrapper>
                     )}
@@ -160,7 +160,7 @@ const DevBox = styled.div`
     width: 123.8rem;
     height: 60rem;
 
-    @media (max-width: 700px) {
+    @media (max-width: 767px) {
         width: fit-content;
         height: auto;
     }
@@ -185,7 +185,9 @@ const Header = styled.div`
     }
     img {
         margin-right: 1.5rem;
-        @media (max-width: 700px) {
+        width: 5rem;
+        height: 5rem;
+        @media (max-width: 767px) {
             width: 21px;
             height: 21px;
         }
@@ -205,7 +207,7 @@ const ContentWrapper = styled.div`
     justify-content: space-around;
     box-sizing: border-box;
 
-    @media (max-width: 700px) {
+    @media (max-width: 767px) {
         margin-top: 5rem;
     }
 `;
@@ -227,7 +229,7 @@ const TextWrapper = styled.div`
     height: 16.8rem;
     background: #2c3036;
     border-radius: 3.5rem;
-    @media (max-width: 700px) {
+    @media (max-width: 767px) {
         width: 100%;
         height: 35.8rem;
     }
@@ -237,10 +239,14 @@ const TextWrapper = styled.div`
         font-weight: 400;
         font-size: 2rem;
         line-height: 3.8rem;
-        @media (max-width: 700px) {
+        @media (max-width: 767px) {
             font-size: 2.5rem;
             line-height: 3.8rem;
         }
         color: #d9d9d9;
+    }
+
+    h2 strong {
+        font-weight: bold;
     }
 `;

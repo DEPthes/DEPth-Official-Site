@@ -4,20 +4,22 @@ import styled from 'styled-components';
 import { ProjectBlockProps } from '../../assets/Contents/ProjectInterface';
 
 const ProjectBlock = (props: ProjectBlockProps) => {
-    const { id, thumbnail, name, slogan, cohort, platform } = props;
+    const { id, thumbnail, name, slogan, cohort, projectType, platform } = props;
 
     return (
         <StyledLink to={`/project/${id}`}>
             <Wrapper>
                 <img src={thumbnail} alt={name} />
-                <Header>
-                    <h3>{name}</h3>
+                <TextWrapper>
+                    <Header>
+                        <h3>{name}</h3>
+                    </Header>
+                    <Slogan>{slogan}</Slogan>
                     <BoxWrapper>
-                        <Box>{cohort}</Box>
-                        <Box> {platform}</Box>
+                        <Box>{projectType}</Box>
+                        <WhiteBox> {platform}</WhiteBox>
                     </BoxWrapper>
-                </Header>
-                <Slogan>{slogan}</Slogan>
+                </TextWrapper>
             </Wrapper>
         </StyledLink>
     );
@@ -32,14 +34,15 @@ const StyledLink = styled(Link)`
 
 const Wrapper = styled.div`
     width: 50.25rem;
-    height: 38.75rem;
+    font-family: 'Noto Sans KR';
+    // height: 38.75rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 4.5rem;
-    padding: 2.56rem 1.51rem;
-    border-radius: 1.25rem;
+    margin-top: 3rem;
+    padding: 3rem 2rem;
+    border-radius: 20px;
     border: 0.1rem solid #ffffff1f;
 
     cursor: pointer;
@@ -49,38 +52,45 @@ const Wrapper = styled.div`
         box-shadow: 0 0 1.5rem rgba(144, 144, 144, 0.2);
     }
 
-    @media (max-width: 700px) {
+    @media (max-width: 767px) {
         width: 60.25rem;
-        height: 48.75rem;
+        // height: 48.75rem;
     }
 
     img {
-        width: 43.625rem;
+        width: 100%;
         height: 27.125rem;
         object-fit: cover;
-        margin-bottom: 1rem;
-        border-radius: 1rem;
-        @media (max-width: 700px) {
+        margin-bottom: 2rem;
+        border-radius: 10px;
+        @media (max-width: 767px) {
             width: 53.625rem;
             height: 37.125rem;
         }
     }
 `;
 
+const TextWrapper = styled.div`
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+`;
+
 const Header = styled.div`
     display: flex;
+    font-family: 'Noto Sans KR';
+    font-weight: 700;
     align-items: center;
     justify-content: space-between;
-    width: 90%;
     h3 {
+        font-family: 'Noto Sans KR';
         font-weight: 900;
         font-size: 3.3rem;
-        font-weight: 500;
-        @media (max-width: 700px) {
+        @media (max-width: 767px) {
             font-size: 3.7rem;
         }
     }
-    margin-bottom: 0.56rem;
+    margin-bottom: 0.5em;
 `;
 
 const Box = styled.div`
@@ -95,10 +105,34 @@ const Box = styled.div`
     background: rgba(217, 217, 217, 0.149);
     color: rgba(255, 255, 255, 0.712);
     font-size: 1.4375rem;
+    font-weight: bold;
+    line-height: 1.875rem;
+    margin-right: 1rem;
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.1);
+    @media (max-width: 767px) {
+        width: 8.7875rem;
+        height: 4.375rem;
+        font-size: 1.90375rem;
+    }
+`;
+
+const WhiteBox = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 6.7875rem;
+    height: 3.375rem;
+    border-radius: 0.3125rem;
+    border: 1px solid #363636;
+    background-color: black;
+    color: rgba(255, 255, 255, 0.712);
+    font-size: 1.4375rem;
     font-weight: 500;
     line-height: 1.875rem;
-    margin-left: 1rem;
-    @media (max-width: 700px) {
+    margin-right: 1rem;
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.1);
+    @media (max-width: 767px) {
         width: 8.7875rem;
         height: 4.375rem;
         font-size: 1.90375rem;
@@ -106,16 +140,16 @@ const Box = styled.div`
 `;
 
 const Slogan = styled.div`
-    width: 90%;
     color: rgba(255, 255, 255, 0.767);
     font-size: 1.9rem;
+    margin-bottom: 2rem;
     font-weight: 500;
-    margin-bottom: 1.6rem;
-    @media (max-width: 700px) {
+    @media (max-width: 767px) {
         font-size: 2.005rem;
     }
 `;
 
 const BoxWrapper = styled.div`
     display: flex;
+    margin: 0 auto 0 0;
 `;
