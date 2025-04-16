@@ -436,7 +436,7 @@ const ThirdWrapper = styled.div`
 `;
 const ThirdHeader = styled.div`
     & > div:nth-of-type(1) {
-        width: 100%;
+        width: 80%;
         margin: 0 auto;
         > h1 {
             width: 80%;
