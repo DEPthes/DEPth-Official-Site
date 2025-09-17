@@ -3,61 +3,61 @@ import styled from 'styled-components';
 import { useMediaQuery } from 'react-responsive';
 
 interface storyType {
-    img: string;
-    header: string;
-    content: string;
-    name: string;
-    department: string;
-    isLeft: boolean;
+  img: string;
+  header: string;
+  content: string;
+  name: string;
+  department: string;
+  isLeft: boolean;
 }
 
 const StoryBlock = (p: storyType) => {
-    const isSmallScreen = useMediaQuery({ query: '(max-width: 767px)' });
-    let isLeft = p.isLeft;
-    if (isSmallScreen) {
-        isLeft = true;
-    }
-    return (
-        <BlockWrapper>
-            {isLeft ? (
-                <>
-                    <BlockMent>
-                        <img src="./image/bigQuote.png" alt="bigQuote" style={{width: '5rem'}}/>
-                        <BlockMentHeader>
-                            <h1>{p.header}</h1>
-                        </BlockMentHeader>
-                        <BlockMentContent>
-                            <h2>{p.content}</h2>
-                        </BlockMentContent>
-                        <BlockMentMember>
-                            <h3>{p.name}</h3>
-                            <h4>{p.department}</h4>
-                        </BlockMentMember>
-                    </BlockMent>
-                    <div style={{width:!isSmallScreen?'40%':''}}></div>
-                    <BlockImg src={p.img} alt="blockImg" />
-                </>
-            ) : (
-                <>
-                    <BlockImg src={p.img} alt="blockImg" />
-                    <div style={{width:!isSmallScreen?'40%':''}}></div>
-                    <BlockMent>
-                        <img src="./image/bigQuote.png" alt="bigQuote" />
-                        <BlockMentHeader>
-                            <h1>{p.header}</h1>
-                        </BlockMentHeader>
-                        <BlockMentContent>
-                            <h2>{p.content}</h2>
-                        </BlockMentContent>
-                        <BlockMentMember>
-                            <h3>{p.name}</h3>
-                            <h4>{p.department}</h4>
-                        </BlockMentMember>
-                    </BlockMent>
-                </>
-            )}
-        </BlockWrapper>
-    );
+  const isSmallScreen = useMediaQuery({ query: '(max-width: 767px)' });
+  let isLeft = p.isLeft;
+  if (isSmallScreen) {
+    isLeft = true;
+  }
+  return (
+    <BlockWrapper>
+      {isLeft ? (
+        <>
+          <BlockMent>
+            <img src="./image/bigQuote.png" alt="bigQuote" style={{ width: '5rem' }} />
+            <BlockMentHeader>
+              <h1>{p.header}</h1>
+            </BlockMentHeader>
+            <BlockMentContent>
+              <h2>{p.content}</h2>
+            </BlockMentContent>
+            <BlockMentMember>
+              <h3>{p.name}</h3>
+              <h4>{p.department}</h4>
+            </BlockMentMember>
+          </BlockMent>
+          <div style={{ width: !isSmallScreen ? '40%' : '' }}></div>
+          <BlockImg src={p.img} alt="blockImg" />
+        </>
+      ) : (
+        <>
+          <BlockImg src={p.img} alt="blockImg" />
+          <div style={{ width: !isSmallScreen ? '40%' : '' }}></div>
+          <BlockMent>
+            <img src="./image/bigQuote.png" alt="bigQuote" style={{ width: '5rem' }} />
+            <BlockMentHeader>
+              <h1>{p.header}</h1>
+            </BlockMentHeader>
+            <BlockMentContent>
+              <h2>{p.content}</h2>
+            </BlockMentContent>
+            <BlockMentMember>
+              <h3>{p.name}</h3>
+              <h4>{p.department}</h4>
+            </BlockMentMember>
+          </BlockMent>
+        </>
+      )}
+    </BlockWrapper>
+  );
 };
 
 export default StoryBlock;
@@ -140,6 +140,9 @@ const BlockMentMember = styled.div`
 
 const BlockImg = styled.img`
     width: 45%;
+    height: 70%;
+    border-radius: 1.5rem;
+    object-fit: cover;
     @media (max-width: 767px) {
         margin: 0;
         width: 100%;

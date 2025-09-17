@@ -374,11 +374,9 @@ const SecondWrapper = styled.div`
     justify-content: center;
     flex-direction: column;
     margin-top: 31.3rem;
-    // padding-left: 2.5rem;
     @media (max-width: 767px) {
         margin-top: 18.5rem;
         width: 100%;
-        // padding: 0 5.8rem;
     }
 `;
 
@@ -546,6 +544,7 @@ const FormButton = styled.button`
     color: white;
     font-family: 'Noto Sans KR';
     font-size: 2rem;
+    font-weight: bold;
 
     background: #354cda;
     border-radius: 0.609483rem;

@@ -6,112 +6,113 @@ import { projectContents } from '../../../src/assets/Contents/ProjectContents';
 import { ProjectBlockProps } from '../../../src/assets/Contents/ProjectInterface';
 
 const ProjectDetail = () => {
-    // useParams 훅을 사용하여 URL에서 프로젝트 ID 가져오기
-    const { id } = useParams();
-    const projectDetail = projectContents.find(
-        (project) => project.id === id,
-    ) as ProjectBlockProps;
+  // useParams 훅을 사용하여 URL에서 프로젝트 ID 가져오기
+  const { id } = useParams();
+  const projectDetail = projectContents.find(
+    (project) => project.id === id,
+  ) as ProjectBlockProps;
 
-    if (!projectDetail) {
-        return <div>프로젝트를 찾을 수 없습니다.</div>;
-    }
+  if (!projectDetail) {
+    return <div>프로젝트를 찾을 수 없습니다.</div>;
+  }
 
-    return (
-        <Inner>
-            <SecondWrapper>
-                <Header>
-                    <div>
-                        <img
-                            src={projectDetail.logo}
-                            alt={projectDetail.name}
-                        />
-                    </div>
-                    <div>
-                        <h1>{projectDetail.name}</h1>
-                        <h2>{projectDetail.slogan}</h2>
-                        {projectDetail.id === 'yetsul' ? (
-                            <h4 className="service-end">
-                                현재 서비스가 종료되었습니다.
-                            </h4>
-                        ) : (
-                            <></>
-                        )}
-                    </div>
-                </Header>
-                <Content>
-                    <ImgWrapper>
-                        <img
-                            src={projectDetail.detailImg?projectDetail.detailImg:projectDetail.thumbnail}
-                            alt={projectDetail.name}
-                        />
-                        <ButtonWrapper>
-                            {projectDetail.serviceLink != '' ? (
-                                <a
-                                    href={projectDetail.serviceLink}
-                                    target="_blank"
-                                    rel="noreferrer"
-                                >
-                                    <img src="../image/link.png" alt="link" />
-                                </a>
-                            ) : (
-                                <></>
-                            )}
+  return (
+    <Inner>
+      <SecondWrapper>
+        <Header>
+          <div>
+            <img
+              src={projectDetail.logo}
+              alt={projectDetail.name}
+            />
+          </div>
+          <div>
+            <h1>{projectDetail.name}</h1>
+            <h2>{projectDetail.slogan}</h2>
+            {projectDetail.id === 'yetsul' ? (
+              <h4 className="service-end">
+                현재 서비스가 종료되었습니다.
+              </h4>
+            ) : (
+              <></>
+            )}
+          </div>
+        </Header>
+        <Content>
+          <ImgWrapper>
+            <img
+              src={projectDetail.detailImg ? projectDetail.detailImg : projectDetail.thumbnail}
+              style={{ borderRadius: '20px' }}
+              alt={projectDetail.name}
+            />
+            <ButtonWrapper>
+              {projectDetail.serviceLink != '' ? (
+                <a
+                  href={projectDetail.serviceLink}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <img src="../image/link.png" alt="link" />
+                </a>
+              ) : (
+                <></>
+              )}
 
-                            {projectDetail.githubLink.map(
-                                (githubLink, index) => (
-                                    <a
-                                        key={index}
-                                        href={githubLink}
-                                        target="_blank"
-                                        rel="noreferrer"
-                                    >
-                                        <img
-                                            src="../image/github.png"
-                                            alt="github"
-                                        />
-                                    </a>
-                                ),
-                            )}
-                        </ButtonWrapper>
-                    </ImgWrapper>
-                </Content>
-                <Desc>
-                    <DescHeader>
-                        <h1>프로젝트 설명</h1>
-                    </DescHeader>
-                    <DescContent>
-                        <h2 dangerouslySetInnerHTML={{__html: projectDetail.description}}/>
-                    </DescContent>
-                </Desc>
-                <TeamMember>
-                    <div>
-                        <h1>프로젝트 팀원</h1>
+              {projectDetail.githubLink.map(
+                (githubLink, index) => (
+                  <a
+                    key={index}
+                    href={githubLink}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <img
+                      src="../image/github.png"
+                      alt="github"
+                    />
+                  </a>
+                ),
+              )}
+            </ButtonWrapper>
+          </ImgWrapper>
+        </Content>
+        <Desc>
+          <DescHeader>
+            <h1>프로젝트 설명</h1>
+          </DescHeader>
+          <DescContent>
+            <h2 dangerouslySetInnerHTML={{ __html: projectDetail.description }} />
+          </DescContent>
+        </Desc>
+        <TeamMember>
+          <div>
+            <h1>프로젝트 팀원</h1>
+          </div>
+          <TeamMemberWrapper>
+            {Object.entries(projectDetail.member).map(
+              ([role, names], index) => (
+                <>
+                  {Array.isArray(names) ? (
+                    names.map((name, i) => (
+                      <div key={index}>
+                        <h2>{role}</h2>
+                        <h3 key={i}>{name}</h3>
+                      </div>
+                    ))
+                  ) : (
+                    <div key={index}>
+                      <h2>{role}</h2>
+                      <h3>{names}</h3>
                     </div>
-                    <TeamMemberWrapper>
-                        {Object.entries(projectDetail.member).map(
-                            ([role, names], index) => (
-                                <>
-                                    {Array.isArray(names) ? (
-                                        names.map((name, i) => (
-                                            <div key={index}>
-                                                <h2>{role}</h2>
-                                                <h3 key={i}>{name}</h3>
-                                            </div>
-                                        ))
-                                    ) : (
-                                        <div key={index}>
-                                            <h2>{role}</h2>
-                                            <h3>{names}</h3>
-                                        </div>
-                                    )}
-                                </>
-                            ),
-                        )}
-                    </TeamMemberWrapper>
-                </TeamMember>
-            </SecondWrapper>
-        </Inner>
-    );
+                  )}
+                </>
+              ),
+            )}
+          </TeamMemberWrapper>
+        </TeamMember>
+      </SecondWrapper>
+    </Inner>
+  );
 };
 
 export default ProjectDetail;
@@ -257,7 +258,6 @@ const DescHeader = styled.div`
 `;
 const DescContent = styled.div`
     width: 83rem;
-    // height: 10.978rem;
     h2 {
         font-family: 'Noto Sans KR';
         font-style: normal;
@@ -324,7 +324,6 @@ const TeamMemberWrapper = styled.div`
         justify-content: center;
         @media (max-width: 767px) {
             &:nth-child(even) {
-                // margin-right: 0;
             }
             width: 24rem;
         }
