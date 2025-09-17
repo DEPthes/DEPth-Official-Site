@@ -3,141 +3,141 @@ import { useMediaQuery } from 'react-responsive';
 import styled from 'styled-components';
 
 interface PartType {
-    header: string;
-    headerImg: string;
-    userImg: string;
-    content: string;
-    isDev: boolean;
-    DuserImg: string;
-    Dcontent: string;
-    AuserImg: string;
-    Acontent: string;
-    header2: string;
-    header3: string;
+  header: string;
+  headerImg: string;
+  userImg: string;
+  content: string;
+  isDev: boolean;
+  DuserImg: string;
+  Dcontent: string;
+  AuserImg: string;
+  Acontent: string;
+  header2: string;
+  header3: string;
 }
 
 const PartBox = (p: PartType) => {
-    const isMobile = useMediaQuery({
-        query: '(max-width:767px)',
-    });
-    return (
-        <BoxWrapper isDev={p.isDev}>
-            {isMobile ? (
-                <>
-                    <MHeader>
-                        <ImgWrapper>
-                            <img src={p.userImg} alt="pmImg" />
-                        </ImgWrapper>
-                        <Header>
-                            <div>
-                                <img src={p.headerImg} alt="headerImg" />
-                                <h1>{p.header}</h1>
-                            </div>
-                        </Header>
-                    </MHeader>
-                    {p.isDev ? (
-                        <>
-                            <ContentWrapper>
-                                <TextWrapper>
-                                    <h2 dangerouslySetInnerHTML={{__html:p.content}}/>
-                                </TextWrapper>
-                            </ContentWrapper>
-                            <MHeader>
-                                <ImgWrapper>
-                                    <img src={p.DuserImg} alt="pmImg" />
-                                </ImgWrapper>
-                                <Header>
-                                    <div>
-                                        <img
-                                            src={p.headerImg}
-                                            alt="headerImg"
-                                        />
-                                        <h1>{p.header2}</h1>
-                                    </div>
-                                </Header>
-                            </MHeader>
-                            <ContentWrapper>
-                                <TextWrapper>
-                                    <h2 dangerouslySetInnerHTML={{__html:p.Dcontent}}/>
-                                </TextWrapper>
-                            </ContentWrapper>
-                            <MHeader>
-                                <ImgWrapper>
-                                    <img src={p.AuserImg} alt="pmImg" />
-                                </ImgWrapper>
-                                <Header>
-                                    <div>
-                                        <img
-                                            src={p.headerImg}
-                                            alt="headerImg"
-                                        />
-                                        <h1>{p.header3}</h1>
-                                    </div>
-                                </Header>
-                            </MHeader>
-                            <ContentWrapper>
-                                <TextWrapper>
-                                    <h2 dangerouslySetInnerHTML={{__html:p.Acontent}}/>
-                                </TextWrapper>
-                            </ContentWrapper>
-                        </>
-                    ) : (
-                        <ContentWrapper>
-                            <TextWrapper>
-                                <h2 dangerouslySetInnerHTML={{__html:p.content}}/>
-                            </TextWrapper>
-                        </ContentWrapper>
-                    )}
-                </>
-            ) : (
-                <>
-                    <Header>
-                        <div>
-                            <img src={p.headerImg} alt="headerImg" />
-                            <h1>{p.header}</h1>
-                        </div>
-                    </Header>
-                    {p.isDev ? (
-                        <DevBox>
-                            <ContentWrapper>
-                                <ImgWrapper>
-                                    <img src={p.userImg} alt="pmImg" />
-                                </ImgWrapper>
-                                <TextWrapper>
-                                    <h2 dangerouslySetInnerHTML={{__html:p.content}}/>
-                                </TextWrapper>
-                            </ContentWrapper>
-                            <ContentWrapper>
-                                <ImgWrapper>
-                                    <img src={p.DuserImg} alt="pmImg" />
-                                </ImgWrapper>
-                                <TextWrapper>
-                                    <h2 dangerouslySetInnerHTML={{__html:p.Dcontent}}/>
-                                </TextWrapper>
-                            </ContentWrapper>
-                            <ContentWrapper>
-                                <ImgWrapper>
-                                    <img src={p.AuserImg} alt="pmImg" />
-                                </ImgWrapper>
-                                <TextWrapper>
-                                    <h2 dangerouslySetInnerHTML={{__html:p.Acontent}}/>
-                                </TextWrapper>
-                            </ContentWrapper>
-                        </DevBox>
-                    ) : (
-                        <ContentWrapper>
-                            <ImgWrapper>
-                                <img src={p.userImg} alt="pmImg" />
-                            </ImgWrapper>
-                            <TextWrapper>
-                                <h2 dangerouslySetInnerHTML={{__html:p.content}}/>
-                            </TextWrapper>
-                        </ContentWrapper>
-                    )}
-                </>
-            )}
-        </BoxWrapper>
-    );
+  const isMobile = useMediaQuery({
+    query: '(max-width:767px)',
+  });
+  return (
+    <BoxWrapper isDev={p.isDev}>
+      {isMobile ? (
+        <>
+          <MHeader>
+            <ImgWrapper>
+              <img src={p.userImg} alt="pmImg" />
+            </ImgWrapper>
+            <Header>
+              <div>
+                <img src={p.headerImg} alt="headerImg" />
+                <h1>{p.header}</h1>
+              </div>
+            </Header>
+          </MHeader>
+          {p.isDev ? (
+            <>
+              <ContentWrapper>
+                <TextWrapper>
+                  <h2 dangerouslySetInnerHTML={{ __html: p.content }} />
+                </TextWrapper>
+              </ContentWrapper>
+              <MHeader>
+                <ImgWrapper>
+                  <img src={p.DuserImg} alt="pmImg" />
+                </ImgWrapper>
+                <Header>
+                  <div>
+                    <img
+                      src={p.headerImg}
+                      alt="headerImg"
+                    />
+                    <h1>{p.header2}</h1>
+                  </div>
+                </Header>
+              </MHeader>
+              <ContentWrapper>
+                <TextWrapper>
+                  <h2 dangerouslySetInnerHTML={{ __html: p.Dcontent }} />
+                </TextWrapper>
+              </ContentWrapper>
+              <MHeader>
+                <ImgWrapper>
+                  <img src={p.AuserImg} alt="pmImg" />
+                </ImgWrapper>
+                <Header>
+                  <div>
+                    <img
+                      src={p.headerImg}
+                      alt="headerImg"
+                    />
+                    <h1>{p.header3}</h1>
+                  </div>
+                </Header>
+              </MHeader>
+              <ContentWrapper>
+                <TextWrapper>
+                  <h2 dangerouslySetInnerHTML={{ __html: p.Acontent }} />
+                </TextWrapper>
+              </ContentWrapper>
+            </>
+          ) : (
+            <ContentWrapper>
+              <TextWrapper>
+                <h2 dangerouslySetInnerHTML={{ __html: p.content }} />
+              </TextWrapper>
+            </ContentWrapper>
+          )}
+        </>
+      ) : (
+        <>
+          <Header>
+            <div>
+              <img src={p.headerImg} alt="headerImg" />
+              <h1>{p.header}</h1>
+            </div>
+          </Header>
+          {p.isDev ? (
+            <DevBox>
+              <ContentWrapper>
+                <ImgWrapper>
+                  <img src={p.userImg} alt="pmImg" />
+                </ImgWrapper>
+                <TextWrapper>
+                  <h2 dangerouslySetInnerHTML={{ __html: p.content }} />
+                </TextWrapper>
+              </ContentWrapper>
+              <ContentWrapper>
+                <ImgWrapper>
+                  <img src={p.DuserImg} alt="pmImg" />
+                </ImgWrapper>
+                <TextWrapper>
+                  <h2 dangerouslySetInnerHTML={{ __html: p.Dcontent }} />
+                </TextWrapper>
+              </ContentWrapper>
+              <ContentWrapper>
+                <ImgWrapper>
+                  <img src={p.AuserImg} alt="pmImg" />
+                </ImgWrapper>
+                <TextWrapper>
+                  <h2 dangerouslySetInnerHTML={{ __html: p.Acontent }} />
+                </TextWrapper>
+              </ContentWrapper>
+            </DevBox>
+          ) : (
+            <ContentWrapper>
+              <ImgWrapper>
+                <img src={p.userImg} alt="pmImg" />
+              </ImgWrapper>
+              <TextWrapper>
+                <h2 dangerouslySetInnerHTML={{ __html: p.content }} />
+              </TextWrapper>
+            </ContentWrapper>
+          )}
+        </>
+      )}
+    </BoxWrapper>
+  );
 };
 
 export default PartBox;
@@ -160,9 +160,6 @@ const DevBox = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-
-    // width: 123.8rem;
-    // height: 60rem;
 
     @media (max-width: 767px) {
         width: fit-content;

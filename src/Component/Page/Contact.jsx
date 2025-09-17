@@ -106,7 +106,6 @@ const Ment = styled.div`
     }
     @media (max-width: 767px) {
         margin-bottom: 30px;
-        // margin-top: 20rem;
     }
 `;
 
@@ -127,7 +126,6 @@ const IntroImg = styled.div`
     height: 77.5rem;
     @media (max-width: 767px) {
         width: 83.5rem;
-        // margin-top: 2rem;
     }
     background-image: url(./image/ContactImg.png);
     background-size: contain;

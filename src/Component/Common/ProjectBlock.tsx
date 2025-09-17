@@ -4,25 +4,25 @@ import styled from 'styled-components';
 import { ProjectBlockProps } from '../../assets/Contents/ProjectInterface';
 
 const ProjectBlock = (props: ProjectBlockProps) => {
-    const { id, thumbnail, name, slogan, cohort, projectType, platform } = props;
+  const { id, thumbnail, name, slogan, cohort, projectType, platform } = props;
 
-    return (
-        <StyledLink to={`/project/${id}`}>
-            <Wrapper>
-                <img src={thumbnail} alt={name} />
-                <TextWrapper>
-                    <Header>
-                        <h3>{name}</h3>
-                    </Header>
-                    <Slogan>{slogan}</Slogan>
-                    <BoxWrapper>
-                        <Box>{projectType}</Box>
-                        <WhiteBox> {platform}</WhiteBox>
-                    </BoxWrapper>
-                </TextWrapper>
-            </Wrapper>
-        </StyledLink>
-    );
+  return (
+    <StyledLink to={`/project/${id}`}>
+      <Wrapper>
+        <img src={thumbnail} alt={name} />
+        <TextWrapper>
+          <Header>
+            <h3>{name}</h3>
+          </Header>
+          <Slogan>{slogan}</Slogan>
+          <BoxWrapper>
+            <Box>{projectType}</Box>
+            <WhiteBox> {platform}</WhiteBox>
+          </BoxWrapper>
+        </TextWrapper>
+      </Wrapper>
+    </StyledLink>
+  );
 };
 
 export default ProjectBlock;
@@ -35,7 +35,6 @@ const StyledLink = styled(Link)`
 const Wrapper = styled.div`
     width: 50.25rem;
     font-family: 'Noto Sans KR';
-    // height: 38.75rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -54,12 +53,10 @@ const Wrapper = styled.div`
 
     @media (max-width: 767px) {
         width: 100%;
-        // height: 48.75rem;
     }
 
     img {
         width: 100%;
-        // height: 27.125rem;
         object-fit: cover;
         margin-bottom: 2rem;
         border-radius: 10px;
