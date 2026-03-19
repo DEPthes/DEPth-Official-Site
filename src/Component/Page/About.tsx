@@ -19,7 +19,7 @@ const About = () => {
   };
   const handleButtonClick = () => {
     window.location.href =
-      'https://forms.gle/gsgQhrqFzUBbCVAu6';
+      'https://docs.google.com/forms/d/1sZkw51V_OadEbzvwfD_oZsfddbSzsBAhJcQNYw1H_sQ/edit';
   };
 
   const curriculumBoxes1 = [
@@ -307,7 +307,7 @@ const About = () => {
         {!isSmallScreen ? <div className="blur"></div> : <></>}
         {isSmallScreen ? <ColorBox /> : <></>}
         <FormButton onClick={handleButtonClick}>
-          4기 지원하기
+          5기 지원하기
         </FormButton>
       </LastWrapper>
     </Inner>
